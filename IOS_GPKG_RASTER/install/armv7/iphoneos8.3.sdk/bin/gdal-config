@@ -1,0 +1,74 @@
+#!/bin/sh
+CONFIG_LIBS="-L/Users/vishsubramanian/works/install//armv7/iphoneos8.3.sdk/lib -lgdal"
+CONFIG_DEP_LIBS="  -L/Users/vishsubramanian/works/install//armv7/iphoneos8.3.sdk/lib -lproj -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/lib -lsqlite3 -lz -lpthread -ldl               -liconv     "
+CONFIG_PREFIX="/Users/vishsubramanian/works/install//armv7/iphoneos8.3.sdk"
+CONFIG_CFLAGS="-I/Users/vishsubramanian/works/install//armv7/iphoneos8.3.sdk/include"
+CONFIG_DATA="/Users/vishsubramanian/works/install//armv7/iphoneos8.3.sdk/share/gdal"
+CONFIG_VERSION="2.1.0"
+CONFIG_OGR_ENABLED=yes
+CONFIG_GNM_ENABLED=no
+CONFIG_FORMATS=" gtiff hfa jpeg png zlib raw mem vrt   pcidsk rik ozi pdf rasterlite mbtiles arg"
+usage()
+{
+	cat <<EOF
+Usage: gdal-config [OPTIONS]
+Options:
+	[--prefix[=DIR]]
+	[--libs]
+	[--dep-libs]
+	[--cflags]
+	[--datadir]
+	[--version]
+	[--ogr-enabled]
+	[--gnm-enabled]
+	[--formats]
+EOF
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+case $1 in
+  --libs)
+    echo $CONFIG_LIBS
+    ;;
+
+  --dep-libs)
+    echo $CONFIG_DEP_LIBS
+    ;;
+
+  --cflags)
+    echo $CONFIG_CFLAGS
+    ;;
+
+  --datadir)
+    echo $CONFIG_DATA
+    ;;
+
+  --prefix)
+    echo $CONFIG_PREFIX
+    ;;
+
+  --version)
+    echo $CONFIG_VERSION
+    ;;
+
+  --ogr-enabled)
+    echo yes
+    ;;
+
+  --gnm-enabled)
+    echo $CONFIG_GNM_ENABLED
+    ;;
+
+  --formats)
+    echo $CONFIG_FORMATS
+    ;;
+
+  *)
+    usage 1 1>&2
+    ;;
+
+esac
