@@ -36,5 +36,5 @@ GDAL_FORMATS +=  gtiff hfa jpeg png zlib raw mem vrt
 
 Step 5: execute build-gdal-combined-lib.sh
 
-Final build is available at install folder.
+ 
 
