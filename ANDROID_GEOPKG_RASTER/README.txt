@@ -51,5 +51,5 @@ cd geopackage-raster/
 
 ./build-all-geopkg-raster.sh /Users/vishsubramanian/ANDROID_GEOPKG_RASTER/android-geopkg-raster   /Users/vishsubramanian/ANDROID_GEOPKG_RASTER/android-geopkg-raster/android-ndk-r14b
 
-Result of all the android libs will be available at miles
+Result of all the android libs will be available at geopackage-raster/mlibs
 
