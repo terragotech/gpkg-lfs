@@ -1,0 +1,28 @@
+#This Makefile.nmake is not a part of the distribution
+
+CFLAGS=/I.
+
+!IFNDEF DEBUG
+CFLAGS=$(CFLAGS) /Zl /Ox /W3 /wd4996 /nologo
+!ELSE
+CFLAGS=$(CFLAGS) /nologo /Zi /MD /Fdsqlite3100200.pdb
+!ENDIF
+
+LIBFLAGS=/nologo
+
+CORE_OBJS=sqlite3.obj
+
+STATIC_LIBS=sqlite3.lib
+
+all: static_libs
+
+static_libs: $(STATIC_LIBS)
+
+
+sqlite3.lib: $(CORE_OBJS)
+	lib $(LIBFLAGS) $(CORE_OBJS) /NODEFAULTLIB  /out:sqlite3.lib
+	
+	
+clean:
+	del $(CORE_OBJS)
+	del $(STATIC_LIBS)
