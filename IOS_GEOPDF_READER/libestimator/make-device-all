@@ -1,0 +1,21 @@
+INCLUDES=-I./include -I.
+
+armv7:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c RasterSizeEstimator.cpp -o RasterSizeEstimator.o  
+	$(AR) rcs libestimator.a *.o
+	cp libestimator.a device/armv7/libestimator.a
+
+armv7s:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c RasterSizeEstimator.cpp -o RasterSizeEstimator.o  
+	$(AR) rcs libestimator.a *.o
+	cp libestimator.a device/armv7s/libestimator.a
+
+arm64:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c RasterSizeEstimator.cpp -o RasterSizeEstimator.o  
+	$(AR) rcs libestimator.a *.o
+	cp libestimator.a device/arm64/libestimator.a
+
+
+clean:
+	rm -f *.o
+	rm -f *.a

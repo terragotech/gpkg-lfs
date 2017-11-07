@@ -1,0 +1,84 @@
+#include "GeoPDFReader.h"
+#include "com_terragoedge_geopdf_read_GeoPDFReader.h"
+#ifdef GEOPDF_IOS_BUILD
+int geopdf_generateMBTilesFromGeoPDF(char *ptrScratchFolder ,char *ptrFileName,char *ptrMBTileName,char *ptrGdalPath,char *ptrProgressID,char *ptrTMP,char *ptrutid)
+{
+	int nResult = 0;
+	GeoPDFReader *pGeoPDFReader = new GeoPDFReader();
+	nResult = pGeoPDFReader->generateMBTiles(ptrScratchFolder,ptrFileName,ptrMBTileName,ptrGdalPath,ptrProgressID,ptrTMP,ptrutid);
+	delete pGeoPDFReader;
+	return nResult;
+}
+#else
+JNIEXPORT jlong JNICALL Java_com_terragoedge_geopdf_read_GeoPDFReader_createGeoPDFReader(JNIEnv *env, jobject jobj)
+{
+	return reinterpret_cast<jlong>(new GeoPDFReader());
+}
+
+JNIEXPORT jlong JNICALL Java_com_terragoedge_geopdf_read_GeoPDFReader_generateMBTiles(JNIEnv *env, jobject jobj, jlong ptr,
+jstring inputFile, 
+jstring mbtilesFile,
+jstring gdalPath,
+jstring progressFile, 
+jstring tmpFolder, jstring utid)
+{
+		int nResult = 0;
+		GeoPDFReader *pGeoPDFReader = reinterpret_cast<GeoPDFReader*>(ptr);
+		char *ptrInputFile = NULL;
+		char *ptrMbtilesFile = NULL;
+		char *ptrGdalPath = NULL;
+		char *ptrProgressFile = NULL;
+		char *ptrtmpFolder = NULL;
+        	char *ptrutid = NULL;
+		
+		
+		ptrInputFile = (char*)env->GetStringUTFChars(inputFile,0);
+		ptrMbtilesFile = (char*)env->GetStringUTFChars(mbtilesFile,0);
+		ptrGdalPath = (char*)env->GetStringUTFChars(gdalPath,0);
+		ptrProgressFile = (char*)env->GetStringUTFChars(progressFile,0);
+		ptrtmpFolder = (char*)env->GetStringUTFChars(tmpFolder,0);
+        	ptrutid = (char*)env->GetStringUTFChars(utid,0);
+    
+    
+    
+		
+		if((ptrInputFile != NULL) && (ptrMbtilesFile != NULL) && (ptrGdalPath != NULL) && (ptrProgressFile != NULL) && (ptrtmpFolder != NULL) && (ptrutid != NULL))
+		{
+			pGeoPDFReader->generateMBTiles(ptrInputFile,ptrMbtilesFile,ptrGdalPath,ptrProgressFile,ptrtmpFolder,ptrutid);
+		}
+		//Releasing Resources
+		if(ptrInputFile)
+		{
+			env->ReleaseStringUTFChars(inputFile,(const char*)ptrInputFile);
+		}
+		if(ptrMbtilesFile)
+		{
+			env->ReleaseStringUTFChars(mbtilesFile,(const char*)ptrMbtilesFile);
+		}
+		if(ptrGdalPath)
+		{
+			env->ReleaseStringUTFChars(gdalPath,(const char*)ptrGdalPath);
+		}
+		if(ptrProgressFile)
+		{
+			env->ReleaseStringUTFChars(progressFile,(const char*)ptrProgressFile);
+		}
+		if(ptrtmpFolder)
+		{
+			env->ReleaseStringUTFChars(tmpFolder,(const char*)ptrtmpFolder);
+		}
+        	if(ptrutid)
+        	{
+            		env->ReleaseStringUTFChars(utid,(const char*)ptrutid);
+        	}
+    
+		return nResult;
+}
+JNIEXPORT jlong JNICALL Java_com_terragoedge_geopdf_read_GeoPDFReader_destroyGeoPDF(JNIEnv *env, jobject jobj, jlong ptr)
+{
+	int nResult = 0;
+	GeoPDFReader *pGeoPDFReader = reinterpret_cast<GeoPDFReader*>(ptr);
+	delete pGeoPDFReader;
+	return nResult;
+}
+#endif
