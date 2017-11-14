@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_rasterizer_scanline_aa.cpp \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/fx_ext.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/fx_system.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/../../../third_party/base/numerics/safe_conversions.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/../../../third_party/base/numerics/../logging.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/../../../third_party/base/numerics/safe_conversions_impl.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/../../../third_party/base/numerics/../macros.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/../../../third_party/base/numerics/../template_util.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_rasterizer_scanline_aa.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxge/fx_ge.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxge/fx_dib.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxge/../fxcrt/fx_basic.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/fx_memory.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/fx_stream.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxcrt/fx_string.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxge/../fxcrt/fx_coordinates.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/../../core/include/fxge/fx_font.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_basics.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_math.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_array.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_clip_liang_barsky.h \
+  /Users/venkata/whard22/pdfium/third_party/agg23/agg_render_scanlines.h

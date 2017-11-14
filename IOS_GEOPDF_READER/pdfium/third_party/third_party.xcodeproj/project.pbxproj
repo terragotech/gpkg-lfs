@@ -1,0 +1,2771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		646ED769D534781766BFE1FE /* pdfium_base */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5058D779CE8ABC76D7D41A66 /* Build configuration list for PBXAggregateTarget "pdfium_base" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = pdfium_base;
+			productName = pdfium_base;
+		};
+		A2599CB813E1063FFA56A8F8 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 75EA4CD9DA60BB94B20ABC61 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				4F00D3BF5D49BBA8D5998F8E /* PBXTargetDependency */,
+				A286A52E7B389E5984A24074 /* PBXTargetDependency */,
+				AADBA3326EE3CA661E60B941 /* PBXTargetDependency */,
+				85B11999B330CDC7695EAD5A /* PBXTargetDependency */,
+				B738A8A1D63313DA94B0106B /* PBXTargetDependency */,
+				B497BEEA4D84ED1A7441722A /* PBXTargetDependency */,
+				8E6AAC7D97D68B3FA53E0F07 /* PBXTargetDependency */,
+				362340010869C9B3813B9BDC /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01581F72544E06067D9FDB55 /* j2k.c in Sources */ = {isa = PBXBuildFile; fileRef = D08D12CF7C5A773A15C07073 /* j2k.c */; };
+		0255EA3F356D0924695B37C1 /* uncompr.c in Sources */ = {isa = PBXBuildFile; fileRef = BE0DB42F54AE020F488DD700 /* uncompr.c */; };
+		03628FBD524C5953459C003D /* fpdfapi_jdcoefct.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D12464BC23B5C227A6ECCBB /* fpdfapi_jdcoefct.c */; };
+		039E08A7F319DD8667DD8D5A /* type1.c in Sources */ = {isa = PBXBuildFile; fileRef = DF5AEFFA6029293C340A631D /* type1.c */; };
+		03B1CBB3118E9037B92F3847 /* fpdfapi_jcmainct.c in Sources */ = {isa = PBXBuildFile; fileRef = D7F5EA225A9F29204A3B7C1F /* fpdfapi_jcmainct.c */; };
+		05F7DF6617FB22CC2430C774 /* fpdfapi_jdapimin.c in Sources */ = {isa = PBXBuildFile; fileRef = 45A72F36E5846EABCCFBB754 /* fpdfapi_jdapimin.c */; };
+		079B4E67866F90F15751803C /* deflate.c in Sources */ = {isa = PBXBuildFile; fileRef = FF459F88B900420811688550 /* deflate.c */; };
+		07E1AD09167A8463DAC3009E /* trees.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EB40E6127CE692324EBBD77 /* trees.c */; };
+		1308320E03C3AE36DB069A59 /* gzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = DF7C508414FC83AD5375954A /* gzlib.c */; };
+		13DE4DCB056B1320163E5DB8 /* ftmm.c in Sources */ = {isa = PBXBuildFile; fileRef = 16177232DE43A3B0E7968086 /* ftmm.c */; };
+		13FC8B8CEAB4E167F88FE4C3 /* cmssm.c in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB1369DD69E59261295BB0 /* cmssm.c */; };
+		15392A5908FE94D2B340B3C5 /* fpdfapi_jfdctint.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E9A963333EC61B4F0841A02 /* fpdfapi_jfdctint.c */; };
+		16991AC7014BA78C363A9C65 /* cmshalf.c in Sources */ = {isa = PBXBuildFile; fileRef = 008EECAE4D0AE599447241B3 /* cmshalf.c */; };
+		17D731EF581CD101ED54185D /* inflate.c in Sources */ = {isa = PBXBuildFile; fileRef = AEAD3109AF09770722DBB012 /* inflate.c */; };
+		180EAEA89FDADA43C6749BD3 /* cmsmd5.c in Sources */ = {isa = PBXBuildFile; fileRef = 715E480951ABC1FF1D083DE7 /* cmsmd5.c */; };
+		1A2DD894A53F56316BE9CE66 /* fpdfapi_jidctfst.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B782810D51FBD0968FCBC75 /* fpdfapi_jidctfst.c */; };
+		1A479E23D7ABA44F7B4E03ED /* gzwrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 08568BE671FA57514BF789FC /* gzwrite.c */; };
+		1B446829CA7F10F4CF4A9F38 /* fpdfapi_jcomapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 279441C8621B9FE976FD7446 /* fpdfapi_jcomapi.c */; };
+		1BD2FDB1359585FE21229518 /* cmsvirt.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CF7FADF6C7EE9DCF2D4DEF4 /* cmsvirt.c */; };
+		2202E0A8943F733C05490BD6 /* inffast.c in Sources */ = {isa = PBXBuildFile; fileRef = D6AF0DEF0D2A70A489B1F2B7 /* inffast.c */; };
+		2408BFF0239AD8DFCA56C25D /* BigUnsigned.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3298AC04DE4EB0F381D60BF8 /* BigUnsigned.cc */; };
+		24663438903801F7ECA8D895 /* cmspcs.c in Sources */ = {isa = PBXBuildFile; fileRef = 40F73D2839F13A266004615A /* cmspcs.c */; };
+		260FB852EE448AD533C679A0 /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D8E563BA03A9F93CFA0BC /* image.c */; };
+		28EBCB3364D89832C9E79D58 /* fpdfapi_jcsample.c in Sources */ = {isa = PBXBuildFile; fileRef = 11F0E9CA17E9D2882A3B347C /* fpdfapi_jcsample.c */; };
+		2D90E1A31D515A2BA6915E41 /* fpdfapi_jdmainct.c in Sources */ = {isa = PBXBuildFile; fileRef = 87A13E249A26C212437427EB /* fpdfapi_jdmainct.c */; };
+		32C18C3C1A5C52BEE2371EEC /* agg_curves.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3B0109B1030AB2F4A0BCF1F /* agg_curves.cpp */; };
+		33E6A5C85E3377AE2436C0F1 /* fpdfapi_jerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 991B3EDFDB118621A68A0A14 /* fpdfapi_jerror.c */; };
+		341DFB6A3322BE72123601C9 /* cmserr.c in Sources */ = {isa = PBXBuildFile; fileRef = A4350902D2B3C19C7147BA91 /* cmserr.c */; };
+		356AF686B2C3E7CA35A74508 /* raster.c in Sources */ = {isa = PBXBuildFile; fileRef = 68E49664AA848856161B92EC /* raster.c */; };
+		358D7ADA2BC63A96F9701F19 /* cmsxform.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D075D6C5FFAD6166AEFC4 /* cmsxform.c */; };
+		36EC907E5ABF4EA3A38A7241 /* cmscgats.c in Sources */ = {isa = PBXBuildFile; fileRef = CD788E744DA96729AEA5CCB7 /* cmscgats.c */; };
+		376CAC7C812B6D10F29BAB15 /* pshinter.c in Sources */ = {isa = PBXBuildFile; fileRef = 36B2BA876CA0F3C485ECF0C2 /* pshinter.c */; };
+		37B8E1FFDC400C9BAEE366F8 /* fpdfapi_jdmerge.c in Sources */ = {isa = PBXBuildFile; fileRef = 51D0FB34F91CE7ECE013983A /* fpdfapi_jdmerge.c */; };
+		38F00DC89CF2BD93193A7E0C /* dwt.c in Sources */ = {isa = PBXBuildFile; fileRef = 767C757A8C286C18D1435C34 /* dwt.c */; };
+		3933EB7C66600DACEFEC2D6E /* fpdfapi_jcmaster.c in Sources */ = {isa = PBXBuildFile; fileRef = E9B37585AB167E448A1CFE66 /* fpdfapi_jcmaster.c */; };
+		3AF6FBAF065D3450A7D8261D /* event.c in Sources */ = {isa = PBXBuildFile; fileRef = 172E01BC91F9D1568F3D2B19 /* event.c */; };
+		3B9BEBD899C7310590C11E4C /* pi.c in Sources */ = {isa = PBXBuildFile; fileRef = 530C3B58DF560716696DD69C /* pi.c */; };
+		3C95DF8C543E36C91560B43F /* sfnt.c in Sources */ = {isa = PBXBuildFile; fileRef = BADF0BAC05B39CC28F6169FC /* sfnt.c */; };
+		3E215C1C953855805FB6FD1F /* fpdfapi_jdhuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F4BBCCA3136ECD28EADB022 /* fpdfapi_jdhuff.c */; };
+		4189A8A8F7A40FDD89E742B7 /* cmsio0.c in Sources */ = {isa = PBXBuildFile; fileRef = F67ED1274638407D9008360D /* cmsio0.c */; };
+		42B2D93C540218D34E9CEA43 /* ftlcdfil.c in Sources */ = {isa = PBXBuildFile; fileRef = F5D6E1540862549958865794 /* ftlcdfil.c */; };
+		42BD04B3FE7310AC6E348E6C /* cmscnvrt.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F816A54CAA0D4D41EBCD637 /* cmscnvrt.c */; };
+		46A19CC889BB8C990901A17B /* infback.c in Sources */ = {isa = PBXBuildFile; fileRef = DE62CD97FC5ADBC4620F8823 /* infback.c */; };
+		4A232A1ADFFBA8A4F63BE83C /* ftglyph.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D70182056F592F61A7B03E7 /* ftglyph.c */; };
+		4D7A025E9CCDF56D20890105 /* fpdfapi_jdcolor.c in Sources */ = {isa = PBXBuildFile; fileRef = 069D24CA10A62424E79934B2 /* fpdfapi_jdcolor.c */; };
+		4E78A64759FEB288593AFD5F /* fpdfapi_jddctmgr.c in Sources */ = {isa = PBXBuildFile; fileRef = EF30C5208EE41B76C38C1A8A /* fpdfapi_jddctmgr.c */; };
+		4FBFA2CD65E99A2D761070AB /* truetype.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FE762ABAD4CD4BB2DA12DFF /* truetype.c */; };
+		504D579FF6F0D61F3F8E7CE8 /* fpdfapi_jfdctfst.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA1BF8A06AD166E6092A5D /* fpdfapi_jfdctfst.c */; };
+		523D381AFF2A3394A2ECC3A6 /* cmsintrp.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0F5C87C296F8EF26C4578 /* cmsintrp.c */; };
+		523F56EFC6DB6EB3303CBE1D /* mct.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FC57A8C8C7BDBAB29ECB6CD /* mct.c */; };
+		525CC5461FD0EF4EF3EC6E46 /* fpdfapi_jdapistd.c in Sources */ = {isa = PBXBuildFile; fileRef = 17F2769F1E0B5BD302B68C91 /* fpdfapi_jdapistd.c */; };
+		543F61C42116E613AC23D6D0 /* psmodule.c in Sources */ = {isa = PBXBuildFile; fileRef = DBE1F4C81E15F4369DECD369 /* psmodule.c */; };
+		54F2DD2CF9C6900F2360F537 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B586ACD1490CD247864FD0C /* crc32.c */; };
+		57DE47A99D7D0287CDF864B7 /* cmsgmt.c in Sources */ = {isa = PBXBuildFile; fileRef = 06BD43B351B5D322D4F3D635 /* cmsgmt.c */; };
+		5AA9A8EE8B66FA621121DC01 /* compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 076BBBFD07AF94F8E101F127 /* compress.c */; };
+		5E6A39F22EDE0FEAE227A68E /* fpdfapi_jcinit.c in Sources */ = {isa = PBXBuildFile; fileRef = 70F833E9A8440EBBC0096FDC /* fpdfapi_jcinit.c */; };
+		5E979531B3B77EBC032DEDFD /* opj_clock.c in Sources */ = {isa = PBXBuildFile; fileRef = FDCCCE773FB50EBDE38187B8 /* opj_clock.c */; };
+		5FD4301A8E5E1584958ECA75 /* fpdfapi_jmemnobs.c in Sources */ = {isa = PBXBuildFile; fileRef = EF09E850996B85D3BEB29434 /* fpdfapi_jmemnobs.c */; };
+		609BE830026034F9E9764722 /* cmsio1.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C0882E5820C758D419B64E1 /* cmsio1.c */; };
+		629D294B610491108172FCFA /* fpdfapi_jdinput.c in Sources */ = {isa = PBXBuildFile; fileRef = CA8697E65723A501DEC6B560 /* fpdfapi_jdinput.c */; };
+		62B6AB1F44E57D0104D244EE /* cmsmtrx.c in Sources */ = {isa = PBXBuildFile; fileRef = 1166ACE2A10D9AE8FCC0B28E /* cmsmtrx.c */; };
+		65D9D148C502330C5421A492 /* cmspack.c in Sources */ = {isa = PBXBuildFile; fileRef = A5391BFA8046E33AF8597B61 /* cmspack.c */; };
+		65F893267853ED0BEC800936 /* agg_vcgen_stroke.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896E55C60A209AC9B301D2F /* agg_vcgen_stroke.cpp */; };
+		695ECC5D9931E61056F562CD /* fpdfapi_jidctred.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E761A49AB16D1198125304D /* fpdfapi_jidctred.c */; };
+		6FF306E0847CE979C2F76635 /* BigIntegerUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2E8F4C27AC23B615D799DAE7 /* BigIntegerUtils.cc */; };
+		70246F5CD41E38DEA682810B /* cmsps2.c in Sources */ = {isa = PBXBuildFile; fileRef = 29187C6FB1FB6E15DD719F38 /* cmsps2.c */; };
+		71896BA16A5D397C99ABEC82 /* cff.c in Sources */ = {isa = PBXBuildFile; fileRef = 99DC7D98376CC567CC96A5AE /* cff.c */; };
+		721E8744C37DEA0C968246C6 /* fpdfapi_jutils.c in Sources */ = {isa = PBXBuildFile; fileRef = BEE1A3F8108EDAF963D00468 /* fpdfapi_jutils.c */; };
+		7260EF7EC92B9D95FBD8928A /* fpdfapi_jccoefct.c in Sources */ = {isa = PBXBuildFile; fileRef = 55E3B97B70144D2F4BC982B2 /* fpdfapi_jccoefct.c */; };
+		74845AF408194AE34752273E /* function_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D5CC5D744FAD53BD667E111 /* function_list.c */; };
+		749305F39AF75BC17B5D2504 /* fpdfapi_jdmarker.c in Sources */ = {isa = PBXBuildFile; fileRef = DFF51968A84398C18212DCD3 /* fpdfapi_jdmarker.c */; };
+		76E128C29BFAEC8670A2823A /* fpdfapi_jccolor.c in Sources */ = {isa = PBXBuildFile; fileRef = 959E66A1D63972583496B61A /* fpdfapi_jccolor.c */; };
+		7ADA8A77B80599F7D1E6C26F /* agg_rasterizer_scanline_aa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88244A1E83E4DAC57BE64A7 /* agg_rasterizer_scanline_aa.cpp */; };
+		7AF4274E45D228EF33CDA520 /* cmslut.c in Sources */ = {isa = PBXBuildFile; fileRef = 69112444EF92792732527381 /* cmslut.c */; };
+		7B91C67C1E18A25B9A99D179 /* cmsopt.c in Sources */ = {isa = PBXBuildFile; fileRef = D631C46B882D7888359659E6 /* cmsopt.c */; };
+		7F18BFBCAF3081370BA6A467 /* type1cid.c in Sources */ = {isa = PBXBuildFile; fileRef = 87F9C82C3C6902346BCA1E2C /* type1cid.c */; };
+		7FDD981F71F1F507994959AD /* gzclose.c in Sources */ = {isa = PBXBuildFile; fileRef = C759330610D5128BAE768C98 /* gzclose.c */; };
+		7FDE6CD2F8C5424A4B41C5C8 /* ftbitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = A8F5647633CC05403580C0BD /* ftbitmap.c */; };
+		838024E0AC697CF5EF52968A /* fpdfapi_jctrans.c in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E9FEE2EE5CDEF7871D7B /* fpdfapi_jctrans.c */; };
+		83ED38B507EF75779596F090 /* cio.c in Sources */ = {isa = PBXBuildFile; fileRef = 2ED934ECD5547340EBFACEC3 /* cio.c */; };
+		8421328F35CFD1AE3D719107 /* BigInteger.cc in Sources */ = {isa = PBXBuildFile; fileRef = EDE84C40303C2A434F273EF1 /* BigInteger.cc */; };
+		8B70E9F2EF727EEB9DB6AFBE /* fpdfapi_jcphuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB2BDF8E0BA705EA4CA00E /* fpdfapi_jcphuff.c */; };
+		8C114FBDAA2999BEB1476F8E /* cmsplugin.c in Sources */ = {isa = PBXBuildFile; fileRef = DDA3A0D7B41CDBAB955DC6D9 /* cmsplugin.c */; };
+		8DDA42F6F548030427148105 /* cmsnamed.c in Sources */ = {isa = PBXBuildFile; fileRef = 771DAE8E2718A8ED5A474D99 /* cmsnamed.c */; };
+		A02AECCCB160F02B55796664 /* fpdfapi_jcapimin.c in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE317C34914FC276469D57 /* fpdfapi_jcapimin.c */; };
+		A2878324B77237E91896B9C0 /* fpdfapi_jdsample.c in Sources */ = {isa = PBXBuildFile; fileRef = A2C8F96FF780C036AE27227F /* fpdfapi_jdsample.c */; };
+		A433F21577550EB908E30D57 /* fpdfapi_jdtrans.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A7D82FA53ED05B9B69FB1 /* fpdfapi_jdtrans.c */; };
+		A85C3A38FC0FF0DAAC263A0C /* agg_path_storage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82DAAC41B7A3BD8BC62120C3 /* agg_path_storage.cpp */; };
+		ADE0DD93376A62F881A29356 /* fpdfapi_jdpostct.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FB6D55ADB088F3766AEC33 /* fpdfapi_jdpostct.c */; };
+		AFAA1B7B8981BDA72A76E001 /* cmsgamma.c in Sources */ = {isa = PBXBuildFile; fileRef = 021A819E32E1CADE54DA3BAA /* cmsgamma.c */; };
+		B04A58FA6647A9A8784FC55A /* fpdfapi_jdmaster.c in Sources */ = {isa = PBXBuildFile; fileRef = A1CFD83E9C0065FB750AE02F /* fpdfapi_jdmaster.c */; };
+		B16BAFC59BAB404B5F903B2C /* tgt.c in Sources */ = {isa = PBXBuildFile; fileRef = ECD4AAED675CD00291E93939 /* tgt.c */; };
+		B23FCB5C51A8600C7A5771CA /* cmscam02.c in Sources */ = {isa = PBXBuildFile; fileRef = 07872D67DEA0A5E04E29F213 /* cmscam02.c */; };
+		B4EF261F719714F7026D33D3 /* smooth.c in Sources */ = {isa = PBXBuildFile; fileRef = 14097481EBC85FE9C8E8C45F /* smooth.c */; };
+		B80E28B0213EFD9DA628DBEC /* mqc.c in Sources */ = {isa = PBXBuildFile; fileRef = EACFEBDF051C339AE0C19B0B /* mqc.c */; };
+		B83D1BA6A934DDE2DE5A697E /* fpdfapi_jdphuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A09D39B6345562239FC6337 /* fpdfapi_jdphuff.c */; };
+		BB71F2B1F1E04975DCD70C36 /* fpdfapi_jmemmgr.c in Sources */ = {isa = PBXBuildFile; fileRef = 962976525727ACEBF56459D3 /* fpdfapi_jmemmgr.c */; };
+		BCC4459BE9D6F0F4142EA98C /* fpdfapi_jcdctmgr.c in Sources */ = {isa = PBXBuildFile; fileRef = CF074DCB04D6779F31AD372B /* fpdfapi_jcdctmgr.c */; };
+		C7B0B8C5A75F8AF63B508EDA /* inftrees.c in Sources */ = {isa = PBXBuildFile; fileRef = 813ED29598A97B225E9A6427 /* inftrees.c */; };
+		C837A9021445FEF088621975 /* bio.c in Sources */ = {isa = PBXBuildFile; fileRef = C329E87F814AFA96565AF104 /* bio.c */; };
+		CC6093D544EAD2C54A5419BB /* cmssamp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3789952396218E0BE680B0DF /* cmssamp.c */; };
+		CE6C622813780E1A9A52CD1A /* fpdfapi_jcapistd.c in Sources */ = {isa = PBXBuildFile; fileRef = 025615AA26940222AC055FBC /* fpdfapi_jcapistd.c */; };
+		CEA4534246B8DFD5654A597B /* raw.c in Sources */ = {isa = PBXBuildFile; fileRef = FE004994793FC7984ACAB76E /* raw.c */; };
+		CEC6B05F22D8590FAA938AF3 /* gzread.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B2995B94CB150597339BF /* gzread.c */; };
+		CF9B4F11AC889924E7853703 /* t1.c in Sources */ = {isa = PBXBuildFile; fileRef = B081CF9996CC02683F559569 /* t1.c */; };
+		D2197AF44C78BB56C31E9989 /* ftinit.c in Sources */ = {isa = PBXBuildFile; fileRef = 14E06E4EF837C0EE098406DB /* ftinit.c */; };
+		D31439EA3EE5521BCB3146A5 /* fpdfapi_jcprepct.c in Sources */ = {isa = PBXBuildFile; fileRef = DDB7D603968E4F2B7DC1E19B /* fpdfapi_jcprepct.c */; };
+		D498C39A09ABD5FAE825DCD0 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = B766745749F9D53396BAFF7C /* adler32.c */; };
+		D4F380A92099EE524BD775C4 /* cmstypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 79978E0E87572097C5F49FE7 /* cmstypes.c */; };
+		D53375985B8790C0613C46C0 /* t2.c in Sources */ = {isa = PBXBuildFile; fileRef = 3205C725C45325D6490D23A9 /* t2.c */; };
+		D57B0898249CCE762622D14D /* fpdfapi_jidctint.c in Sources */ = {isa = PBXBuildFile; fileRef = 4550785D51E7EC7AAF02CB1D /* fpdfapi_jidctint.c */; };
+		DD9F95261BCADD88DCFDD203 /* tcd.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B074DDF1D046924E3A2E0C1 /* tcd.c */; };
+		E0094E24356FD64DCDE6D4B9 /* BigUnsignedInABase.cc in Sources */ = {isa = PBXBuildFile; fileRef = 99E34AAF857D5321BED9AB03 /* BigUnsignedInABase.cc */; };
+		E3E931F96CD240F8B4A7DF10 /* invert.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B6D04E429D0AA935950099C /* invert.c */; };
+		E7D419252C17C7600FC9E4F2 /* jp2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9233B2F4D3ECB25DBA281104 /* jp2.c */; };
+		EAE943ED7D90B997D8AF6BCD /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 0172B61FCC50EC839DE522C0 /* zutil.c */; };
+		EE32CA38B8802A48424BBA5F /* agg_vcgen_dash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B3E4A3D8353A3E470A3E22 /* agg_vcgen_dash.cpp */; };
+		F22186084FAC14B929B230B8 /* psaux.c in Sources */ = {isa = PBXBuildFile; fileRef = B417E5A135FA56F53AAF62A2 /* psaux.c */; };
+		F31C1AFFA798F2741913D51C /* ftbase.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C42650F953AF0804B2CBC73 /* ftbase.c */; };
+		F3DB4B5591D87A0B528F7E8F /* fpdfapi_jcparam.c in Sources */ = {isa = PBXBuildFile; fileRef = 8393F095F3C62AC8CD5946A5 /* fpdfapi_jcparam.c */; };
+		F6F4E4D794E942456CD36177 /* fpdfapi_jcmarker.c in Sources */ = {isa = PBXBuildFile; fileRef = C21E08C47B8EAE5CB5C74DC1 /* fpdfapi_jcmarker.c */; };
+		F7E10D43AC845B18D4EE1BD6 /* fpdfapi_jchuff.c in Sources */ = {isa = PBXBuildFile; fileRef = A89F6EDF3613B589AC202A61 /* fpdfapi_jchuff.c */; };
+		FB4C48D78032D1F09C42569F /* openjpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 176DAC95D7D2443D848BE716 /* openjpeg.c */; };
+		FC817AFDBBE4EBEA4632455C /* cmswtpnt.c in Sources */ = {isa = PBXBuildFile; fileRef = F42A3125493C652661B0E528 /* cmswtpnt.c */; };
+		FFDBD4213F6C3CFA5BF660FA /* ftsystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDA55F974BF951C093B146 /* ftsystem.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		331ED985907CD6E5007F979A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4784E06A4293E56767C38DB1;
+			remoteInfo = freetype;
+		};
+		7A045850A44E359DD5D4AE7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CD94E557B684794AEA50708;
+			remoteInfo = fx_libopenjpeg;
+		};
+		7F4839E31A09195B9D8D1889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 831B0161EAA4793E79F1F237;
+			remoteInfo = fx_agg;
+		};
+		A45153B7FF9FFA26E670653D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB4318A9796D284145943CE;
+			remoteInfo = fx_libjpeg;
+		};
+		BCE51BF1BC7EE02D22092D52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A87BBA27AD105AC3B36DEDAF;
+			remoteInfo = bigint;
+		};
+		E400A3FE24A2974FF6B35653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 646ED769D534781766BFE1FE;
+			remoteInfo = pdfium_base;
+		};
+		E94548E9AE2711EDB31BE7A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DE9E3184A28C4186199358;
+			remoteInfo = fx_zlib;
+		};
+		FB8C0F8D2DA996C098A5FC14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED38BA4BD4F431D874B24B00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C94B0904B26820DAFBF21994;
+			remoteInfo = fx_lcms2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008EECAE4D0AE599447241B3 /* cmshalf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmshalf.c; sourceTree = "<group>"; };
+		0172B61FCC50EC839DE522C0 /* zutil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = zutil.c; sourceTree = "<group>"; };
+		021A819E32E1CADE54DA3BAA /* cmsgamma.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsgamma.c; sourceTree = "<group>"; };
+		025615AA26940222AC055FBC /* fpdfapi_jcapistd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcapistd.c; sourceTree = "<group>"; };
+		04FB6D55ADB088F3766AEC33 /* fpdfapi_jdpostct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdpostct.c; sourceTree = "<group>"; };
+		069D24CA10A62424E79934B2 /* fpdfapi_jdcolor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdcolor.c; sourceTree = "<group>"; };
+		06BD43B351B5D322D4F3D635 /* cmsgmt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsgmt.c; sourceTree = "<group>"; };
+		076BBBFD07AF94F8E101F127 /* compress.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compress.c; sourceTree = "<group>"; };
+		07872D67DEA0A5E04E29F213 /* cmscam02.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmscam02.c; sourceTree = "<group>"; };
+		0843EB9EBED727C4EB81BE4D /* jconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
+		08568BE671FA57514BF789FC /* gzwrite.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gzwrite.c; sourceTree = "<group>"; };
+		0A8B2995B94CB150597339BF /* gzread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gzread.c; sourceTree = "<group>"; };
+		0C4B7BB737625A05B261A531 /* agg_conv_dash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_conv_dash.h; sourceTree = "<group>"; };
+		0C8C504BDD1542597B2E3FDC /* freetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = freetype.h; sourceTree = "<group>"; };
+		0CA39659AD96DAA3DE6528B3 /* jpegint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jpegint.h; sourceTree = "<group>"; };
+		0D12464BC23B5C227A6ECCBB /* fpdfapi_jdcoefct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdcoefct.c; sourceTree = "<group>"; };
+		0D95F86223F06F4F6C90726D /* transupp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = transupp.h; sourceTree = "<group>"; };
+		0F3D075D6C5FFAD6166AEFC4 /* cmsxform.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsxform.c; sourceTree = "<group>"; };
+		1166ACE2A10D9AE8FCC0B28E /* cmsmtrx.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsmtrx.c; sourceTree = "<group>"; };
+		11F0E9CA17E9D2882A3B347C /* fpdfapi_jcsample.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcsample.c; sourceTree = "<group>"; };
+		14097481EBC85FE9C8E8C45F /* smooth.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = smooth.c; sourceTree = "<group>"; };
+		14E06E4EF837C0EE098406DB /* ftinit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftinit.c; sourceTree = "<group>"; };
+		16177232DE43A3B0E7968086 /* ftmm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftmm.c; sourceTree = "<group>"; };
+		1717797C137F7879D68DFFB4 /* tttables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tttables.h; sourceTree = "<group>"; };
+		172E01BC91F9D1568F3D2B19 /* event.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = event.c; sourceTree = "<group>"; };
+		176DAC95D7D2443D848BE716 /* openjpeg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = openjpeg.c; sourceTree = "<group>"; };
+		17F2769F1E0B5BD302B68C91 /* fpdfapi_jdapistd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdapistd.c; sourceTree = "<group>"; };
+		1DF0F5C87C296F8EF26C4578 /* cmsintrp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsintrp.c; sourceTree = "<group>"; };
+		1FC57A8C8C7BDBAB29ECB6CD /* mct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mct.c; sourceTree = "<group>"; };
+		259F3CEBAB0F154CD0045AD0 /* template_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
+		2627D6B64EB812560CF855CB /* jpeglib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
+		279441C8621B9FE976FD7446 /* fpdfapi_jcomapi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcomapi.c; sourceTree = "<group>"; };
+		28FB7F0C0693A5F91257848D /* ftobjs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ftobjs.h; sourceTree = "<group>"; };
+		29187C6FB1FB6E15DD719F38 /* cmsps2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsps2.c; sourceTree = "<group>"; };
+		2976372EE4A24205025AD3A1 /* cfftypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cfftypes.h; sourceTree = "<group>"; };
+		2E8F4C27AC23B615D799DAE7 /* BigIntegerUtils.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BigIntegerUtils.cc; sourceTree = "<group>"; };
+		2ED934ECD5547340EBFACEC3 /* cio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cio.c; sourceTree = "<group>"; };
+		2FE762ABAD4CD4BB2DA12DFF /* truetype.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = truetype.c; sourceTree = "<group>"; };
+		3205C725C45325D6490D23A9 /* t2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = t2.c; sourceTree = "<group>"; };
+		3298AC04DE4EB0F381D60BF8 /* BigUnsigned.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BigUnsigned.cc; sourceTree = "<group>"; };
+		36B2BA876CA0F3C485ECF0C2 /* pshinter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pshinter.c; sourceTree = "<group>"; };
+		3789952396218E0BE680B0DF /* cmssamp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmssamp.c; sourceTree = "<group>"; };
+		3ACDA55F974BF951C093B146 /* ftsystem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftsystem.c; sourceTree = "<group>"; };
+		3C0882E5820C758D419B64E1 /* cmsio1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsio1.c; sourceTree = "<group>"; };
+		3C408F0A92F1870287500640 /* agg_path_storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_path_storage.h; sourceTree = "<group>"; };
+		3D70182056F592F61A7B03E7 /* ftglyph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftglyph.c; sourceTree = "<group>"; };
+		3E9A963333EC61B4F0841A02 /* fpdfapi_jfdctint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jfdctint.c; sourceTree = "<group>"; };
+		3F22BF6E81572236F099BFF9 /* third_party.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = third_party.gyp; sourceTree = "<group>"; };
+		3FFB2BDF8E0BA705EA4CA00E /* fpdfapi_jcphuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcphuff.c; sourceTree = "<group>"; };
+		40F73D2839F13A266004615A /* cmspcs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmspcs.c; sourceTree = "<group>"; };
+		4550785D51E7EC7AAF02CB1D /* fpdfapi_jidctint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jidctint.c; sourceTree = "<group>"; };
+		45A72F36E5846EABCCFBB754 /* fpdfapi_jdapimin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdapimin.c; sourceTree = "<group>"; };
+		462D6F7E5DB77C3E97F81DF3 /* ftstream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ftstream.h; sourceTree = "<group>"; };
+		4800D143B8E69D58D0FFACB9 /* ftmm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ftmm.h; sourceTree = "<group>"; };
+		48278CB86D06D28327D1B31F /* nonstd_unique_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nonstd_unique_ptr.h; sourceTree = "<group>"; };
+		4B074DDF1D046924E3A2E0C1 /* tcd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tcd.c; sourceTree = "<group>"; };
+		4B5D8E563BA03A9F93CFA0BC /* image.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = "<group>"; };
+		4B6D04E429D0AA935950099C /* invert.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = invert.c; sourceTree = "<group>"; };
+		4D4A7D82FA53ED05B9B69FB1 /* fpdfapi_jdtrans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdtrans.c; sourceTree = "<group>"; };
+		4D5CC5D744FAD53BD667E111 /* function_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = function_list.c; sourceTree = "<group>"; };
+		51D0FB34F91CE7ECE013983A /* fpdfapi_jdmerge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdmerge.c; sourceTree = "<group>"; };
+		530C3B58DF560716696DD69C /* pi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pi.c; sourceTree = "<group>"; };
+		54CBAB860258083EB35EBDDE /* jversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jversion.h; sourceTree = "<group>"; };
+		55E3B97B70144D2F4BC982B2 /* fpdfapi_jccoefct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jccoefct.c; sourceTree = "<group>"; };
+		5A09D39B6345562239FC6337 /* fpdfapi_jdphuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdphuff.c; sourceTree = "<group>"; };
+		5AB483CB22E20830990D8BE4 /* jerror.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
+		5FE17EA8042CB54D7BB9749D /* cderror.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cderror.h; sourceTree = "<group>"; };
+		5FEA1BF8A06AD166E6092A5D /* fpdfapi_jfdctfst.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jfdctfst.c; sourceTree = "<group>"; };
+		62211DBD9F10BD184FDABA4A /* cffobjs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cffobjs.h; sourceTree = "<group>"; };
+		6403B35B867FB608C629D357 /* libfx_zlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfx_zlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66BE433B3C2076999D095BD6 /* agg_basics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_basics.h; sourceTree = "<group>"; };
+		68CEBAF152F88B183299E7E1 /* BigInteger.hh */ = {isa = PBXFileReference; lastKnownFileType = text; path = BigInteger.hh; sourceTree = "<group>"; };
+		68E49664AA848856161B92EC /* raster.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = raster.c; sourceTree = "<group>"; };
+		69112444EF92792732527381 /* cmslut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmslut.c; sourceTree = "<group>"; };
+		692A834257306DD04CED1393 /* BigIntegerUtils.hh */ = {isa = PBXFileReference; lastKnownFileType = text; path = BigIntegerUtils.hh; sourceTree = "<group>"; };
+		6E761A49AB16D1198125304D /* fpdfapi_jidctred.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jidctred.c; sourceTree = "<group>"; };
+		6ED33A7B6C0DF2FA9D20473B /* lcms2_plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcms2_plugin.h; sourceTree = "<group>"; };
+		6F4BBCCA3136ECD28EADB022 /* fpdfapi_jdhuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdhuff.c; sourceTree = "<group>"; };
+		70F833E9A8440EBBC0096FDC /* fpdfapi_jcinit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcinit.c; sourceTree = "<group>"; };
+		715D09F272D8FF5AC79B41D3 /* safe_math_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safe_math_impl.h; sourceTree = "<group>"; };
+		715E480951ABC1FF1D083DE7 /* cmsmd5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsmd5.c; sourceTree = "<group>"; };
+		7262964172D0CAB7F055974A /* tttypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tttypes.h; sourceTree = "<group>"; };
+		767C757A8C286C18D1435C34 /* dwt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dwt.c; sourceTree = "<group>"; };
+		771DAE8E2718A8ED5A474D99 /* cmsnamed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsnamed.c; sourceTree = "<group>"; };
+		785C8C444EF37093699DB865 /* libfx_libjpeg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfx_libjpeg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		79978E0E87572097C5F49FE7 /* cmstypes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmstypes.c; sourceTree = "<group>"; };
+		7C42650F953AF0804B2CBC73 /* ftbase.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftbase.c; sourceTree = "<group>"; };
+		7CF7FADF6C7EE9DCF2D4DEF4 /* cmsvirt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsvirt.c; sourceTree = "<group>"; };
+		801DFABFE4CDB62B83589F19 /* safe_conversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safe_conversions.h; sourceTree = "<group>"; };
+		813ED29598A97B225E9A6427 /* inftrees.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = inftrees.c; sourceTree = "<group>"; };
+		82DAAC41B7A3BD8BC62120C3 /* agg_path_storage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = agg_path_storage.cpp; sourceTree = "<group>"; };
+		8393F095F3C62AC8CD5946A5 /* fpdfapi_jcparam.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcparam.c; sourceTree = "<group>"; };
+		87A13E249A26C212437427EB /* fpdfapi_jdmainct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdmainct.c; sourceTree = "<group>"; };
+		87F9C82C3C6902346BCA1E2C /* type1cid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = type1cid.c; sourceTree = "<group>"; };
+		8B586ACD1490CD247864FD0C /* crc32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
+		8B782810D51FBD0968FCBC75 /* fpdfapi_jidctfst.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jidctfst.c; sourceTree = "<group>"; };
+		8BFA800CCBE6A907319B5D8B /* BigIntegerLibrary.hh */ = {isa = PBXFileReference; lastKnownFileType = text; path = BigIntegerLibrary.hh; sourceTree = "<group>"; };
+		8EB40E6127CE692324EBBD77 /* trees.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = trees.c; sourceTree = "<group>"; };
+		908373F5C1D662B3A1E5613E /* libbigint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbigint.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9233B2F4D3ECB25DBA281104 /* jp2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = jp2.c; sourceTree = "<group>"; };
+		94E9E8B078EF5B3518BB1F5F /* logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
+		959E66A1D63972583496B61A /* fpdfapi_jccolor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jccolor.c; sourceTree = "<group>"; };
+		962976525727ACEBF56459D3 /* fpdfapi_jmemmgr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jmemmgr.c; sourceTree = "<group>"; };
+		991B3EDFDB118621A68A0A14 /* fpdfapi_jerror.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jerror.c; sourceTree = "<group>"; };
+		99DC7D98376CC567CC96A5AE /* cff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cff.c; sourceTree = "<group>"; };
+		99E34AAF857D5321BED9AB03 /* BigUnsignedInABase.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BigUnsignedInABase.cc; sourceTree = "<group>"; };
+		9ABDB8C4EA72797AF93F9F2C /* jdhuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jdhuff.h; sourceTree = "<group>"; };
+		9BCB1369DD69E59261295BB0 /* cmssm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmssm.c; sourceTree = "<group>"; };
+		9EAE317C34914FC276469D57 /* fpdfapi_jcapimin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcapimin.c; sourceTree = "<group>"; };
+		9F816A54CAA0D4D41EBCD637 /* cmscnvrt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmscnvrt.c; sourceTree = "<group>"; };
+		A1CFD83E9C0065FB750AE02F /* fpdfapi_jdmaster.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdmaster.c; sourceTree = "<group>"; };
+		A201E04B72260DC19E452DFA /* libfx_libopenjpeg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfx_libopenjpeg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C8F96FF780C036AE27227F /* fpdfapi_jdsample.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdsample.c; sourceTree = "<group>"; };
+		A3B0109B1030AB2F4A0BCF1F /* agg_curves.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = agg_curves.cpp; sourceTree = "<group>"; };
+		A4350902D2B3C19C7147BA91 /* cmserr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmserr.c; sourceTree = "<group>"; };
+		A4D6FB13F50B07BDA9CA22E0 /* NumberlikeArray.hh */ = {isa = PBXFileReference; lastKnownFileType = text; path = NumberlikeArray.hh; sourceTree = "<group>"; };
+		A5391BFA8046E33AF8597B61 /* cmspack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmspack.c; sourceTree = "<group>"; };
+		A86874E1C4466C70BD04EEC0 /* jchuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jchuff.h; sourceTree = "<group>"; };
+		A89F6EDF3613B589AC202A61 /* fpdfapi_jchuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jchuff.c; sourceTree = "<group>"; };
+		A8F5647633CC05403580C0BD /* ftbitmap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftbitmap.c; sourceTree = "<group>"; };
+		ABAFDC99B311E4ABB32EFFA9 /* ftotval.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ftotval.h; sourceTree = "<group>"; };
+		AEAD3109AF09770722DBB012 /* inflate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = inflate.c; sourceTree = "<group>"; };
+		AF65920D10D829B59175203F /* jdct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jdct.h; sourceTree = "<group>"; };
+		B081CF9996CC02683F559569 /* t1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = t1.c; sourceTree = "<group>"; };
+		B2D916C9E0A1C6413573000D /* agg_rendering_buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_rendering_buffer.h; sourceTree = "<group>"; };
+		B417E5A135FA56F53AAF62A2 /* psaux.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = psaux.c; sourceTree = "<group>"; };
+		B5C0FACE9BD824068FED150E /* jinclude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jinclude.h; sourceTree = "<group>"; };
+		B766745749F9D53396BAFF7C /* adler32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = adler32.c; sourceTree = "<group>"; };
+		B7B6AA1D658B3C164726536B /* BigUnsignedInABase.hh */ = {isa = PBXFileReference; lastKnownFileType = text; path = BigUnsignedInABase.hh; sourceTree = "<group>"; };
+		B9DCAF9532481F640EA70E08 /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		BADF0BAC05B39CC28F6169FC /* sfnt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sfnt.c; sourceTree = "<group>"; };
+		BB0497ABD7A52FEC5C493F4C /* libfx_agg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfx_agg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE0DB42F54AE020F488DD700 /* uncompr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uncompr.c; sourceTree = "<group>"; };
+		BEE1A3F8108EDAF963D00468 /* fpdfapi_jutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jutils.c; sourceTree = "<group>"; };
+		C21E08C47B8EAE5CB5C74DC1 /* fpdfapi_jcmarker.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcmarker.c; sourceTree = "<group>"; };
+		C329E87F814AFA96565AF104 /* bio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bio.c; sourceTree = "<group>"; };
+		C3AE4BA568EC5CF5A48CC3FA /* BigUnsigned.hh */ = {isa = PBXFileReference; lastKnownFileType = text; path = BigUnsigned.hh; sourceTree = "<group>"; };
+		C72B8B82EB3F37113B2BB1EF /* ft2build.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ft2build.h; sourceTree = "<group>"; };
+		C759330610D5128BAE768C98 /* gzclose.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gzclose.c; sourceTree = "<group>"; };
+		C88244A1E83E4DAC57BE64A7 /* agg_rasterizer_scanline_aa.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = agg_rasterizer_scanline_aa.cpp; sourceTree = "<group>"; };
+		C8C6F5FB95A994246CC4DBA2 /* lcms2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcms2.h; sourceTree = "<group>"; };
+		CA8697E65723A501DEC6B560 /* fpdfapi_jdinput.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdinput.c; sourceTree = "<group>"; };
+		CD788E744DA96729AEA5CCB7 /* cmscgats.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmscgats.c; sourceTree = "<group>"; };
+		CF074DCB04D6779F31AD372B /* fpdfapi_jcdctmgr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcdctmgr.c; sourceTree = "<group>"; };
+		D08D12CF7C5A773A15C07073 /* j2k.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = j2k.c; sourceTree = "<group>"; };
+		D4B9E9FEE2EE5CDEF7871D7B /* fpdfapi_jctrans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jctrans.c; sourceTree = "<group>"; };
+		D500FABA12E431D459076024 /* agg_renderer_scanline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_renderer_scanline.h; sourceTree = "<group>"; };
+		D5E63FAE35779486568C72E2 /* safe_conversions_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safe_conversions_impl.h; sourceTree = "<group>"; };
+		D5F9EEBC69431298024C8320 /* ftoutln.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ftoutln.h; sourceTree = "<group>"; };
+		D631C46B882D7888359659E6 /* cmsopt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsopt.c; sourceTree = "<group>"; };
+		D6AF0DEF0D2A70A489B1F2B7 /* inffast.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = inffast.c; sourceTree = "<group>"; };
+		D7F11F35EC0E397C940BDDA4 /* agg_conv_stroke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_conv_stroke.h; sourceTree = "<group>"; };
+		D7F5EA225A9F29204A3B7C1F /* fpdfapi_jcmainct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcmainct.c; sourceTree = "<group>"; };
+		D896E55C60A209AC9B301D2F /* agg_vcgen_stroke.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = agg_vcgen_stroke.cpp; sourceTree = "<group>"; };
+		DB7347702B250793C4F1AD68 /* cdjpeg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cdjpeg.h; sourceTree = "<group>"; };
+		DBE1F4C81E15F4369DECD369 /* psmodule.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = psmodule.c; sourceTree = "<group>"; };
+		DC96A4F00D7D01536BB09DE3 /* standalone.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = standalone.gypi; path = ../build/standalone.gypi; sourceTree = "<group>"; };
+		DDA3A0D7B41CDBAB955DC6D9 /* cmsplugin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsplugin.c; sourceTree = "<group>"; };
+		DDB7D603968E4F2B7DC1E19B /* fpdfapi_jcprepct.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcprepct.c; sourceTree = "<group>"; };
+		DE62CD97FC5ADBC4620F8823 /* infback.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = infback.c; sourceTree = "<group>"; };
+		DF5AEFFA6029293C340A631D /* type1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = type1.c; sourceTree = "<group>"; };
+		DF7C508414FC83AD5375954A /* gzlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gzlib.c; sourceTree = "<group>"; };
+		DFF51968A84398C18212DCD3 /* fpdfapi_jdmarker.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jdmarker.c; sourceTree = "<group>"; };
+		E6B43BA68825FF96585E6940 /* jmorecfg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
+		E751105867B0EBEC29B06AAD /* libfx_lcms2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfx_lcms2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B37585AB167E448A1CFE66 /* fpdfapi_jcmaster.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jcmaster.c; sourceTree = "<group>"; };
+		EACFEBDF051C339AE0C19B0B /* mqc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mqc.c; sourceTree = "<group>"; };
+		ECD4AAED675CD00291E93939 /* tgt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tgt.c; sourceTree = "<group>"; };
+		EDE84C40303C2A434F273EF1 /* BigInteger.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BigInteger.cc; sourceTree = "<group>"; };
+		EF09E850996B85D3BEB29434 /* fpdfapi_jmemnobs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jmemnobs.c; sourceTree = "<group>"; };
+		EF30C5208EE41B76C38C1A8A /* fpdfapi_jddctmgr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fpdfapi_jddctmgr.c; sourceTree = "<group>"; };
+		F0AF7BBCC760F86555319626 /* agg_curves.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_curves.h; sourceTree = "<group>"; };
+		F42A3125493C652661B0E528 /* cmswtpnt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmswtpnt.c; sourceTree = "<group>"; };
+		F5D6E1540862549958865794 /* ftlcdfil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ftlcdfil.c; sourceTree = "<group>"; };
+		F67ED1274638407D9008360D /* cmsio0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmsio0.c; sourceTree = "<group>"; };
+		F6B3E4A3D8353A3E470A3E22 /* agg_vcgen_dash.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = agg_vcgen_dash.cpp; sourceTree = "<group>"; };
+		F7AE0061FACB6B6975C25D37 /* libfreetype.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfreetype.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80691B307A0151D2EB9EAF9 /* agg_clip_liang_barsky.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_clip_liang_barsky.h; sourceTree = "<group>"; };
+		F80C9FED88D64458B169AA14 /* agg_scanline_u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_scanline_u.h; sourceTree = "<group>"; };
+		FAD456DA2CCBF4E375E5302A /* agg_rasterizer_scanline_aa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = agg_rasterizer_scanline_aa.h; sourceTree = "<group>"; };
+		FAEB8757873A838D93761341 /* jmemsys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jmemsys.h; sourceTree = "<group>"; };
+		FCF62FE19C1729FD99A7798F /* safe_math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safe_math.h; sourceTree = "<group>"; };
+		FDCCCE773FB50EBDE38187B8 /* opj_clock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = opj_clock.c; sourceTree = "<group>"; };
+		FE004994793FC7984ACAB76E /* raw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = raw.c; sourceTree = "<group>"; };
+		FF459F88B900420811688550 /* deflate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deflate.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A8FFB8F56FAF4B82E179B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B6A623E4597873899A40028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98D7F44E18FEC1C698615A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AC3FF48299C886F7C643B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF65F4DB4D571C0D1AB95FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4206AA0DD00CE1708A4BBE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC501175471526A4CD7E0CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		070C1A10F4ECFD406EC6CAFE /* smooth */ = {
+			isa = PBXGroup;
+			children = (
+				14097481EBC85FE9C8E8C45F /* smooth.c */,
+			);
+			path = smooth;
+			sourceTree = "<group>";
+		};
+		0D7657991E0269D9E618BB32 = {
+			isa = PBXGroup;
+			children = (
+				9D17F48099BD50A2D25CD07B /* Source */,
+				F6A7368038800A2D695765AE /* Products */,
+				7A1C9F49FF82B74AE7D34C4B /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		1D16CB9A970CA61C4D0552B8 /* zlib_v128 */ = {
+			isa = PBXGroup;
+			children = (
+				B766745749F9D53396BAFF7C /* adler32.c */,
+				076BBBFD07AF94F8E101F127 /* compress.c */,
+				8B586ACD1490CD247864FD0C /* crc32.c */,
+				FF459F88B900420811688550 /* deflate.c */,
+				C759330610D5128BAE768C98 /* gzclose.c */,
+				DF7C508414FC83AD5375954A /* gzlib.c */,
+				0A8B2995B94CB150597339BF /* gzread.c */,
+				08568BE671FA57514BF789FC /* gzwrite.c */,
+				DE62CD97FC5ADBC4620F8823 /* infback.c */,
+				D6AF0DEF0D2A70A489B1F2B7 /* inffast.c */,
+				AEAD3109AF09770722DBB012 /* inflate.c */,
+				813ED29598A97B225E9A6427 /* inftrees.c */,
+				8EB40E6127CE692324EBBD77 /* trees.c */,
+				BE0DB42F54AE020F488DD700 /* uncompr.c */,
+				0172B61FCC50EC839DE522C0 /* zutil.c */,
+			);
+			path = zlib_v128;
+			sourceTree = "<group>";
+		};
+		2391936EC454BE6F925FCEB4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C8C6F5FB95A994246CC4DBA2 /* lcms2.h */,
+				6ED33A7B6C0DF2FA9D20473B /* lcms2_plugin.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3B1B011368457F63ABC274C9 /* numerics */ = {
+			isa = PBXGroup;
+			children = (
+				801DFABFE4CDB62B83589F19 /* safe_conversions.h */,
+				D5E63FAE35779486568C72E2 /* safe_conversions_impl.h */,
+				FCF62FE19C1729FD99A7798F /* safe_math.h */,
+				715D09F272D8FF5AC79B41D3 /* safe_math_impl.h */,
+			);
+			path = numerics;
+			sourceTree = "<group>";
+		};
+		490B7729E7B2879C6AF2FFF0 /* sfnt */ = {
+			isa = PBXGroup;
+			children = (
+				BADF0BAC05B39CC28F6169FC /* sfnt.c */,
+			);
+			path = sfnt;
+			sourceTree = "<group>";
+		};
+		6464C367737E0904C2EA3974 /* libjpeg */ = {
+			isa = PBXGroup;
+			children = (
+				5FE17EA8042CB54D7BB9749D /* cderror.h */,
+				DB7347702B250793C4F1AD68 /* cdjpeg.h */,
+				9EAE317C34914FC276469D57 /* fpdfapi_jcapimin.c */,
+				025615AA26940222AC055FBC /* fpdfapi_jcapistd.c */,
+				55E3B97B70144D2F4BC982B2 /* fpdfapi_jccoefct.c */,
+				959E66A1D63972583496B61A /* fpdfapi_jccolor.c */,
+				CF074DCB04D6779F31AD372B /* fpdfapi_jcdctmgr.c */,
+				A89F6EDF3613B589AC202A61 /* fpdfapi_jchuff.c */,
+				70F833E9A8440EBBC0096FDC /* fpdfapi_jcinit.c */,
+				D7F5EA225A9F29204A3B7C1F /* fpdfapi_jcmainct.c */,
+				C21E08C47B8EAE5CB5C74DC1 /* fpdfapi_jcmarker.c */,
+				E9B37585AB167E448A1CFE66 /* fpdfapi_jcmaster.c */,
+				279441C8621B9FE976FD7446 /* fpdfapi_jcomapi.c */,
+				8393F095F3C62AC8CD5946A5 /* fpdfapi_jcparam.c */,
+				3FFB2BDF8E0BA705EA4CA00E /* fpdfapi_jcphuff.c */,
+				DDB7D603968E4F2B7DC1E19B /* fpdfapi_jcprepct.c */,
+				11F0E9CA17E9D2882A3B347C /* fpdfapi_jcsample.c */,
+				D4B9E9FEE2EE5CDEF7871D7B /* fpdfapi_jctrans.c */,
+				45A72F36E5846EABCCFBB754 /* fpdfapi_jdapimin.c */,
+				17F2769F1E0B5BD302B68C91 /* fpdfapi_jdapistd.c */,
+				0D12464BC23B5C227A6ECCBB /* fpdfapi_jdcoefct.c */,
+				069D24CA10A62424E79934B2 /* fpdfapi_jdcolor.c */,
+				EF30C5208EE41B76C38C1A8A /* fpdfapi_jddctmgr.c */,
+				6F4BBCCA3136ECD28EADB022 /* fpdfapi_jdhuff.c */,
+				CA8697E65723A501DEC6B560 /* fpdfapi_jdinput.c */,
+				87A13E249A26C212437427EB /* fpdfapi_jdmainct.c */,
+				DFF51968A84398C18212DCD3 /* fpdfapi_jdmarker.c */,
+				A1CFD83E9C0065FB750AE02F /* fpdfapi_jdmaster.c */,
+				51D0FB34F91CE7ECE013983A /* fpdfapi_jdmerge.c */,
+				5A09D39B6345562239FC6337 /* fpdfapi_jdphuff.c */,
+				04FB6D55ADB088F3766AEC33 /* fpdfapi_jdpostct.c */,
+				A2C8F96FF780C036AE27227F /* fpdfapi_jdsample.c */,
+				4D4A7D82FA53ED05B9B69FB1 /* fpdfapi_jdtrans.c */,
+				991B3EDFDB118621A68A0A14 /* fpdfapi_jerror.c */,
+				5FEA1BF8A06AD166E6092A5D /* fpdfapi_jfdctfst.c */,
+				3E9A963333EC61B4F0841A02 /* fpdfapi_jfdctint.c */,
+				8B782810D51FBD0968FCBC75 /* fpdfapi_jidctfst.c */,
+				4550785D51E7EC7AAF02CB1D /* fpdfapi_jidctint.c */,
+				6E761A49AB16D1198125304D /* fpdfapi_jidctred.c */,
+				962976525727ACEBF56459D3 /* fpdfapi_jmemmgr.c */,
+				EF09E850996B85D3BEB29434 /* fpdfapi_jmemnobs.c */,
+				BEE1A3F8108EDAF963D00468 /* fpdfapi_jutils.c */,
+				A86874E1C4466C70BD04EEC0 /* jchuff.h */,
+				0843EB9EBED727C4EB81BE4D /* jconfig.h */,
+				AF65920D10D829B59175203F /* jdct.h */,
+				9ABDB8C4EA72797AF93F9F2C /* jdhuff.h */,
+				5AB483CB22E20830990D8BE4 /* jerror.h */,
+				B5C0FACE9BD824068FED150E /* jinclude.h */,
+				FAEB8757873A838D93761341 /* jmemsys.h */,
+				E6B43BA68825FF96585E6940 /* jmorecfg.h */,
+				0CA39659AD96DAA3DE6528B3 /* jpegint.h */,
+				2627D6B64EB812560CF855CB /* jpeglib.h */,
+				54CBAB860258083EB35EBDDE /* jversion.h */,
+				0D95F86223F06F4F6C90726D /* transupp.h */,
+			);
+			path = libjpeg;
+			sourceTree = "<group>";
+		};
+		6862C53EC539EC463A3F7EB8 /* psaux */ = {
+			isa = PBXGroup;
+			children = (
+				B417E5A135FA56F53AAF62A2 /* psaux.c */,
+			);
+			path = psaux;
+			sourceTree = "<group>";
+		};
+		6A410E255D06DB908DD75F60 /* raster */ = {
+			isa = PBXGroup;
+			children = (
+				68E49664AA848856161B92EC /* raster.c */,
+			);
+			path = raster;
+			sourceTree = "<group>";
+		};
+		70C145F9F5282ED3F84BB138 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FE2AB7B12D2941C737CF3697 /* base */,
+				E58A3CF5AD9FD16D44DCFF2A /* cff */,
+				90C4F3F7CD4CD2A6BA5E1C8A /* cid */,
+				6862C53EC539EC463A3F7EB8 /* psaux */,
+				735F829BB0749D90D0849CAA /* pshinter */,
+				921D1258CE6FB24B87CA6C50 /* psnames */,
+				6A410E255D06DB908DD75F60 /* raster */,
+				490B7729E7B2879C6AF2FFF0 /* sfnt */,
+				070C1A10F4ECFD406EC6CAFE /* smooth */,
+				AC002C8570DB285704298683 /* truetype */,
+				D680250E77B01608A50B6B0D /* type1 */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		735F829BB0749D90D0849CAA /* pshinter */ = {
+			isa = PBXGroup;
+			children = (
+				36B2BA876CA0F3C485ECF0C2 /* pshinter.c */,
+			);
+			path = pshinter;
+			sourceTree = "<group>";
+		};
+		756E5BB535497A02ADCFAA68 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8AE84E9F00C3BB2D96F8CEC9 /* internal */,
+				0C8C504BDD1542597B2E3FDC /* freetype.h */,
+				C72B8B82EB3F37113B2BB1EF /* ft2build.h */,
+				4800D143B8E69D58D0FFACB9 /* ftmm.h */,
+				ABAFDC99B311E4ABB32EFFA9 /* ftotval.h */,
+				D5F9EEBC69431298024C8320 /* ftoutln.h */,
+				1717797C137F7879D68DFFB4 /* tttables.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		7A1C9F49FF82B74AE7D34C4B /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				DC96A4F00D7D01536BB09DE3 /* standalone.gypi */,
+				3F22BF6E81572236F099BFF9 /* third_party.gyp */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		845623FAD8E2E7D1CCE41EC2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				07872D67DEA0A5E04E29F213 /* cmscam02.c */,
+				CD788E744DA96729AEA5CCB7 /* cmscgats.c */,
+				9F816A54CAA0D4D41EBCD637 /* cmscnvrt.c */,
+				A4350902D2B3C19C7147BA91 /* cmserr.c */,
+				021A819E32E1CADE54DA3BAA /* cmsgamma.c */,
+				06BD43B351B5D322D4F3D635 /* cmsgmt.c */,
+				008EECAE4D0AE599447241B3 /* cmshalf.c */,
+				1DF0F5C87C296F8EF26C4578 /* cmsintrp.c */,
+				F67ED1274638407D9008360D /* cmsio0.c */,
+				3C0882E5820C758D419B64E1 /* cmsio1.c */,
+				69112444EF92792732527381 /* cmslut.c */,
+				715E480951ABC1FF1D083DE7 /* cmsmd5.c */,
+				1166ACE2A10D9AE8FCC0B28E /* cmsmtrx.c */,
+				771DAE8E2718A8ED5A474D99 /* cmsnamed.c */,
+				D631C46B882D7888359659E6 /* cmsopt.c */,
+				A5391BFA8046E33AF8597B61 /* cmspack.c */,
+				40F73D2839F13A266004615A /* cmspcs.c */,
+				DDA3A0D7B41CDBAB955DC6D9 /* cmsplugin.c */,
+				29187C6FB1FB6E15DD719F38 /* cmsps2.c */,
+				3789952396218E0BE680B0DF /* cmssamp.c */,
+				9BCB1369DD69E59261295BB0 /* cmssm.c */,
+				79978E0E87572097C5F49FE7 /* cmstypes.c */,
+				7CF7FADF6C7EE9DCF2D4DEF4 /* cmsvirt.c */,
+				F42A3125493C652661B0E528 /* cmswtpnt.c */,
+				0F3D075D6C5FFAD6166AEFC4 /* cmsxform.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		87C64CAAFE2456DE64FE33F5 /* bigint */ = {
+			isa = PBXGroup;
+			children = (
+				EDE84C40303C2A434F273EF1 /* BigInteger.cc */,
+				68CEBAF152F88B183299E7E1 /* BigInteger.hh */,
+				8BFA800CCBE6A907319B5D8B /* BigIntegerLibrary.hh */,
+				2E8F4C27AC23B615D799DAE7 /* BigIntegerUtils.cc */,
+				692A834257306DD04CED1393 /* BigIntegerUtils.hh */,
+				3298AC04DE4EB0F381D60BF8 /* BigUnsigned.cc */,
+				C3AE4BA568EC5CF5A48CC3FA /* BigUnsigned.hh */,
+				99E34AAF857D5321BED9AB03 /* BigUnsignedInABase.cc */,
+				B7B6AA1D658B3C164726536B /* BigUnsignedInABase.hh */,
+				A4D6FB13F50B07BDA9CA22E0 /* NumberlikeArray.hh */,
+			);
+			path = bigint;
+			sourceTree = "<group>";
+		};
+		8AE84E9F00C3BB2D96F8CEC9 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				28FB7F0C0693A5F91257848D /* ftobjs.h */,
+				462D6F7E5DB77C3E97F81DF3 /* ftstream.h */,
+				7262964172D0CAB7F055974A /* tttypes.h */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		90C4F3F7CD4CD2A6BA5E1C8A /* cid */ = {
+			isa = PBXGroup;
+			children = (
+				87F9C82C3C6902346BCA1E2C /* type1cid.c */,
+			);
+			path = cid;
+			sourceTree = "<group>";
+		};
+		921D1258CE6FB24B87CA6C50 /* psnames */ = {
+			isa = PBXGroup;
+			children = (
+				DBE1F4C81E15F4369DECD369 /* psmodule.c */,
+			);
+			path = psnames;
+			sourceTree = "<group>";
+		};
+		9D17F48099BD50A2D25CD07B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FD6ACC5D01B6D671E26AFB76 /* agg23 */,
+				9DF88A14B5B8B6C5474F4297 /* base */,
+				87C64CAAFE2456DE64FE33F5 /* bigint */,
+				CED284083A98BDE30C0BE5BA /* freetype */,
+				F4DDE76C4FF47C5C1384200B /* lcms2-2.6 */,
+				6464C367737E0904C2EA3974 /* libjpeg */,
+				ED7A32C48FD5081436CE1BFE /* libopenjpeg20 */,
+				1D16CB9A970CA61C4D0552B8 /* zlib_v128 */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		9DF88A14B5B8B6C5474F4297 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				3B1B011368457F63ABC274C9 /* numerics */,
+				94E9E8B078EF5B3518BB1F5F /* logging.h */,
+				B9DCAF9532481F640EA70E08 /* macros.h */,
+				48278CB86D06D28327D1B31F /* nonstd_unique_ptr.h */,
+				259F3CEBAB0F154CD0045AD0 /* template_util.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		AC002C8570DB285704298683 /* truetype */ = {
+			isa = PBXGroup;
+			children = (
+				2FE762ABAD4CD4BB2DA12DFF /* truetype.c */,
+			);
+			path = truetype;
+			sourceTree = "<group>";
+		};
+		CED284083A98BDE30C0BE5BA /* freetype */ = {
+			isa = PBXGroup;
+			children = (
+				756E5BB535497A02ADCFAA68 /* include */,
+				70C145F9F5282ED3F84BB138 /* src */,
+			);
+			path = freetype;
+			sourceTree = "<group>";
+		};
+		D680250E77B01608A50B6B0D /* type1 */ = {
+			isa = PBXGroup;
+			children = (
+				DF5AEFFA6029293C340A631D /* type1.c */,
+			);
+			path = type1;
+			sourceTree = "<group>";
+		};
+		E58A3CF5AD9FD16D44DCFF2A /* cff */ = {
+			isa = PBXGroup;
+			children = (
+				99DC7D98376CC567CC96A5AE /* cff.c */,
+				62211DBD9F10BD184FDABA4A /* cffobjs.h */,
+				2976372EE4A24205025AD3A1 /* cfftypes.h */,
+			);
+			path = cff;
+			sourceTree = "<group>";
+		};
+		ED7A32C48FD5081436CE1BFE /* libopenjpeg20 */ = {
+			isa = PBXGroup;
+			children = (
+				C329E87F814AFA96565AF104 /* bio.c */,
+				2ED934ECD5547340EBFACEC3 /* cio.c */,
+				767C757A8C286C18D1435C34 /* dwt.c */,
+				172E01BC91F9D1568F3D2B19 /* event.c */,
+				4D5CC5D744FAD53BD667E111 /* function_list.c */,
+				4B5D8E563BA03A9F93CFA0BC /* image.c */,
+				4B6D04E429D0AA935950099C /* invert.c */,
+				D08D12CF7C5A773A15C07073 /* j2k.c */,
+				9233B2F4D3ECB25DBA281104 /* jp2.c */,
+				1FC57A8C8C7BDBAB29ECB6CD /* mct.c */,
+				EACFEBDF051C339AE0C19B0B /* mqc.c */,
+				176DAC95D7D2443D848BE716 /* openjpeg.c */,
+				FDCCCE773FB50EBDE38187B8 /* opj_clock.c */,
+				530C3B58DF560716696DD69C /* pi.c */,
+				FE004994793FC7984ACAB76E /* raw.c */,
+				B081CF9996CC02683F559569 /* t1.c */,
+				3205C725C45325D6490D23A9 /* t2.c */,
+				4B074DDF1D046924E3A2E0C1 /* tcd.c */,
+				ECD4AAED675CD00291E93939 /* tgt.c */,
+			);
+			path = libopenjpeg20;
+			sourceTree = "<group>";
+		};
+		F4DDE76C4FF47C5C1384200B /* lcms2-2.6 */ = {
+			isa = PBXGroup;
+			children = (
+				2391936EC454BE6F925FCEB4 /* include */,
+				845623FAD8E2E7D1CCE41EC2 /* src */,
+			);
+			path = "lcms2-2.6";
+			sourceTree = "<group>";
+		};
+		F6A7368038800A2D695765AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				908373F5C1D662B3A1E5613E /* libbigint.a */,
+				F7AE0061FACB6B6975C25D37 /* libfreetype.a */,
+				BB0497ABD7A52FEC5C493F4C /* libfx_agg.a */,
+				E751105867B0EBEC29B06AAD /* libfx_lcms2.a */,
+				785C8C444EF37093699DB865 /* libfx_libjpeg.a */,
+				A201E04B72260DC19E452DFA /* libfx_libopenjpeg.a */,
+				6403B35B867FB608C629D357 /* libfx_zlib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD6ACC5D01B6D671E26AFB76 /* agg23 */ = {
+			isa = PBXGroup;
+			children = (
+				66BE433B3C2076999D095BD6 /* agg_basics.h */,
+				F80691B307A0151D2EB9EAF9 /* agg_clip_liang_barsky.h */,
+				0C4B7BB737625A05B261A531 /* agg_conv_dash.h */,
+				D7F11F35EC0E397C940BDDA4 /* agg_conv_stroke.h */,
+				A3B0109B1030AB2F4A0BCF1F /* agg_curves.cpp */,
+				F0AF7BBCC760F86555319626 /* agg_curves.h */,
+				82DAAC41B7A3BD8BC62120C3 /* agg_path_storage.cpp */,
+				3C408F0A92F1870287500640 /* agg_path_storage.h */,
+				C88244A1E83E4DAC57BE64A7 /* agg_rasterizer_scanline_aa.cpp */,
+				FAD456DA2CCBF4E375E5302A /* agg_rasterizer_scanline_aa.h */,
+				D500FABA12E431D459076024 /* agg_renderer_scanline.h */,
+				B2D916C9E0A1C6413573000D /* agg_rendering_buffer.h */,
+				F80C9FED88D64458B169AA14 /* agg_scanline_u.h */,
+				F6B3E4A3D8353A3E470A3E22 /* agg_vcgen_dash.cpp */,
+				D896E55C60A209AC9B301D2F /* agg_vcgen_stroke.cpp */,
+			);
+			path = agg23;
+			sourceTree = "<group>";
+		};
+		FE2AB7B12D2941C737CF3697 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				7C42650F953AF0804B2CBC73 /* ftbase.c */,
+				A8F5647633CC05403580C0BD /* ftbitmap.c */,
+				3D70182056F592F61A7B03E7 /* ftglyph.c */,
+				14E06E4EF837C0EE098406DB /* ftinit.c */,
+				F5D6E1540862549958865794 /* ftlcdfil.c */,
+				16177232DE43A3B0E7968086 /* ftmm.c */,
+				3ACDA55F974BF951C093B146 /* ftsystem.c */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AB4318A9796D284145943CE /* fx_libjpeg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4C6CC7AB8B48C0A0FB573E6 /* Build configuration list for PBXNativeTarget "fx_libjpeg" */;
+			buildPhases = (
+				772D19A64CFBC2A7D7013A6B /* Sources */,
+				0A8FFB8F56FAF4B82E179B0D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fx_libjpeg;
+			productName = fx_libjpeg;
+			productReference = 785C8C444EF37093699DB865 /* libfx_libjpeg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0CD94E557B684794AEA50708 /* fx_libopenjpeg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479762EFC21368D1E40844EC /* Build configuration list for PBXNativeTarget "fx_libopenjpeg" */;
+			buildPhases = (
+				BE406F9876C296118DE75AD0 /* Sources */,
+				D4206AA0DD00CE1708A4BBE0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fx_libopenjpeg;
+			productName = fx_libopenjpeg;
+			productReference = A201E04B72260DC19E452DFA /* libfx_libopenjpeg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4784E06A4293E56767C38DB1 /* freetype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A69C438F553C9C5F52319E6 /* Build configuration list for PBXNativeTarget "freetype" */;
+			buildPhases = (
+				5A718875741DB789B42E69D3 /* Sources */,
+				9A1AC3FF48299C886F7C643B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = freetype;
+			productName = freetype;
+			productReference = F7AE0061FACB6B6975C25D37 /* libfreetype.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		831B0161EAA4793E79F1F237 /* fx_agg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66C1AA1DA23447F6C09CA9CD /* Build configuration list for PBXNativeTarget "fx_agg" */;
+			buildPhases = (
+				FAF6CCF340C7D3748657C26D /* Sources */,
+				CF65F4DB4D571C0D1AB95FEC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fx_agg;
+			productName = fx_agg;
+			productReference = BB0497ABD7A52FEC5C493F4C /* libfx_agg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A87BBA27AD105AC3B36DEDAF /* bigint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20FFAC66FF6F8D9751E1AD20 /* Build configuration list for PBXNativeTarget "bigint" */;
+			buildPhases = (
+				8FC30B291F9BBE3F58786214 /* Sources */,
+				5B6A623E4597873899A40028 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bigint;
+			productName = bigint;
+			productReference = 908373F5C1D662B3A1E5613E /* libbigint.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C94B0904B26820DAFBF21994 /* fx_lcms2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C77E32414A4140AF4E537683 /* Build configuration list for PBXNativeTarget "fx_lcms2" */;
+			buildPhases = (
+				21A2BAFFAA2ED94200C4B61C /* Sources */,
+				98D7F44E18FEC1C698615A74 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fx_lcms2;
+			productName = fx_lcms2;
+			productReference = E751105867B0EBEC29B06AAD /* libfx_lcms2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7DE9E3184A28C4186199358 /* fx_zlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 162769F80095DED1C691C70C /* Build configuration list for PBXNativeTarget "fx_zlib" */;
+			buildPhases = (
+				4C7BC0D0379EA2C16E5A945E /* Sources */,
+				FC501175471526A4CD7E0CC0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fx_zlib;
+			productName = fx_zlib;
+			productReference = 6403B35B867FB608C629D357 /* libfx_zlib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED38BA4BD4F431D874B24B00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 12889F3C6BACA1A326F8A2BB /* Build configuration list for PBXProject "third_party" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 0D7657991E0269D9E618BB32;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2599CB813E1063FFA56A8F8 /* All */,
+				A87BBA27AD105AC3B36DEDAF /* bigint */,
+				4784E06A4293E56767C38DB1 /* freetype */,
+				831B0161EAA4793E79F1F237 /* fx_agg */,
+				C94B0904B26820DAFBF21994 /* fx_lcms2 */,
+				0AB4318A9796D284145943CE /* fx_libjpeg */,
+				0CD94E557B684794AEA50708 /* fx_libopenjpeg */,
+				D7DE9E3184A28C4186199358 /* fx_zlib */,
+				646ED769D534781766BFE1FE /* pdfium_base */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21A2BAFFAA2ED94200C4B61C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B23FCB5C51A8600C7A5771CA /* cmscam02.c in Sources */,
+				36EC907E5ABF4EA3A38A7241 /* cmscgats.c in Sources */,
+				42BD04B3FE7310AC6E348E6C /* cmscnvrt.c in Sources */,
+				341DFB6A3322BE72123601C9 /* cmserr.c in Sources */,
+				AFAA1B7B8981BDA72A76E001 /* cmsgamma.c in Sources */,
+				57DE47A99D7D0287CDF864B7 /* cmsgmt.c in Sources */,
+				16991AC7014BA78C363A9C65 /* cmshalf.c in Sources */,
+				523D381AFF2A3394A2ECC3A6 /* cmsintrp.c in Sources */,
+				4189A8A8F7A40FDD89E742B7 /* cmsio0.c in Sources */,
+				609BE830026034F9E9764722 /* cmsio1.c in Sources */,
+				7AF4274E45D228EF33CDA520 /* cmslut.c in Sources */,
+				180EAEA89FDADA43C6749BD3 /* cmsmd5.c in Sources */,
+				62B6AB1F44E57D0104D244EE /* cmsmtrx.c in Sources */,
+				8DDA42F6F548030427148105 /* cmsnamed.c in Sources */,
+				7B91C67C1E18A25B9A99D179 /* cmsopt.c in Sources */,
+				65D9D148C502330C5421A492 /* cmspack.c in Sources */,
+				24663438903801F7ECA8D895 /* cmspcs.c in Sources */,
+				8C114FBDAA2999BEB1476F8E /* cmsplugin.c in Sources */,
+				70246F5CD41E38DEA682810B /* cmsps2.c in Sources */,
+				CC6093D544EAD2C54A5419BB /* cmssamp.c in Sources */,
+				13FC8B8CEAB4E167F88FE4C3 /* cmssm.c in Sources */,
+				D4F380A92099EE524BD775C4 /* cmstypes.c in Sources */,
+				1BD2FDB1359585FE21229518 /* cmsvirt.c in Sources */,
+				FC817AFDBBE4EBEA4632455C /* cmswtpnt.c in Sources */,
+				358D7ADA2BC63A96F9701F19 /* cmsxform.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C7BC0D0379EA2C16E5A945E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D498C39A09ABD5FAE825DCD0 /* adler32.c in Sources */,
+				5AA9A8EE8B66FA621121DC01 /* compress.c in Sources */,
+				54F2DD2CF9C6900F2360F537 /* crc32.c in Sources */,
+				079B4E67866F90F15751803C /* deflate.c in Sources */,
+				7FDD981F71F1F507994959AD /* gzclose.c in Sources */,
+				1308320E03C3AE36DB069A59 /* gzlib.c in Sources */,
+				CEC6B05F22D8590FAA938AF3 /* gzread.c in Sources */,
+				1A479E23D7ABA44F7B4E03ED /* gzwrite.c in Sources */,
+				46A19CC889BB8C990901A17B /* infback.c in Sources */,
+				2202E0A8943F733C05490BD6 /* inffast.c in Sources */,
+				17D731EF581CD101ED54185D /* inflate.c in Sources */,
+				C7B0B8C5A75F8AF63B508EDA /* inftrees.c in Sources */,
+				07E1AD09167A8463DAC3009E /* trees.c in Sources */,
+				0255EA3F356D0924695B37C1 /* uncompr.c in Sources */,
+				EAE943ED7D90B997D8AF6BCD /* zutil.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A718875741DB789B42E69D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71896BA16A5D397C99ABEC82 /* cff.c in Sources */,
+				F31C1AFFA798F2741913D51C /* ftbase.c in Sources */,
+				7FDE6CD2F8C5424A4B41C5C8 /* ftbitmap.c in Sources */,
+				4A232A1ADFFBA8A4F63BE83C /* ftglyph.c in Sources */,
+				D2197AF44C78BB56C31E9989 /* ftinit.c in Sources */,
+				42B2D93C540218D34E9CEA43 /* ftlcdfil.c in Sources */,
+				13DE4DCB056B1320163E5DB8 /* ftmm.c in Sources */,
+				FFDBD4213F6C3CFA5BF660FA /* ftsystem.c in Sources */,
+				F22186084FAC14B929B230B8 /* psaux.c in Sources */,
+				376CAC7C812B6D10F29BAB15 /* pshinter.c in Sources */,
+				543F61C42116E613AC23D6D0 /* psmodule.c in Sources */,
+				356AF686B2C3E7CA35A74508 /* raster.c in Sources */,
+				3C95DF8C543E36C91560B43F /* sfnt.c in Sources */,
+				B4EF261F719714F7026D33D3 /* smooth.c in Sources */,
+				4FBFA2CD65E99A2D761070AB /* truetype.c in Sources */,
+				039E08A7F319DD8667DD8D5A /* type1.c in Sources */,
+				7F18BFBCAF3081370BA6A467 /* type1cid.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		772D19A64CFBC2A7D7013A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02AECCCB160F02B55796664 /* fpdfapi_jcapimin.c in Sources */,
+				CE6C622813780E1A9A52CD1A /* fpdfapi_jcapistd.c in Sources */,
+				7260EF7EC92B9D95FBD8928A /* fpdfapi_jccoefct.c in Sources */,
+				76E128C29BFAEC8670A2823A /* fpdfapi_jccolor.c in Sources */,
+				BCC4459BE9D6F0F4142EA98C /* fpdfapi_jcdctmgr.c in Sources */,
+				F7E10D43AC845B18D4EE1BD6 /* fpdfapi_jchuff.c in Sources */,
+				5E6A39F22EDE0FEAE227A68E /* fpdfapi_jcinit.c in Sources */,
+				03B1CBB3118E9037B92F3847 /* fpdfapi_jcmainct.c in Sources */,
+				F6F4E4D794E942456CD36177 /* fpdfapi_jcmarker.c in Sources */,
+				3933EB7C66600DACEFEC2D6E /* fpdfapi_jcmaster.c in Sources */,
+				1B446829CA7F10F4CF4A9F38 /* fpdfapi_jcomapi.c in Sources */,
+				F3DB4B5591D87A0B528F7E8F /* fpdfapi_jcparam.c in Sources */,
+				8B70E9F2EF727EEB9DB6AFBE /* fpdfapi_jcphuff.c in Sources */,
+				D31439EA3EE5521BCB3146A5 /* fpdfapi_jcprepct.c in Sources */,
+				28EBCB3364D89832C9E79D58 /* fpdfapi_jcsample.c in Sources */,
+				838024E0AC697CF5EF52968A /* fpdfapi_jctrans.c in Sources */,
+				05F7DF6617FB22CC2430C774 /* fpdfapi_jdapimin.c in Sources */,
+				525CC5461FD0EF4EF3EC6E46 /* fpdfapi_jdapistd.c in Sources */,
+				03628FBD524C5953459C003D /* fpdfapi_jdcoefct.c in Sources */,
+				4D7A025E9CCDF56D20890105 /* fpdfapi_jdcolor.c in Sources */,
+				4E78A64759FEB288593AFD5F /* fpdfapi_jddctmgr.c in Sources */,
+				3E215C1C953855805FB6FD1F /* fpdfapi_jdhuff.c in Sources */,
+				629D294B610491108172FCFA /* fpdfapi_jdinput.c in Sources */,
+				2D90E1A31D515A2BA6915E41 /* fpdfapi_jdmainct.c in Sources */,
+				749305F39AF75BC17B5D2504 /* fpdfapi_jdmarker.c in Sources */,
+				B04A58FA6647A9A8784FC55A /* fpdfapi_jdmaster.c in Sources */,
+				37B8E1FFDC400C9BAEE366F8 /* fpdfapi_jdmerge.c in Sources */,
+				B83D1BA6A934DDE2DE5A697E /* fpdfapi_jdphuff.c in Sources */,
+				ADE0DD93376A62F881A29356 /* fpdfapi_jdpostct.c in Sources */,
+				A2878324B77237E91896B9C0 /* fpdfapi_jdsample.c in Sources */,
+				A433F21577550EB908E30D57 /* fpdfapi_jdtrans.c in Sources */,
+				33E6A5C85E3377AE2436C0F1 /* fpdfapi_jerror.c in Sources */,
+				504D579FF6F0D61F3F8E7CE8 /* fpdfapi_jfdctfst.c in Sources */,
+				15392A5908FE94D2B340B3C5 /* fpdfapi_jfdctint.c in Sources */,
+				1A2DD894A53F56316BE9CE66 /* fpdfapi_jidctfst.c in Sources */,
+				D57B0898249CCE762622D14D /* fpdfapi_jidctint.c in Sources */,
+				695ECC5D9931E61056F562CD /* fpdfapi_jidctred.c in Sources */,
+				BB71F2B1F1E04975DCD70C36 /* fpdfapi_jmemmgr.c in Sources */,
+				5FD4301A8E5E1584958ECA75 /* fpdfapi_jmemnobs.c in Sources */,
+				721E8744C37DEA0C968246C6 /* fpdfapi_jutils.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC30B291F9BBE3F58786214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8421328F35CFD1AE3D719107 /* BigInteger.cc in Sources */,
+				6FF306E0847CE979C2F76635 /* BigIntegerUtils.cc in Sources */,
+				2408BFF0239AD8DFCA56C25D /* BigUnsigned.cc in Sources */,
+				E0094E24356FD64DCDE6D4B9 /* BigUnsignedInABase.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE406F9876C296118DE75AD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C837A9021445FEF088621975 /* bio.c in Sources */,
+				83ED38B507EF75779596F090 /* cio.c in Sources */,
+				38F00DC89CF2BD93193A7E0C /* dwt.c in Sources */,
+				3AF6FBAF065D3450A7D8261D /* event.c in Sources */,
+				74845AF408194AE34752273E /* function_list.c in Sources */,
+				260FB852EE448AD533C679A0 /* image.c in Sources */,
+				E3E931F96CD240F8B4A7DF10 /* invert.c in Sources */,
+				01581F72544E06067D9FDB55 /* j2k.c in Sources */,
+				E7D419252C17C7600FC9E4F2 /* jp2.c in Sources */,
+				523F56EFC6DB6EB3303CBE1D /* mct.c in Sources */,
+				B80E28B0213EFD9DA628DBEC /* mqc.c in Sources */,
+				FB4C48D78032D1F09C42569F /* openjpeg.c in Sources */,
+				5E979531B3B77EBC032DEDFD /* opj_clock.c in Sources */,
+				3B9BEBD899C7310590C11E4C /* pi.c in Sources */,
+				CEA4534246B8DFD5654A597B /* raw.c in Sources */,
+				CF9B4F11AC889924E7853703 /* t1.c in Sources */,
+				D53375985B8790C0613C46C0 /* t2.c in Sources */,
+				DD9F95261BCADD88DCFDD203 /* tcd.c in Sources */,
+				B16BAFC59BAB404B5F903B2C /* tgt.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF6CCF340C7D3748657C26D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C18C3C1A5C52BEE2371EEC /* agg_curves.cpp in Sources */,
+				A85C3A38FC0FF0DAAC263A0C /* agg_path_storage.cpp in Sources */,
+				7ADA8A77B80599F7D1E6C26F /* agg_rasterizer_scanline_aa.cpp in Sources */,
+				EE32CA38B8802A48424BBA5F /* agg_vcgen_dash.cpp in Sources */,
+				65F893267853ED0BEC800936 /* agg_vcgen_stroke.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		362340010869C9B3813B9BDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 646ED769D534781766BFE1FE /* pdfium_base */;
+			targetProxy = E400A3FE24A2974FF6B35653 /* PBXContainerItemProxy */;
+		};
+		4F00D3BF5D49BBA8D5998F8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A87BBA27AD105AC3B36DEDAF /* bigint */;
+			targetProxy = BCE51BF1BC7EE02D22092D52 /* PBXContainerItemProxy */;
+		};
+		85B11999B330CDC7695EAD5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C94B0904B26820DAFBF21994 /* fx_lcms2 */;
+			targetProxy = FB8C0F8D2DA996C098A5FC14 /* PBXContainerItemProxy */;
+		};
+		8E6AAC7D97D68B3FA53E0F07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DE9E3184A28C4186199358 /* fx_zlib */;
+			targetProxy = E94548E9AE2711EDB31BE7A1 /* PBXContainerItemProxy */;
+		};
+		A286A52E7B389E5984A24074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4784E06A4293E56767C38DB1 /* freetype */;
+			targetProxy = 331ED985907CD6E5007F979A /* PBXContainerItemProxy */;
+		};
+		AADBA3326EE3CA661E60B941 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 831B0161EAA4793E79F1F237 /* fx_agg */;
+			targetProxy = 7F4839E31A09195B9D8D1889 /* PBXContainerItemProxy */;
+		};
+		B497BEEA4D84ED1A7441722A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CD94E557B684794AEA50708 /* fx_libopenjpeg */;
+			targetProxy = 7A045850A44E359DD5D4AE7F /* PBXContainerItemProxy */;
+		};
+		B738A8A1D63313DA94B0106B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB4318A9796D284145943CE /* fx_libjpeg */;
+			targetProxy = A45153B7FF9FFA26E670653D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FB355FF515F36B965F52EEA /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		1464AD329F78656E172C2F48 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_agg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		1B206972312E9D811E60A606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_zlib;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		1D75F13F4EA14F94526CC810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		203D94EA7690919EE2A91793 /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libstdc++",
+					"-Wl,-search_paths_first",
+				);
+				PRODUCT_NAME = pdfium_base;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		285A2FF2C093F960564E785C /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libopenjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		293ECBF472449F6B87B96E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = bigint;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		33389F805BB15550698299DA /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_agg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		3845D00661639F98F8D3C700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_lcms2;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		3A3A2B6FC8388DC0DE7FB420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libopenjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		43B3F466C8A0B3F7EB02FC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_lcms2;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		4C09EFDA9037957B8827C088 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_lcms2;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		5B2B6317FA2850EF10922B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = bigint;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		5C23F0F0C745F69E45E98399 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Debug_x64;
+		};
+		6A2C2BF67EF9A2A43CE2A0E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_zlib;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		703C0E67A4E2716258D72F00 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = bigint;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		75B1819E77269A6D934C4176 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libopenjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		7AC60FF1A0163872804886DC /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_lcms2;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		8135F9A74C80EF3E26028EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libstdc++",
+					"-Wl,-search_paths_first",
+				);
+				PRODUCT_NAME = pdfium_base;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		87C0AD72EACE7912415ACA1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libstdc++",
+					"-Wl,-search_paths_first",
+				);
+				PRODUCT_NAME = pdfium_base;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		8948BF3C304B1B72F1281979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Debug;
+		};
+		89C52E70827AFACBB448DAD0 /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Release_x64;
+		};
+		9536B4ECECCE997786E6C79E /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = bigint;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		9DFF7AF1A74C00099CE31F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+					FT2_BUILD_LIBRARY,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = freetype/include;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = freetype;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		9F6B790A4FE4C5A7D149866C /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Debug_x64;
+		};
+		A6A7FEA64140F9E1091B57AF /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libstdc++",
+					"-Wl,-search_paths_first",
+				);
+				PRODUCT_NAME = pdfium_base;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		A876842A753F98B21E12FC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Release;
+		};
+		B68229CA0AF5AFB07C768F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libopenjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		C1B7FF5146EFB557861DE7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		CE311182028DE88F653B3709 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_zlib;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		CE58D4638A7E20ADA8A41F9B /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		D12BEF662B0A07F91954F6B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_agg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		D329482161E1DD03BBF74FD2 /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Release_x64;
+		};
+		D791822EBF324F84A001D40D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Release;
+		};
+		DEB0D90C594C562523D75688 /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_zlib;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		EE750B86875DABEA89440659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_libjpeg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		F578A3210D480D74B464B24C /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+					FT2_BUILD_LIBRARY,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = freetype/include;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = freetype;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+		F9ECADC3C2D7B4103E5D63A7 /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+					FT2_BUILD_LIBRARY,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = freetype/include;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = freetype;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		FA2E4A05D204CE47015997F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+					FT2_BUILD_LIBRARY,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = freetype/include;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = freetype;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		FCC3B40B5D05DA1F18337BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "i386 x86_64";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				EXECUTABLE_PREFIX = lib;
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OPJ_STATIC,
+					_CRT_SECURE_NO_WARNINGS,
+					V8_DEPRECATION_WARNINGS,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-fno-strict-aliasing",
+					"-stdlib=libstdc++",
+				);
+				OTHER_LDFLAGS = "-stdlib=libstdc++";
+				PRODUCT_NAME = fx_agg;
+				SDKROOT = iphonesimulator;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12889F3C6BACA1A326F8A2BB /* Build configuration list for PBXProject "third_party" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D791822EBF324F84A001D40D /* Release */,
+				8948BF3C304B1B72F1281979 /* Debug */,
+				5C23F0F0C745F69E45E98399 /* Debug_x64 */,
+				89C52E70827AFACBB448DAD0 /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		162769F80095DED1C691C70C /* Build configuration list for PBXNativeTarget "fx_zlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B206972312E9D811E60A606 /* Release */,
+				6A2C2BF67EF9A2A43CE2A0E5 /* Debug */,
+				CE311182028DE88F653B3709 /* Debug_x64 */,
+				DEB0D90C594C562523D75688 /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		20FFAC66FF6F8D9751E1AD20 /* Build configuration list for PBXNativeTarget "bigint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2B6317FA2850EF10922B4D /* Release */,
+				293ECBF472449F6B87B96E33 /* Debug */,
+				703C0E67A4E2716258D72F00 /* Debug_x64 */,
+				9536B4ECECCE997786E6C79E /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		479762EFC21368D1E40844EC /* Build configuration list for PBXNativeTarget "fx_libopenjpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B68229CA0AF5AFB07C768F54 /* Release */,
+				3A3A2B6FC8388DC0DE7FB420 /* Debug */,
+				75B1819E77269A6D934C4176 /* Debug_x64 */,
+				285A2FF2C093F960564E785C /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		5058D779CE8ABC76D7D41A66 /* Build configuration list for PBXAggregateTarget "pdfium_base" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87C0AD72EACE7912415ACA1A /* Release */,
+				8135F9A74C80EF3E26028EE8 /* Debug */,
+				A6A7FEA64140F9E1091B57AF /* Debug_x64 */,
+				203D94EA7690919EE2A91793 /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		66C1AA1DA23447F6C09CA9CD /* Build configuration list for PBXNativeTarget "fx_agg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC3B40B5D05DA1F18337BFD /* Release */,
+				D12BEF662B0A07F91954F6B4 /* Debug */,
+				1464AD329F78656E172C2F48 /* Debug_x64 */,
+				33389F805BB15550698299DA /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		75EA4CD9DA60BB94B20ABC61 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A876842A753F98B21E12FC89 /* Release */,
+				C1B7FF5146EFB557861DE7A7 /* Debug */,
+				9F6B790A4FE4C5A7D149866C /* Debug_x64 */,
+				D329482161E1DD03BBF74FD2 /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		9A69C438F553C9C5F52319E6 /* Build configuration list for PBXNativeTarget "freetype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2E4A05D204CE47015997F4 /* Release */,
+				9DFF7AF1A74C00099CE31F1A /* Debug */,
+				F578A3210D480D74B464B24C /* Debug_x64 */,
+				F9ECADC3C2D7B4103E5D63A7 /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		C77E32414A4140AF4E537683 /* Build configuration list for PBXNativeTarget "fx_lcms2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43B3F466C8A0B3F7EB02FC68 /* Release */,
+				3845D00661639F98F8D3C700 /* Debug */,
+				4C09EFDA9037957B8827C088 /* Debug_x64 */,
+				7AC60FF1A0163872804886DC /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		E4C6CC7AB8B48C0A0FB573E6 /* Build configuration list for PBXNativeTarget "fx_libjpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE750B86875DABEA89440659 /* Release */,
+				1D75F13F4EA14F94526CC810 /* Debug */,
+				0FB355FF515F36B965F52EEA /* Debug_x64 */,
+				CE58D4638A7E20ADA8A41F9B /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED38BA4BD4F431D874B24B00 /* Project object */;
+}

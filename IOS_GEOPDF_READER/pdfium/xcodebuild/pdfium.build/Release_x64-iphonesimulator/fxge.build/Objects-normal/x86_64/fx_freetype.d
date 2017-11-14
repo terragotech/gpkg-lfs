@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/venkata/whard22/pdfium/core/src/fxge/freetype/fx_freetype.c \
+  /Users/venkata/whard22/pdfium/core/src/fxge/freetype/../../../include/fxge/fx_freetype.h \
+  third_party/freetype/include/ft2build.h \
+  third_party/freetype/include/config/ftheader.h \
+  third_party/freetype/include/freetype.h \
+  third_party/freetype/include/config/ftconfig.h \
+  third_party/freetype/include/config/ftoption.h \
+  third_party/freetype/include/config/ftstdlib.h \
+  third_party/freetype/include/fttypes.h \
+  third_party/freetype/include/ftsystem.h \
+  third_party/freetype/include/ftimage.h \
+  third_party/freetype/include/fterrors.h \
+  third_party/freetype/include/ftmoderr.h \
+  third_party/freetype/include/fterrdef.h \
+  third_party/freetype/include/ftglyph.h \
+  third_party/freetype/include/ftlcdfil.h \
+  third_party/freetype/include/ftmm.h \
+  third_party/freetype/include/t1tables.h \
+  third_party/freetype/include/ftoutln.h \
+  third_party/freetype/include/tttables.h \
+  /Users/venkata/whard22/pdfium/core/src/fxge/freetype/../../../../third_party/freetype/src/psnames/pstables.h
