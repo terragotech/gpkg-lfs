@@ -1,4 +1,0 @@
-include_rules = [
-  '+fx_lpng',
-  '+third_party/zlib_v128',
-]
