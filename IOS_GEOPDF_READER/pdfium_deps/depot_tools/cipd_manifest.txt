@@ -1,0 +1,9 @@
+# Copyright 2017 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# vpython.
+infra/tools/luci/vpython/${platform}  git_revision:cea2b0eb174d6d8e6b628020e3986cb251ea2d97
+
+# LUCI editor
+infra/tools/luci/led/${platform}  git_revision:712c596d2a593eb976d2bd202aee3e580990d3f5
