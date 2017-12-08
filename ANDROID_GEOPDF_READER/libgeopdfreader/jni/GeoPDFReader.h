@@ -8,6 +8,7 @@
 #define GEOPDF_READER_WARP_ODS_EXISTS			-1013
 #define GEOPDF_READER_WARP_WRP_OPERROR			-1014
 #define GEOPDF_READER_TILE_GEN_ERROR			-1015
+#define GEOPDF_READER_RW_ERROR				-1016
 #include <stdio.h>
 #include "gdal.h"
 #include "ogrsf_frmts.h"

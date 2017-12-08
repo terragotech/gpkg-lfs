@@ -2169,8 +2169,8 @@ int geopdf_generate_base_tiles_gtt(struct gdal_tiles *gt,struct global_mercator 
 					process_tile_info.wysize = wysize1;
 
 					geopdf_remove_distortions(gt,gg,tx,ty,tz,&tf);
-					double percentage = (((double)gt->current_tile_count)/((double)gt->total_tile_count)) * 0.75f;
-					geopdf_create_status_file_progress(gt->process_id,percentage+0.25f);
+					double percentage = (((double)gt->current_tile_count)/((double)gt->total_tile_count)) * 0.40f;
+					geopdf_create_status_file_progress(gt->process_id,percentage+0.60f);
 					//Check if termination requested
 					termination_status = geopdf_check_process_termination(gt->termFile);
 					printf("%.f...",floor(((double)gt->current_tile_count)/((double)gt->total_tile_count) * 100)); 
@@ -2306,8 +2306,8 @@ int geopdf_generate_overview_tiles_gtt(struct gdal_tiles *gt,struct global_merca
 						process_tile_info.wy = wy1;
 						process_tile_info.wxsize = wxsize1;
 						process_tile_info.wysize = wysize1;
-						double  percentage = (((double)gt->current_tile_count)/((double)gt->total_tile_count)) * 0.75f;
-						geopdf_create_status_file_progress(gt->process_id,percentage + 0.25f);
+						double  percentage = (((double)gt->current_tile_count)/((double)gt->total_tile_count)) * 0.40f;
+						geopdf_create_status_file_progress(gt->process_id,percentage + 0.60f);
 						//Check if termination requested
 						termination_status = geopdf_check_process_termination(gt->termFile);
 						printf("%.f...",floor( ((double)gt->current_tile_count)/((double)gt->total_tile_count) *100 )); 
