@@ -15,7 +15,7 @@ export CC=`xcrun -find -sdk iphoneos gcc`
 export CFLAGS="-Wno-error=implicit-function-declaration -arch ${arch} -pipe -Os -gdwarf-2 -isysroot ${platform_sdk_dir} ${extra_cflags} -stdlib=libstdc++"
 export LDFLAGS="-arch ${arch} -isysroot ${platform_sdk_dir}"
 export CXX=`xcrun -find -sdk iphoneos g++`
-export CXXFLAGS="${CFLAGS} -g"
+export CXXFLAGS="${CFLAGS}"
 export CPP=`xcrun -find -sdk iphoneos cpp`
 export CXXCPP="${CPP}"
 

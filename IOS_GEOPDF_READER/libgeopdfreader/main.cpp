@@ -163,7 +163,7 @@ case MBGEN_ERROR_CANNOT_PROCESS_FILE:
 geopdf_write_log((char*)objLogFileName.c_str(),"INFO:Opening input file complete");
 geopdf_generate_metadata_gtt(&gt,&gm);
 geopdf_write_log((char*)objLogFileName.c_str(),"INFO:generating metadata complete");
-geopdf_create_status_file_progress(gt.process_id,0.0);
+//geopdf_create_status_file_progress(gt.process_id,0.0);
 
 // Opening the MBTiles
 

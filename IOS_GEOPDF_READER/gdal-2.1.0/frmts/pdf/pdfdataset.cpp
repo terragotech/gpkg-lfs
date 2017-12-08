@@ -50,7 +50,7 @@
 
 #include "pdfcreatecopy.h"
 #include <set>
-
+#include <string.h>
 #define GDAL_DEFAULT_DPI 150.0
 
 /* g++ -fPIC -g -Wall frmts/pdf/pdfdataset.cpp -shared -o gdal_PDF.so -Iport -Igcore -Iogr -L. -lgdal -lpoppler -I/usr/include/poppler */
@@ -898,15 +898,13 @@ CPLErr PDFRasterBand::IReadBlock( int nBlockXOff, int nBlockYOff,
 
     if (poGDS->bTried == FALSE)
     {
-	/////////////////// Add Correction here ///////////////////////////
-	if((nRasterXSize > 2500) || (nRasterYSize > 2500))
-	{
-		
-		CPLErr eErr = poGDS->ReadPixels2(); 
-		
-		 return CE_Failure;
-	}
-	/////////////////// End of Adding Correction //////////////////////
+	CPLErr eErr = poGDS->ReadPixels2();
+	/* Returning here to bypass large memory allocation and warp operation,
+	 this is a customization for the embedded device which doesn't have large memory to work with this
+	Forcing now to terminate safely in the GDAL Frame works
+	* ReadPixels2 will render the raster perfectly with low memory usage and dump to a file
+	*/
+	return CE_Failure; 
         poGDS->bTried = TRUE;
         if( nBlockYSize == 1 )
             poGDS->pabyCachedData = (GByte*)VSIMalloc3(MAX(3, poGDS->nBands), nRasterXSize, nRasterYSize);
@@ -1699,121 +1697,779 @@ void PDFDataset::PDFiumRenderPageBitmap(FPDF_BITMAP bitmap, FPDF_PAGE page,
 }
 
 #endif /* HAVE_PDFIUM */
-
-CPLErr PDFDataset::ReadPixels2(){ 
-/* Correction Code */
+/* Hack Code to support low memory footprint for rasteriztion */
+int PDFDataset::geopdf_create_status_file_progress(char *ptrID,double percentage)
+{
+    int result = GEOMAP_UTILS_SUCCESS;
+    
+    FILE *fp = fopen(ptrID,"w");
+    if(fp != NULL)
+    {
+        fprintf(fp,"PROGRESS-%f#\r\n",percentage);
+        fclose(fp);
+    }
+    return result;
+}
+int PDFDataset::geopdf_create_status_file_failed(char *ptrId, char *ptrReason)
+{
+    int result = GEOMAP_UTILS_SUCCESS;
+    if((NULL == ptrId) || (NULL == ptrReason))
+    {
+        return GEOMAP_UTILS_ERROR_BAD_INPUT_PARAMETER;
+    }
+    FILE *fp = fopen(ptrId,"w");
+    if(fp != NULL)
+    {
+        fprintf(fp,"FAILED-%s-\r\n",ptrReason);
+        fclose(fp);
+    }
+    return GEOMAP_UTILS_SUCCESS;
+}
+int PDFDataset::geopdf_create_status_file_term(char *ptrId, char *ptrReason)
+{
+    int result = GEOMAP_UTILS_SUCCESS;
+    
+    if((NULL == ptrId) || (NULL == ptrReason))
+    {
+        return GEOMAP_UTILS_ERROR_BAD_INPUT_PARAMETER;
+    }
+    FILE *fp = fopen(ptrId,"w");
+    if(fp != NULL)
+    {
+        fprintf(fp,"TERM-%s-\r\n",ptrReason);
+        fclose(fp);
+    }
+    return GEOMAP_UTILS_SUCCESS;
+}
+int PDFDataset::geopdf_check_process_termination(char *ptrId)
+{
+    int result = 0;
+    if(NULL == ptrId)
+    {
+        return GEOMAP_UTILS_ERROR_BAD_INPUT_PARAMETER;
+    }
+    FILE *fp = fopen(ptrId,"r");
+    if(fp == NULL)
+    {
+        result = GEOMAP_UTILS_TERM_NOT_REQUESTED;
+    }
+    else
+    {
+        fclose(fp);
+        result = GEOMAP_UTILS_TERM_REQUESTED;
+    }
+    return result;
+}
+int PDFDataset::geopdf_write_log(char *filename, char *message)
+{
+    std::string time_string;
+    std::string time_string_tmp;
+    
+    int result = GEOMAP_LOG_SUCCESS;
+    
+    //Check input parameters
+    if((NULL == filename) || (NULL == message))
+    {
+        return GEOMAP_LOGS_ERROR_BAD_INPUT_PARAMETER;
+    }
+    
+    //Open the file in append mode
+    FILE *fp_log = fopen(filename,"a");
+    if(NULL == fp_log)
+    {
+        return GEOMAP_LOGS_ERROR_FILE_OPEN_FAILED;
+    }
+    
+    time_t tresult = time(NULL);
+    time_string_tmp.append(asctime(localtime(&tresult)));
+    
+    if(time_string_tmp.length() <= 1)
+    {
+        fclose(fp_log);
+        return GEOMAP_LOGS_ERROR_BAD_TIME_STRING;
+    }
+    
+    // Remove the carriage return from the time string using substr
+    
+    time_string = time_string_tmp.substr(0,time_string_tmp.length()-1);
+    result = fprintf(fp_log,"%s : %s\n",time_string.c_str(),message);
+    if(result < 0)
+    {
+        result = GEOMAP_LOGS_ERROR_FILE_IO;
+    }
+    else
+    {
+        result = GEOMAP_LOG_SUCCESS;
+    }
+    fclose(fp_log);
+    return result;
+}
+CPLErr PDFDataset::ReadPixels2()
+{
+    //Hack Code Begins here
+    
+    printf("Read Pixels2 Called \n");
+    char *ptrLogFile = getenv("GPDF_LOGFILE");
+    geopdf_write_log(ptrLogFile,"Inside ReadPixels2");
+	GDALSetCacheMax(1*1024*1024);
+	
 	CPLErr eErr = CE_None;
-	unsigned int nMemoryRequired = nRasterXSize * nRasterYSize * 4;
-	if((nRasterXSize > 2500) || (nRasterYSize > 2500))
+	int nGoodWidth = 256;
+	int nGoodHeight = 256;
+       CPLErr writeResult = CE_None; 
+	CPLCreateOrAcquireMutex(&g_oPdfiumReadMutex, PDFIUM_MUTEX_TIMEOUT);
+	CPLCreateOrAcquireMutex(&(poPagePdfium->readMutex), PDFIUM_MUTEX_TIMEOUT);
+    
+    printf("Start Parsing the Page of PDF\n");
+    geopdf_write_log(ptrLogFile,"Start Parsing the Page of PDF");
+	poPagePdfium->page->ParseContent();
+    printf("Parsing the Page of PDF complete\n");
+     geopdf_write_log(ptrLogFile,"Parsing the Page of PDF complete");
+    
+	FPDF_BITMAP bitmap1 = FPDFBitmap_Create(nGoodWidth, nGoodHeight, nBands == 4/*alpha*/);
+	if( bitmap1 == NULL )
 	{
-		int nBands1 = (nBands == 1) ? 1 : 3;
-		int correctedXSize = 0;
-		int correctedYSize = 0;
-		double ar = 0.0;
-		if(nRasterXSize > nRasterYSize)
+	//Failed to create Surface for Drawing
+        printf("Tile Memory allocation [FAILED] \n");
+        geopdf_write_log(ptrLogFile,"Tile Memory allocation [FAILED]");
+	    CPLReleaseMutex(poPagePdfium->readMutex);
+	    CPLReleaseMutex(g_oPdfiumReadMutex);
+        setenv("GPDF_RESULT","-1000",1);
+	    return CE_Failure;
+	}
+	/////////////////////////////// RENDER LOOP ////////////////////////////////////////////
+	FPDF_DWORD color = 0xFFFFFFFF; // A,R,G,Bv 
+	const GByte* buffer = NULL;
+	int stride = 0;
+	GByte* pabyData = NULL;
+	int nBandSpace = 0;
+	int nPixelSpace = 0;
+	int nLineSpace = 0;	
+	pabyData = (GByte*)malloc(nGoodWidth*nGoodHeight*nBands);
+    if(pabyData == NULL)
+    {
+	//Failed to create Memory location for Storing surface
+        printf("Memory allocation [FAILED] \n");
+        geopdf_write_log(ptrLogFile,"Data Memory allocation [FAILED]");
+        // Release mutex - following code is thread-safe
+        CPLReleaseMutex(poPagePdfium->readMutex);
+        CPLReleaseMutex(g_oPdfiumReadMutex);
+        if(bitmap1 != NULL)
+        {
+            FPDFBitmap_Destroy(bitmap1);
+            bitmap1 = NULL;
+        }
+        setenv("GPDF_RESULT","-1000",1);
+        return CE_Failure;
+        
+    }
+	GDALDriverH hDriver = GDALGetDriverByName( "GTiff" );
+	GDALDatasetH ds1 = NULL;
+	int nNXTile = 0;
+	int nNYTile = 0;
+	int nblockXTileCount = (nRasterXSize / 256 );
+	int nblockYTileCount = (nRasterYSize / 256 );
+   
+	if(nblockXTileCount == 0)
+	{
+		nblockXTileCount = 1;
+	}
+	if(nblockYTileCount == 0)
+	{
+		nblockYTileCount = 1;
+	}
+	nblockXTileCount = nblockXTileCount * 256;
+	nblockYTileCount = nblockYTileCount * 256;
+	int nXBalancePixels = 0;
+	int nYBalancePixels = 0;
+    /* Compute the total tile Count */
+    double totalTileCountForProgress = nblockXTileCount * nblockYTileCount;
+    double currentTileCount = 0;
+    
+    double tileProgress = ((double)currentTileCount / (double)totalTileCountForProgress);
+    double fullProgress = 0.0f;
+    
+    if(tileProgress > 1.0f)
+    {
+        tileProgress = 1.0f;
+    }
+    fullProgress = tileProgress * 0.40;
+    
+    /* End of Computing the total tile count */
+	if(nRasterXSize % 256 != 0)
+	{
+		nXBalancePixels = nRasterXSize % 256;
+    }
+	if(nRasterYSize % 256 != 0)
+	{
+		nYBalancePixels = nRasterYSize % 256;
+	}
+    char *ptrDump = getenv("GPDF_DUMPFILE");
+    printf("Dump file name = %s\n",ptrDump );
+    char *ptrProgressFile = getenv("GPDF_PROGFILE");
+    printf("Progress file name = %s\n",ptrProgressFile );
+    char *ptrTerminationFile = getenv("GPDF_TERMFILE");
+    
+    
+    printf("Termination file name = %s\n",ptrTerminationFile );
+    
+    if(hDriver != NULL)
+	{	
+		ds1 = GDALCreate(hDriver,ptrDump,nRasterXSize,nRasterYSize,nBands,GDT_Byte,NULL);
+		if(ds1 != NULL)
 		{
-			//X is larger
-			ar = (double)nRasterXSize / (double) nRasterYSize;
-			correctedXSize = 2500;
-			correctedYSize = (double)correctedXSize / ar;
+			int gxtile=0;
+			int gytile=0;
+			for(gytile=0;gytile<nblockYTileCount;gytile=gytile+256)
+			{
+				nNXTile = 0;
+				for(gxtile=0;gxtile<nblockXTileCount;gxtile=gxtile+256)
+				{
+					FPDFBitmap_FillRect(bitmap1, 0, 0, nGoodWidth, nGoodHeight, color);
+					FPDF_RenderPageBitmap(bitmap1, poPagePdfium->page, nNXTile, nNYTile, nRasterXSize, nRasterYSize, 0, 0);
+					nNXTile = nNXTile - 256;
+					 stride = FPDFBitmap_GetStride(bitmap1);
+					 buffer = reinterpret_cast<const GByte*>(FPDFBitmap_GetBuffer(bitmap1));
+					
+				 	 nBandSpace = nGoodWidth * nGoodHeight;
+					nPixelSpace = 1;
+					nLineSpace = nGoodWidth;
+					// Source data is B, G, R, unused.
+					// Destination data is R, G, B (,A if is alpha)
+					GByte* pabyDataR = pabyData;
+					GByte* pabyDataG = pabyData + 1 * nBandSpace;
+					GByte* pabyDataB = pabyData + 2 * nBandSpace;
+					GByte* pabyDataA = pabyData + 3 * nBandSpace;
+			
+					int i, j;
+					for(j=0;j<nGoodHeight;j++)
+					{
+					    for(i=0;i<nGoodWidth;i++)
+					    {
+						pabyDataR[i * nPixelSpace] = buffer[(i*4) + 2];
+						pabyDataG[i * nPixelSpace] = buffer[(i*4) + 1];
+						pabyDataB[i * nPixelSpace] = buffer[(i*4) + 0];
+						if (nBands == 4)
+						{
+						    pabyDataA[i * nPixelSpace] = buffer[(i*4) + 3];
+						}
+					    }
+					    pabyDataR += nLineSpace;
+					    pabyDataG += nLineSpace;
+					    pabyDataB += nLineSpace;
+					    pabyDataA += nLineSpace;
+					    buffer += stride;
+					}
+					writeResult = GDALDatasetRasterIO(ds1,GF_Write,gxtile,gytile,nGoodWidth,nGoodHeight,pabyData,nGoodWidth,nGoodHeight,GDT_Byte,nBands,NULL,0,0,0);
+                    if(writeResult != CE_None)
+                    {
+                        //Error happened in writing must terminate and infor the caller via envirorment variables
+                        if(pabyData != NULL)
+                        {
+                            free(pabyData);
+                            pabyData = NULL;
+                        }
+                        //Close the Dataset here
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+                            bitmap1 = NULL;
+                        }
+                        
+                        setenv("GPDF_RESULT","-1002",1);
+                        writeResult = CE_Failure;
+                        geopdf_write_log(ptrLogFile,"GDAL TIF Write [FAILED]");
+                        return writeResult;
+                        
+                    }
+                    currentTileCount++;
+                    tileProgress = ((double)currentTileCount / (double)totalTileCountForProgress);
+                    if(tileProgress > 1.0f)
+                    {
+                        tileProgress = 1.0f;
+                    }
+                    fullProgress = tileProgress * 0.40;
+                    geopdf_create_status_file_progress(ptrProgressFile,fullProgress);
+                    if(geopdf_check_process_termination(ptrTerminationFile) == GEOMAP_UTILS_TERM_REQUESTED)
+                    {
+                        //User has requested for cancel
+                        //Must clean up all resource and return the control to the calle module
+                        if(pabyData != NULL)
+                        {
+                            free(pabyData);
+                            pabyData = NULL;
+                        }
+                        
+                        //Close Dataset
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        //Release the Mutex
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+                            bitmap1 = NULL;
+                        }
+                        setenv("GPDF_RESULT","-1001",1);
+                        
+                        geopdf_write_log(ptrLogFile,"User requested for termination");
+                        return CE_Failure;
+
+                    }
+
+				}//end x for
+				if((nRasterXSize % 256) != 0)
+				{
+					FPDF_BITMAP bitmap2 = FPDFBitmap_Create(nXBalancePixels, nGoodHeight, nBands == 4/*alpha*/);
+                    if(bitmap2 == NULL)
+                    {
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+				 bitmap1 = NULL;
+
+                        }
+                        
+                        if(pabyData != NULL)
+                        {
+                            free(pabyData);
+                            pabyData = NULL;
+                        }
+                        setenv("GPDF_RESULT","-1000",1);
+                        return CE_Failure;
+                    }
+					FPDFBitmap_FillRect(bitmap2, 0, 0, nXBalancePixels, nGoodHeight, color);
+					FPDF_RenderPageBitmap(bitmap2, poPagePdfium->page, nNXTile, nNYTile, nRasterXSize, nRasterYSize, 0, 0);
+					stride = FPDFBitmap_GetStride(bitmap2);
+					buffer = reinterpret_cast<const GByte*>(FPDFBitmap_GetBuffer(bitmap2));
+					nBandSpace = nXBalancePixels * nGoodHeight;
+					nPixelSpace = 1;
+					nLineSpace = nXBalancePixels;
+                    //Deallocation Memory and creating a memory for area smaller than nGoodWidth nGoodHeight
+                    if(pabyData != NULL)
+                    {
+                        free(pabyData);
+                        pabyData = NULL;
+                    }
+                    pabyData = NULL;
+                    //Allocating for smaller area
+					pabyData = (GByte*)malloc(nXBalancePixels*nGoodHeight*nBands);
+                    if(pabyData == NULL)
+                    {
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+                            bitmap1 = NULL;
+                        }
+                        if(bitmap2 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap2);
+                            bitmap2 = NULL;
+                        }
+                        setenv("GPDF_RESULT","-1000",1);
+                        return CE_Failure;
+
+                    }
+					GByte* pabyDataR = pabyData;
+					GByte* pabyDataG = pabyData + 1 * nBandSpace;
+					GByte* pabyDataB = pabyData + 2 * nBandSpace;
+					GByte* pabyDataA = pabyData + 3 * nBandSpace;
+			
+					int i, j;
+					for(j=0;j<nGoodHeight;j++)
+					{
+					    for(i=0;i<nXBalancePixels;i++)
+					    {
+						pabyDataR[i * nPixelSpace] = buffer[(i*4) + 2];
+						pabyDataG[i * nPixelSpace] = buffer[(i*4) + 1];
+						pabyDataB[i * nPixelSpace] = buffer[(i*4) + 0];
+						if (nBands == 4)
+						{
+						    pabyDataA[i * nPixelSpace] = buffer[(i*4) + 3];
+						}
+					    }
+					    pabyDataR += nLineSpace;
+					    pabyDataG += nLineSpace;
+					    pabyDataB += nLineSpace;
+					    pabyDataA += nLineSpace;
+					    buffer += stride;
+					}
+					writeResult = GDALDatasetRasterIO(ds1,GF_Write,gxtile,gytile,nXBalancePixels,nGoodHeight,pabyData,nXBalancePixels,nGoodHeight,GDT_Byte,nBands,NULL,0,0,0);
+                    if(writeResult != CE_None)
+                    {
+                        //Failed to write here
+                        if(pabyData != NULL)
+                        {
+                            free(pabyData);
+                            pabyData = NULL;
+                        }
+                        //Close the Dataset here
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+                            bitmap1 = NULL;
+                        }
+                        if(bitmap2 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap2);
+                            bitmap2 = NULL;
+                        }
+                        setenv("GPDF_RESULT","-1002",1);
+                        writeResult = CE_Failure;
+                        return writeResult;
+
+                        
+                    }
+                    currentTileCount++;
+                    tileProgress = ((double)currentTileCount / (double)totalTileCountForProgress);
+                    if(tileProgress > 1.0f)
+                    {
+                        tileProgress = 1.0f;
+                    }
+                    fullProgress = tileProgress * 0.40;
+                    geopdf_create_status_file_progress(ptrProgressFile,fullProgress);
+                    if(pabyData != NULL)
+                    {
+                        free(pabyData);
+                        pabyData = NULL;
+                    }
+					pabyData = (GByte*)malloc(nGoodWidth*nGoodHeight*nBands);
+                    if(pabyData == NULL)
+                    {
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                            if(bitmap2 != NULL)
+                            {
+                                FPDFBitmap_Destroy(bitmap2);
+                                bitmap2 = NULL;
+                            }
+                            if(bitmap1 != NULL)
+                            {
+                                FPDFBitmap_Destroy(bitmap1);
+                                bitmap1 = NULL;
+                            }
+                        setenv("GPDF_RESULT","-1000",1);
+                        writeResult = CE_Failure;
+                        return writeResult;
+                    }
+					FPDFBitmap_Destroy(bitmap2);
+				}
+				nNYTile = nNYTile - 256;
+			}//end y for
+
+			if((nRasterYSize % 256) != 0)
+			{
+				
+				FPDF_BITMAP bitmap3 = FPDFBitmap_Create(nGoodWidth, nYBalancePixels, nBands == 4/*alpha*/);
+                if(bitmap3 == NULL)
+                {
+                    //Close the Dataset
+                    if(ds1 != NULL)
+                    {
+                        GDALClose(ds1);
+                        ds1 = NULL;
+                    }
+                    if(pabyData != NULL)
+                    {
+                        free(pabyData);
+                        pabyData = NULL;
+                    }
+                    CPLReleaseMutex(poPagePdfium->readMutex);
+                    CPLReleaseMutex(g_oPdfiumReadMutex);
+                    if(bitmap1 != NULL)
+                    {
+                        FPDFBitmap_Destroy(bitmap1);
+                    }
+                    setenv("GPDF_RESULT","-1000",1);
+                    writeResult = CE_Failure;
+                    return CE_Failure;
+                }
+				FPDFBitmap_FillRect(bitmap3, 0, 0, nGoodWidth, nYBalancePixels, color);
+				nNXTile = 0;
+				nBandSpace = nGoodWidth * nYBalancePixels;
+					nPixelSpace = 1;
+					nLineSpace = nGoodWidth;
+                    if(pabyData != NULL)
+                    {
+                        free(pabyData);
+                        pabyData = NULL;
+                    }
+					
+					pabyData = (GByte*)malloc(nYBalancePixels*nGoodWidth*nBands);
+                    if(pabyData == NULL)
+                    {
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+                            bitmap1 = NULL;
+                        }
+                        if(bitmap3 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap3);
+                            bitmap3 = NULL;
+                        }
+                        setenv("GPDF_RESULT","-1000",1);
+                         return CE_Failure;
+                    }
+				for(gxtile=0;gxtile<nblockXTileCount;gxtile=gxtile+256)
+				{
+					FPDF_RenderPageBitmap(bitmap3, poPagePdfium->page, nNXTile, nNYTile, nRasterXSize, nRasterYSize, 0, 0);
+					nNXTile =  nNXTile - 256;
+					stride = FPDFBitmap_GetStride(bitmap3);
+					buffer = reinterpret_cast<const GByte*>(FPDFBitmap_GetBuffer(bitmap3));
+					
+					
+					GByte* pabyDataR = pabyData;
+					GByte* pabyDataG = pabyData + 1 * nBandSpace;
+					GByte* pabyDataB = pabyData + 2 * nBandSpace;
+					GByte* pabyDataA = pabyData + 3 * nBandSpace;
+			
+					int i, j;
+					for(j=0;j<nYBalancePixels;j++)
+					{
+					    for(i=0;i<nGoodWidth;i++)
+					    {
+						pabyDataR[i * nPixelSpace] = buffer[(i*4) + 2];
+						pabyDataG[i * nPixelSpace] = buffer[(i*4) + 1];
+						pabyDataB[i * nPixelSpace] = buffer[(i*4) + 0];
+						if (nBands == 4)
+						{
+						    pabyDataA[i * nPixelSpace] = buffer[(i*4) + 3];
+						}
+					    }
+					    pabyDataR += nLineSpace;
+					    pabyDataG += nLineSpace;
+					    pabyDataB += nLineSpace;
+					    pabyDataA += nLineSpace;
+					    buffer += stride;
+					}
+					writeResult = GDALDatasetRasterIO(ds1,GF_Write,gxtile,gytile,nGoodWidth,nYBalancePixels,pabyData,nGoodWidth,nYBalancePixels,GDT_Byte,nBands,NULL,0,0,0);
+                    if(writeResult != CE_None)
+                    {
+                        //Write Failed
+                        if(pabyData != NULL)
+                        {
+                            free(pabyData);
+                            pabyData = NULL;
+                        }
+                        if(ds1 != NULL)
+                        {
+                            GDALClose(ds1);
+                            ds1 = NULL;
+                        }
+                        CPLReleaseMutex(poPagePdfium->readMutex);
+                        CPLReleaseMutex(g_oPdfiumReadMutex);
+                        if(bitmap1 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap1);
+                            bitmap1 = NULL;
+                        }
+                        if(bitmap3 != NULL)
+                        {
+                            FPDFBitmap_Destroy(bitmap3);
+                            bitmap3 = NULL;
+                        }
+                        setenv("GPDF_RESULT","-1002",1);
+                        return CE_Failure;
+                        
+                    }
+                    currentTileCount++;
+                    tileProgress = ((double)currentTileCount / (double)totalTileCountForProgress);
+                    if(tileProgress > 1.0f)
+                    {
+                        tileProgress = 1.0f;
+                    }
+                    fullProgress = tileProgress * 0.40;
+                    geopdf_create_status_file_progress(ptrProgressFile,fullProgress);
+					
+				}
+                if(pabyData != NULL)
+                {
+                    free(pabyData);
+                    pabyData = NULL;
+                }
+                FPDFBitmap_Destroy(bitmap3);
+			}
+			//Fixing the last tile
+			if( ((nRasterXSize % 256) != 0) && ((nRasterYSize % 256) != 0))
+			{
+				FPDF_BITMAP bitmap3 = FPDFBitmap_Create(nXBalancePixels, nYBalancePixels, nBands == 4/*alpha*/);
+                if(bitmap3 == NULL)
+                {
+                    //Closing Dataset
+                    if (ds1 != NULL) {
+                        GDALClose(ds1);
+                        ds1 = NULL;
+                    }
+                    CPLReleaseMutex(poPagePdfium->readMutex);
+                    CPLReleaseMutex(g_oPdfiumReadMutex);
+                    if(bitmap1 != NULL)
+                    {
+                        FPDFBitmap_Destroy(bitmap1);
+                        bitmap1 = NULL;
+                    }
+                    setenv("GPDF_RESULT","-1000",1);
+                    return CE_Failure;
+                }
+				FPDFBitmap_FillRect(bitmap3, 0, 0, nXBalancePixels, nYBalancePixels, color);
+				nBandSpace = nXBalancePixels * nYBalancePixels;
+				nPixelSpace = 1;
+				nLineSpace = nXBalancePixels;
+				pabyData = (GByte*)malloc(nXBalancePixels * nYBalancePixels*nBands);
+				FPDF_RenderPageBitmap(bitmap3, poPagePdfium->page, nNXTile, nNYTile, nRasterXSize, nRasterYSize, 0, 0);
+				stride = FPDFBitmap_GetStride(bitmap3);
+				buffer = reinterpret_cast<const GByte*>(FPDFBitmap_GetBuffer(bitmap3));
+					
+					
+					GByte* pabyDataR = pabyData;
+					GByte* pabyDataG = pabyData + 1 * nBandSpace;
+					GByte* pabyDataB = pabyData + 2 * nBandSpace;
+					GByte* pabyDataA = pabyData + 3 * nBandSpace;
+			
+					int i, j;
+					for(j=0;j<nYBalancePixels;j++)
+					{
+					    for(i=0;i<nXBalancePixels;i++)
+					    {
+						pabyDataR[i * nPixelSpace] = buffer[(i*4) + 2];
+						pabyDataG[i * nPixelSpace] = buffer[(i*4) + 1];
+						pabyDataB[i * nPixelSpace] = buffer[(i*4) + 0];
+						if (nBands == 4)
+						{
+						    pabyDataA[i * nPixelSpace] = buffer[(i*4) + 3];
+						}
+					    }
+					    pabyDataR += nLineSpace;
+					    pabyDataG += nLineSpace;
+					    pabyDataB += nLineSpace;
+					    pabyDataA += nLineSpace;
+					    buffer += stride;
+					}
+					printf("Printing Diagnostics \n");
+					printf("X Size = %d\n",nXBalancePixels);
+					printf("Y Size = %d\n",nYBalancePixels);
+					printf("xtile  = %d\n",gxtile);
+					printf("ytile  = %d\n",gytile);
+					printf("nNXTile  = %d\n",nNXTile);
+					printf("nNYTile  = %d\n",nNYTile);
+				
+					writeResult = GDALDatasetRasterIO(ds1,GF_Write,gxtile,gytile,nXBalancePixels,nYBalancePixels,pabyData,nXBalancePixels,nYBalancePixels,GDT_Byte,nBands,NULL,0,0,0);
+                if(writeResult != CE_None)
+                {
+                    if(ds1 != NULL)
+                    {
+                        GDALClose(ds1);
+                        ds1 = NULL;
+                        
+                    }
+                    if(pabyData != NULL)
+                    {
+                        free(pabyData);
+                        pabyData = NULL;
+                    }
+                    CPLReleaseMutex(poPagePdfium->readMutex);
+                    CPLReleaseMutex(g_oPdfiumReadMutex);
+                    if(bitmap1 != NULL)
+                    {
+                        FPDFBitmap_Destroy(bitmap1);
+                        bitmap1 = NULL;
+                    }
+                    setenv("GPDF_RESULT","-1002",1);
+                    return CE_Failure;
+                }
+                    currentTileCount++;
+                tileProgress = ((double)currentTileCount / (double)totalTileCountForProgress);
+                if(tileProgress > 1.0f)
+                {
+                    tileProgress = 1.0f;
+                }
+                fullProgress = tileProgress * 0.40;
+                geopdf_create_status_file_progress(ptrProgressFile,fullProgress);
+					FPDFBitmap_Destroy(bitmap3);
+                    if(pabyData != NULL)
+                    {
+                        free(pabyData);
+                        pabyData = NULL;
+                    }
+		}//End of Fixing last tile
+			double pdfTransform[6];
+			GetGeoTransform(pdfTransform);
+	
+			const char *projInfo = GetProjectionRef();
+			GDALSetProjection(ds1,projInfo);
+			GDALSetGeoTransform(ds1,pdfTransform);	
+        
+			GDALClose(ds1);
+			setenv("GPDF_RESULT","0",1);
 		}
 		else
 		{
-			//Y is larger
-			ar = (double)nRasterYSize / (double) nRasterXSize;
-			correctedYSize = 2500;
-			correctedXSize = (double)correctedYSize / ar;
+			setenv("GPDF_RESULT","-1003",1);
+
 		}
-		double reductionFactorX = (double)nRasterXSize / correctedXSize;
-		double reductionFactorY = (double)nRasterYSize / correctedYSize;	
-		/*int correctedXSize = 2500;
-		int correctedYSize = 3300;*/
-		
-		CPLCreateOrAcquireMutex(&g_oPdfiumReadMutex, PDFIUM_MUTEX_TIMEOUT);
-		CPLCreateOrAcquireMutex(&(poPagePdfium->readMutex), PDFIUM_MUTEX_TIMEOUT);
-		poPagePdfium->page->ParseContent();
-		FPDF_BITMAP bitmap1 = FPDFBitmap_Create(correctedXSize, correctedYSize, nBands1 == 4/*alpha*/);
-		if( bitmap1 == NULL )
-		{
-		    // Release mutex - following code is thread-safe
-		    CPLReleaseMutex(poPagePdfium->readMutex);
-		    CPLReleaseMutex(g_oPdfiumReadMutex);
-		    return CE_Failure;
-		}
-		FPDF_DWORD color = 0xFFFFFFFF; // A,R,G,B
-		FPDFBitmap_FillRect(bitmap1, 0, 0, correctedXSize, correctedYSize, color);
-		PDFiumRenderPageBitmap(bitmap1, poPagePdfium->page,
-		      0, 0, correctedXSize, correctedYSize, NULL);
-		int stride = FPDFBitmap_GetStride(bitmap1);
-        	const GByte* buffer = reinterpret_cast<const GByte*>(FPDFBitmap_GetBuffer(bitmap1));
-		GByte* pabyData = (GByte*)malloc(correctedXSize*correctedYSize*nBands);
-		int nBandSpace = correctedXSize * correctedYSize;
-		int nPixelSpace = 1;
-		int nLineSpace = correctedXSize;
-		GByte* pabyDataR = pabyData;
-		GByte* pabyDataG = pabyData + 1 * nBandSpace;
-		GByte* pabyDataB = pabyData + 2 * nBandSpace;
-		GByte* pabyDataA = pabyData + 3 * nBandSpace;
-		// Copied from Poppler
-		int i, j;
-		for(j=0;j<correctedYSize;j++)
-		{
-		    for(i=0;i<correctedXSize;i++)
-		    {
-		        pabyDataR[i * nPixelSpace] = buffer[(i*4) + 2];
-		        pabyDataG[i * nPixelSpace] = buffer[(i*4) + 1];
-		        pabyDataB[i * nPixelSpace] = buffer[(i*4) + 0];
-		        if (nBands == 4)
-		        {
-		            pabyDataA[i * nPixelSpace] = buffer[(i*4) + 3];
-		        }
-		    }
-		    pabyDataR += nLineSpace;
-		    pabyDataG += nLineSpace;
-		    pabyDataB += nLineSpace;
-		    pabyDataA += nLineSpace;
-		    buffer += stride;
-		}
-		FPDFBitmap_Destroy(bitmap1);
-		GDALDriverH hDriver = GDALGetDriverByName( "GTiff" );
-		if(hDriver != NULL)
-		{
- 		printf("X Size = %d\n",correctedXSize);
- 		printf("Y Size = %d\n",correctedYSize);
- 		printf("Bands = %d\n",nBands1);
-		double pdfTransform[6];
-		GetGeoTransform(pdfTransform);
-		
-		
-		
-		printf("pdfTransform[0]=%f\n",pdfTransform[0]);
-		printf("pdfTransform[1]=%f\n",pdfTransform[1]);
-		printf("pdfTransform[2]=%f\n",pdfTransform[2]);
-		printf("pdfTransform[3]=%f\n",pdfTransform[3]);
-		printf("pdfTransform[4]=%f\n",pdfTransform[4]);
-		printf("pdfTransform[5]=%f\n",pdfTransform[5]);	
-		pdfTransform[1] = pdfTransform[1] * reductionFactorX;
-		pdfTransform[5] = pdfTransform[5] * reductionFactorX;
-		char *ptrDump = getenv("GPDF_DUMPFILE");
-		printf("Dump file name = %s\n",ptrDump );
-		GDALDatasetH ds1 = GDALCreate(hDriver,ptrDump,correctedXSize,correctedYSize,nBands1,GDT_Byte,NULL);
-			if(ds1 != NULL){
-			GDALDatasetRasterIO(ds1,GF_Write,0,0,correctedXSize,correctedYSize,pabyData,correctedXSize,correctedYSize,GDT_Byte,nBands1,NULL,0,0,0);
-			GDALSetGeoTransform(ds1,pdfTransform);
-			const char *projInfo = GetProjectionRef();
-			printf("Projection Info: %s\n",projInfo);
-			GDALSetProjection(ds1,projInfo);
-			GDALClose(ds1);
-			}
-		}
-		// Release mutex - following code is thread-safe
-		CPLReleaseMutex(poPagePdfium->readMutex); 
-		CPLReleaseMutex(g_oPdfiumReadMutex);		
-		return CE_Failure;
 	}
+	else
+	{
+		setenv("GPDF_RESULT","-1004",1);
+	}
+	// Release mutex - following code is thread-safe
+        CPLReleaseMutex(poPagePdfium->readMutex);
+        CPLReleaseMutex(g_oPdfiumReadMutex);
+	if(bitmap1 != NULL)
+	{
+		FPDFBitmap_Destroy(bitmap1);
+	}
+	
+	eErr = CE_Failure;
 	return eErr;
-	/* End of Correction Code */
 }
+
+/* End of Hack Code */
 /************************************************************************/
 /*                             ReadPixels()                             */
 /************************************************************************/

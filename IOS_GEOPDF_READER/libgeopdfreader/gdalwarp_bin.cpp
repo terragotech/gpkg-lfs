@@ -331,7 +331,7 @@ int CPL_STDCALL   geopdf_getwarpProgres( double prog, const char *msg, void *msg
     {
         oldProg = prog;
 		if(process_id != NULL) {
-            geopdf_create_status_file_progress(process_id, prog * 0.25f);
+            geopdf_create_status_file_progress(process_id, prog * 0.55f);
         }
         if(ptrTerminate != NULL)
         {
