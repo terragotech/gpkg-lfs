@@ -3,7 +3,8 @@
 export platform=iphonesimulator
 #export platform=iphoneos 
 ###Build for Device###
-export arch="x86_64"
+for f in "x86_64" "i386"; do
+export arch=$f
 export platform_dir=`xcrun -find -sdk ${platform} --show-sdk-platform-path`
 platform_sdk_dir=`xcrun -find -sdk ${platform} --show-sdk-path`
 
@@ -36,4 +37,5 @@ export RANLIB=`xcrun -find -sdk iphoneos ranlib`
 #############End of Cross Compiler ##############
 
 make -f make-sim-x864_64 clean
-make -f make-sim-x864_64
+make -f make-sim-x864_64 ${f}
+done

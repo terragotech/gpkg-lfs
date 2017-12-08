@@ -1,12 +1,17 @@
 INCLUDES=-I./include -I.
 
 
-libestimator.a:
+x86_64:
 	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c RasterSizeEstimator.cpp -o RasterSizeEstimator.o  
 	$(AR) rcs libestimator.a *.o
-	cp libestimator.a sim/libestimator.a
+	cp libestimator.a sim/x86_64/libestimator.a
+
+i386:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c RasterSizeEstimator.cpp -o RasterSizeEstimator.o  
+	$(AR) rcs libestimator.a *.o
+	cp libestimator.a sim/i386/libestimator.a
 
 clean:
 	rm *.o
 	rm *.a
-	rm sim/libestimator.a
+	rm libestimator.a
