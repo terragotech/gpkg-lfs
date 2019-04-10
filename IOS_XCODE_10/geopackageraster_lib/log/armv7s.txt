@@ -1,0 +1,98 @@
+building for host armv7s-apple-darwin
+
+library will be exported to /Users/vishsubramanian/Downloads/gpkg_lib/geopackageraster_lib/install//armv7s/iphoneos8.3.sdk
+CFLAGS -Wno-error=implicit-function-declaration -arch armv7s -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk
+/Applications/Xcode.app/Contents/Developer/usr/bin/g++ -Wno-error=implicit-function-declaration -arch armv7s -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk -arch armv7s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk -c -o GeoPackageRasterReader.o
+GeoPackageRasterReader.cpp:80:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                    "4",
+                    ^
+GeoPackageRasterReader.cpp:81:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                    "png",
+                    ^
+GeoPackageRasterReader.cpp:82:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                    "2",
+                    ^
+GeoPackageRasterReader.cpp:83:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                    "80",
+                    ^
+GeoPackageRasterReader.cpp:84:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                    "1",ptrTMP,(char*)progressFile.c_str());
+                    ^
+GeoPackageRasterReader.cpp:139:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"closeGeoPackage - enter");
+                                                        ^
+GeoPackageRasterReader.cpp:155:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"closeGeoPackage - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:172:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"getGeoPackageToMBTileConversionStatus - enter");
+                                                        ^
+GeoPackageRasterReader.cpp:178:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"getGeoPackageToMBTileConversionStatus - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:189:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"cancelGeoPackageToMBTilesConversion - enter");
+                                                        ^
+GeoPackageRasterReader.cpp:205:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"cancelGeoPackageToMBTilesConversion - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:223:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"initiateGeoPackageToMBTilesConversion - entered");
+                                                        ^
+GeoPackageRasterReader.cpp:226:42: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        write_log((char*)gr->logFileObj.c_str(),"term file name!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                                                ^
+GeoPackageRasterReader.cpp:231:42: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        write_log((char*)gr->logFileObj.c_str(),"term file name########################################");
+                                                ^
+GeoPackageRasterReader.cpp:235:42: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        write_log((char*)gr->logFileObj.c_str(),"Progress file name!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                                                ^
+GeoPackageRasterReader.cpp:240:42: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+        write_log((char*)gr->logFileObj.c_str(),"Progress file name####################################");
+                                                ^
+GeoPackageRasterReader.cpp:409:49: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                                                                write_log((char*)gr->logFileObj.c_str(),"Overview tile processing [STARTED] ");
+                                                                                                        ^
+GeoPackageRasterReader.cpp:417:49: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                                                                write_log((char*)gr->logFileObj.c_str(),"Overview tile processing [COMPLETE] ");
+                                                                                                        ^
+GeoPackageRasterReader.cpp:481:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"initiateGeoPackageToMBTilesConversion - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:497:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"getGeoPackageRasterNameListAsJSON - entered");
+                                                        ^
+GeoPackageRasterReader.cpp:516:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"getGeoPackageRasterNameListAsJSON - Generating JSON");
+                                                        ^
+GeoPackageRasterReader.cpp:619:44: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                        write_log((char*)gr->logFileObj.c_str(),"getGeoPackageRasterNameListAsJSON - JSON");
+                                                                ^
+GeoPackageRasterReader.cpp:627:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"getGeoPackageRasterNameListAsJSON - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:723:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"hasSubDataSets - enter");
+                                                        ^
+GeoPackageRasterReader.cpp:740:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"hasSubDataSets - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:749:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"isValidTileSourceName - entered");
+                                                        ^
+GeoPackageRasterReader.cpp:760:10: warning: implicit conversion of NULL constant to 'bool' [-Wnull-conversion]
+                return NULL;
+                ~~~~~~ ^~~~
+                       false
+GeoPackageRasterReader.cpp:826:43: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                write_log((char*)gr->logFileObj.c_str(),"isValidTileSourceName - exit");
+                                                        ^
+GeoPackageRasterReader.cpp:11:1: warning: function 'GDALInfoReportCorner' has internal linkage but is not defined [-Wundefined-internal]
+GDALInfoReportCorner( GDALDatasetH hDataset,
+^
+GeoPackageRasterReader.cpp:689:4: note: used here
+                        GDALInfoReportCorner(gr->hDSBounds,hTransform,"Lower Left",0.0, GDALGetRasterYSize(gr->hDSBounds),pLat,pLong);
+                        ^
+29 warnings generated.
+mkdir: ./install/: File exists

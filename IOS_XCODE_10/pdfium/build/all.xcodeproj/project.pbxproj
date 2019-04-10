@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D95ADB02FE982347C7965145 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F0E02F47130C9ABE67D4044A /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2C45A82AB639A23F3C20FD43 /* PBXTargetDependency */,
+				32354A179310FBB82DAA5E02 /* PBXTargetDependency */,
+				B8AEDA6520ADAAC46BAC797D /* PBXTargetDependency */,
+				D4837B81C09A8A5BC4CC5020 /* PBXTargetDependency */,
+				C8F7F91C97BD38995375A1BD /* PBXTargetDependency */,
+				BF2890FA593955860008B643 /* PBXTargetDependency */,
+				3DA06E297B2C269DF072EE81 /* PBXTargetDependency */,
+				1CEFF9EA3EFF17CF9C60247D /* PBXTargetDependency */,
+				6742F50951E40CB69BA8DFDF /* PBXTargetDependency */,
+				8AA14F87AA746D19F3249F23 /* PBXTargetDependency */,
+				A8FEA964AC51FC327882A160 /* PBXTargetDependency */,
+				8F5343DF33CF756A2430528B /* PBXTargetDependency */,
+				1A96A41ECDF227B201F28F22 /* PBXTargetDependency */,
+				C7AB25DF7A01C4266FE7E90E /* PBXTargetDependency */,
+				51798A1594B7796DEC29516A /* PBXTargetDependency */,
+				86566DCB0925CCFCA99F1A16 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		00977967752BF40FB59AA8E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FFBAE157DEA1F41FC94121CE;
+			remoteInfo = fpdftext;
+		};
+		0AB1A3C1E951594CA675D115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 98ABFD36238111998AC3F97B;
+			remoteInfo = fpdfdoc;
+		};
+		14902F0A774F49EDEF919247 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5BB5945BFECEE116D73CF38;
+			remoteInfo = formfiller;
+		};
+		16FA2E5874FECDCF1E5AA1BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B07BDC4F219556378AFECD9F;
+			remoteInfo = pdfium_embeddertests;
+		};
+		17C698A6D25806DA66D022A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BB087FB771A2B34BFE4DC47E;
+			remoteInfo = fxge;
+		};
+		1B75AA8B61C8682190460CAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0466BE87F426060C1E589326;
+			remoteInfo = fxcrt;
+		};
+		1E40029C2A0FA178DBF8F3EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 843486EBECEE73A5D48B3A16;
+			remoteInfo = fxcodec;
+		};
+		218619D7854CC9F391EC51E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7CABE0FD23D84EB86D9755FC;
+			remoteInfo = pdfium;
+		};
+		2EAA42C009C41E475432CAF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C511F255CE5AD8A55D7E3A15;
+			remoteInfo = fxedit;
+		};
+		31BC074DB6286DF497A8473F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 244CD81166C3BE217A345AA1;
+			remoteInfo = fxcrt;
+		};
+		3A815CC5707A99103962B56F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 307AFBF4D40164F9142D9EF9;
+			remoteInfo = pdfium_embeddertests;
+		};
+		3B4B92171E54A58605B1B654 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A7DE7E7BD7EBF44F7E06834A;
+			remoteInfo = fxcodec;
+		};
+		4B470BAB04458340EF1F70E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B4620F4B1F34CE175B1F9CEF;
+			remoteInfo = fpdfapi;
+		};
+		4B60A8FEEAD7C53C2982BD13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C83696E98A56413740E6F042;
+			remoteInfo = fx_lpng;
+		};
+		520CAB81253386FBC0C75914 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8E93401C2333E3271576F978;
+			remoteInfo = fxge;
+		};
+		5A50350B749AA78A976C339B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B38B34EFD4FE1C283604614;
+			remoteInfo = formfiller;
+		};
+		77B4B44584FEB4BE5AC369A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06EAD64C17A009928F81E155;
+			remoteInfo = pdfium_diff;
+		};
+		7E7F186534AB0E3A4FB5AAAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 331D706587D77A86D4289326;
+			remoteInfo = fpdfdoc;
+		};
+		7EB678AF44D9A78E567DB1BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 200992C0D0CB89FCD7950534;
+			remoteInfo = fxedit;
+		};
+		9D6335B588E4FA86840FAE0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 135A5A7453BAA0A1B9CA22A8;
+			remoteInfo = pdfium_test;
+		};
+		A4B14AA64DC53E61FE6D32D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40BF0FE0E77F445699A9E80B;
+			remoteInfo = fdrm;
+		};
+		B712774B9D719062CE3F1255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC7F67EFD2409364F1A04603;
+			remoteInfo = fx_lpng;
+		};
+		B93359CCF59E2F8FB0B86DB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AF536D996BCF3362F60944BE;
+			remoteInfo = pdfwindow;
+		};
+		BA0AD0DDD073761B6BFEA694 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B62CEF4E3E6CC495F69090;
+			remoteInfo = pdfium;
+		};
+		BAFEDA8124A3C131F87B44FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 18C4EF5F764DC857EB4A5399;
+			remoteInfo = fdrm;
+		};
+		C81793351551F0AE0D8A3CEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B7FD3D2EC2ABE920ACC4B0F5;
+			remoteInfo = pdfium_unittests;
+		};
+		D46D04FAA0D37F08C982E2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D673B8C232C14439754E5FD2;
+			remoteInfo = fpdfapi;
+		};
+		D9B8C5BCA7D881547485C659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FC21061A2D9A84C679B2F774;
+			remoteInfo = pdfwindow;
+		};
+		E7EB59328C64DE7E1D864C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82B38EC8542B2DAA5A9E852B;
+			remoteInfo = pdfium_unittests;
+		};
+		E8987BCA66FD67567C2BFB61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BB9F1367037D5BD4DD1AAC7A;
+			remoteInfo = pdfium_test;
+		};
+		E95E3D91B1B112BB74ADA9E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D17609DF762463E4AA4FF34;
+			remoteInfo = pdfium_diff;
+		};
+		E9CA7FA873D65B04E0CD373B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A303B35FBE8D29F29C62D3FF;
+			remoteInfo = fpdftext;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		080089BDB4066B779B5B58EE /* samples.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = samples.xcodeproj; path = ../samples/samples.xcodeproj; sourceTree = SOURCE_ROOT; };
+		2AE07737C85E702D08C522B3 /* all.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = all.gyp; sourceTree = "<group>"; };
+		B92E90E548483194C8517365 /* pdfium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pdfium.xcodeproj; path = ../pdfium.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CE743C8F247BB631A25270D5 /* standalone.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = standalone.gypi; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		12A5F3E44925E9F9AEDAB971 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49B6C701DCC49FF26E1BABFE /* pdfium_test */,
+				433C52D287FB0759BA088E9B /* pdfium_diff */,
+				9E154BD1E4AA4D8773F9173C /* libfx_lpng.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		846518D81C03D2D73EB63227 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				B92E90E548483194C8517365 /* pdfium.xcodeproj */,
+				080089BDB4066B779B5B58EE /* samples.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		88ACB7EAB46F9029FA9BEFDD = {
+			isa = PBXGroup;
+			children = (
+				846518D81C03D2D73EB63227 /* Projects */,
+				8BE5546C04678DE71E1D37C7 /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		8BE5546C04678DE71E1D37C7 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				2AE07737C85E702D08C522B3 /* all.gyp */,
+				CE743C8F247BB631A25270D5 /* standalone.gypi */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		E3AF0563E81AA648B3E89065 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38C0134BF43290E8B360EEF1 /* libpdfium.a */,
+				8AF05C0D5202ED387C36A50E /* libfdrm.a */,
+				D526245934158E82752FFB9D /* libfpdfdoc.a */,
+				6E23E22568C3D9193A7648C7 /* libfpdfapi.a */,
+				695A4CCE42945F6549CC022B /* libfpdftext.a */,
+				6C03633514EA175461BF43FC /* libfxcodec.a */,
+				F3AC2CC2C0CD4EAF27AB3E9C /* libfxcrt.a */,
+				A03107A6609FEBE3821ABC90 /* libfxge.a */,
+				435C061E76023AA0D60CA480 /* libfxedit.a */,
+				E3A20C502A558F1093A76515 /* libpdfwindow.a */,
+				2E760005823271E08087CE24 /* libformfiller.a */,
+				E9FA7013FF0D607CBEF70008 /* pdfium_unittests */,
+				DA8DED2B6C4D698BFC45DDC7 /* pdfium_embeddertests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		07F667ABBAC8347BCE0D653A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 5953671EE5E9D932BEFB7B03 /* Build configuration list for PBXProject "all" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 88ACB7EAB46F9029FA9BEFDD;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E3AF0563E81AA648B3E89065 /* Products */;
+					ProjectRef = B92E90E548483194C8517365 /* pdfium.xcodeproj */;
+				},
+				{
+					ProductGroup = 12A5F3E44925E9F9AEDAB971 /* Products */;
+					ProjectRef = 080089BDB4066B779B5B58EE /* samples.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D95ADB02FE982347C7965145 /* All */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2E760005823271E08087CE24 /* libformfiller.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libformfiller.a;
+			remoteRef = 14902F0A774F49EDEF919247 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		38C0134BF43290E8B360EEF1 /* libpdfium.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpdfium.a;
+			remoteRef = 218619D7854CC9F391EC51E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		433C52D287FB0759BA088E9B /* pdfium_diff */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = pdfium_diff;
+			remoteRef = E95E3D91B1B112BB74ADA9E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		435C061E76023AA0D60CA480 /* libfxedit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfxedit.a;
+			remoteRef = 2EAA42C009C41E475432CAF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49B6C701DCC49FF26E1BABFE /* pdfium_test */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = pdfium_test;
+			remoteRef = E8987BCA66FD67567C2BFB61 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		695A4CCE42945F6549CC022B /* libfpdftext.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfpdftext.a;
+			remoteRef = E9CA7FA873D65B04E0CD373B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C03633514EA175461BF43FC /* libfxcodec.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfxcodec.a;
+			remoteRef = 1E40029C2A0FA178DBF8F3EB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E23E22568C3D9193A7648C7 /* libfpdfapi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfpdfapi.a;
+			remoteRef = 4B470BAB04458340EF1F70E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8AF05C0D5202ED387C36A50E /* libfdrm.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfdrm.a;
+			remoteRef = A4B14AA64DC53E61FE6D32D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9E154BD1E4AA4D8773F9173C /* libfx_lpng.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfx_lpng.a;
+			remoteRef = 4B60A8FEEAD7C53C2982BD13 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A03107A6609FEBE3821ABC90 /* libfxge.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfxge.a;
+			remoteRef = 520CAB81253386FBC0C75914 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D526245934158E82752FFB9D /* libfpdfdoc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfpdfdoc.a;
+			remoteRef = 0AB1A3C1E951594CA675D115 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA8DED2B6C4D698BFC45DDC7 /* pdfium_embeddertests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = pdfium_embeddertests;
+			remoteRef = 16FA2E5874FECDCF1E5AA1BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E3A20C502A558F1093A76515 /* libpdfwindow.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpdfwindow.a;
+			remoteRef = B93359CCF59E2F8FB0B86DB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9FA7013FF0D607CBEF70008 /* pdfium_unittests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = pdfium_unittests;
+			remoteRef = E7EB59328C64DE7E1D864C4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3AC2CC2C0CD4EAF27AB3E9C /* libfxcrt.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfxcrt.a;
+			remoteRef = 31BC074DB6286DF497A8473F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXTargetDependency section */
+		1A96A41ECDF227B201F28F22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pdfium_embeddertests;
+			targetProxy = 3A815CC5707A99103962B56F /* PBXContainerItemProxy */;
+		};
+		1CEFF9EA3EFF17CF9C60247D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fxge;
+			targetProxy = 17C698A6D25806DA66D022A2 /* PBXContainerItemProxy */;
+		};
+		2C45A82AB639A23F3C20FD43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pdfium;
+			targetProxy = BA0AD0DDD073761B6BFEA694 /* PBXContainerItemProxy */;
+		};
+		32354A179310FBB82DAA5E02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fdrm;
+			targetProxy = BAFEDA8124A3C131F87B44FC /* PBXContainerItemProxy */;
+		};
+		3DA06E297B2C269DF072EE81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fxcrt;
+			targetProxy = 1B75AA8B61C8682190460CAC /* PBXContainerItemProxy */;
+		};
+		51798A1594B7796DEC29516A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pdfium_diff;
+			targetProxy = 77B4B44584FEB4BE5AC369A5 /* PBXContainerItemProxy */;
+		};
+		6742F50951E40CB69BA8DFDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fxedit;
+			targetProxy = 7EB678AF44D9A78E567DB1BB /* PBXContainerItemProxy */;
+		};
+		86566DCB0925CCFCA99F1A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fx_lpng;
+			targetProxy = B712774B9D719062CE3F1255 /* PBXContainerItemProxy */;
+		};
+		8AA14F87AA746D19F3249F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pdfwindow;
+			targetProxy = D9B8C5BCA7D881547485C659 /* PBXContainerItemProxy */;
+		};
+		8F5343DF33CF756A2430528B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pdfium_unittests;
+			targetProxy = C81793351551F0AE0D8A3CEA /* PBXContainerItemProxy */;
+		};
+		A8FEA964AC51FC327882A160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = formfiller;
+			targetProxy = 5A50350B749AA78A976C339B /* PBXContainerItemProxy */;
+		};
+		B8AEDA6520ADAAC46BAC797D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fpdfdoc;
+			targetProxy = 7E7F186534AB0E3A4FB5AAAF /* PBXContainerItemProxy */;
+		};
+		BF2890FA593955860008B643 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fxcodec;
+			targetProxy = 3B4B92171E54A58605B1B654 /* PBXContainerItemProxy */;
+		};
+		C7AB25DF7A01C4266FE7E90E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pdfium_test;
+			targetProxy = 9D6335B588E4FA86840FAE0E /* PBXContainerItemProxy */;
+		};
+		C8F7F91C97BD38995375A1BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fpdftext;
+			targetProxy = 00977967752BF40FB59AA8E3 /* PBXContainerItemProxy */;
+		};
+		D4837B81C09A8A5BC4CC5020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fpdfapi;
+			targetProxy = D46D04FAA0D37F08C982E2AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		229D6A07D2DDAD475989C29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_DEPRECATION_WARNINGS,
+					"GTEST_HAS_POSIX_RE=0",
+					"GTEST_LANG_CXX11=0",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PRODUCT_NAME = All;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug;
+		};
+		47305E3C9C5C93CCA81183D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_DEPRECATION_WARNINGS,
+					"GTEST_HAS_POSIX_RE=0",
+					"GTEST_LANG_CXX11=0",
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PRODUCT_NAME = All;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release;
+		};
+		5CDDAADA84488E8ECB493DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Debug;
+		};
+		77680E374EBEF888F208EF2C /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_DEPRECATION_WARNINGS,
+					"GTEST_HAS_POSIX_RE=0",
+					"GTEST_LANG_CXX11=0",
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PRODUCT_NAME = All;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Release_x64;
+		};
+		A30A529955D30D1D5F35C8E6 /* Release_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Release_x64;
+		};
+		AB874CBD5ABF75965F606ED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Release;
+		};
+		C652DA54A3ABB8DB70E9E811 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Debug_x64;
+		};
+		EE252582E889349B59EB2DD1 /* Debug_x64 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_DEPRECATION_WARNINGS,
+					"GTEST_HAS_POSIX_RE=0",
+					"GTEST_LANG_CXX11=0",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PRODUCT_NAME = All;
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Debug_x64;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5953671EE5E9D932BEFB7B03 /* Build configuration list for PBXProject "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB874CBD5ABF75965F606ED9 /* Release */,
+				5CDDAADA84488E8ECB493DA7 /* Debug */,
+				C652DA54A3ABB8DB70E9E811 /* Debug_x64 */,
+				A30A529955D30D1D5F35C8E6 /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+		F0E02F47130C9ABE67D4044A /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47305E3C9C5C93CCA81183D5 /* Release */,
+				229D6A07D2DDAD475989C29A /* Debug */,
+				EE252582E889349B59EB2DD1 /* Debug_x64 */,
+				77680E374EBEF888F208EF2C /* Release_x64 */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07F667ABBAC8347BCE0D653A /* Project object */;
+}

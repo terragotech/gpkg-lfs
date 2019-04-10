@@ -1,0 +1,2 @@
+#define OS_UNIX_LINUX_BUILD
+#define GEOPDF_IOS_BUILD

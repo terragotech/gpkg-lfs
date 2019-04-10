@@ -1,0 +1,17 @@
+INCLUDES=-I./include -I.
+
+
+x86_64:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPackageRasterReader.cpp -o GeoPackageRasterReader.o  
+	ar rcs libGeoPackageRasterReader.a GeoPackageRasterReader.o
+	cp libGeoPackageRasterReader.a sim/x86_64/libGeoPackageRasterReader.a
+
+i386:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPackageRasterReader.cpp -o GeoPackageRasterReader.o  
+	ar rcs libGeoPackageRasterReader.a GeoPackageRasterReader.o
+	cp libGeoPackageRasterReader.a sim/i386/libGeoPackageRasterReader.a
+
+clean:
+	rm *.o
+	rm *.a
+	

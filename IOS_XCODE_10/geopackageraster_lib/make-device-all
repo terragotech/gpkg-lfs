@@ -1,0 +1,22 @@
+INCLUDES=-I./include -I.
+
+armv7:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPackageRasterReader.cpp -o GeoPackageRasterReader.o  
+	ar rcs libGeoPackageRasterReader.a GeoPackageRasterReader.o
+	cp libGeoPackageRasterReader.a device/armv7/libGeoPackageRasterReader.a
+
+armv7s:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPackageRasterReader.cpp -o GeoPackageRasterReader.o  
+	ar rcs libGeoPackageRasterReader.a GeoPackageRasterReader.o
+	cp libGeoPackageRasterReader.a device/armv7s/libGeoPackageRasterReader.a
+
+arm64:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPackageRasterReader.cpp -o GeoPackageRasterReader.o  
+	ar rcs libGeoPackageRasterReader.a GeoPackageRasterReader.o
+	cp libGeoPackageRasterReader.a device/arm64/libGeoPackageRasterReader.a
+
+
+
+clean:
+	rm -f *.o
+	rm -f *.a

@@ -1,0 +1,149 @@
+INCLUDES=-I./include -I.
+
+armv7:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPDFReader.cpp -o GeoPDFReader.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium  
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdalwarp_bin.cpp -o gdalwarp_bin2.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium 
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdalwarp_bin21.cpp -o gdalwarp_bin21.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c main.cpp -o main.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c com_terragoedge_geopdf_read_GeoPDFReader.cpp -o com_terragoedge_geopdf_read_GeoPDFReader.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium 
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c global_mercator.cpp -o global_mercator.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c utils.cpp -o utils.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c commonutils.cpp -o commonutils.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c logger.cpp -o logger.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdal_to_tiles.cpp -o gdal_to_tiles.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c logger2.cpp -o logger2.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(AR) rcs libgeopdfreader.a *.o
+	cp libgeopdfreader.a device/armv7/libgeopdfreader.a
+
+armv7s:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPDFReader.cpp -o GeoPDFReader.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium  
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdalwarp_bin.cpp -o gdalwarp_bin2.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium 
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdalwarp_bin21.cpp -o gdalwarp_bin21.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c main.cpp -o main.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c com_terragoedge_geopdf_read_GeoPDFReader.cpp -o com_terragoedge_geopdf_read_GeoPDFReader.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium 
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c global_mercator.cpp -o global_mercator.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c utils.cpp -o utils.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c commonutils.cpp -o commonutils.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c logger.cpp -o logger.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdal_to_tiles.cpp -o gdal_to_tiles.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c logger2.cpp -o logger2.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(AR) rcs libgeopdfreader.a *.o
+	cp libgeopdfreader.a device/armv7s/libgeopdfreader.a
+
+arm64:
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c GeoPDFReader.cpp -o GeoPDFReader.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium  
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdalwarp_bin.cpp -o gdalwarp_bin2.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdalwarp_bin21.cpp -o gdalwarp_bin21.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c main.cpp -o main.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c com_terragoedge_geopdf_read_GeoPDFReader.cpp -o com_terragoedge_geopdf_read_GeoPDFReader.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium 
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c global_mercator.cpp -o global_mercator.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c utils.cpp -o utils.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c commonutils.cpp -o commonutils.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c logger.cpp -o logger.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c gdal_to_tiles.cpp -o gdal_to_tiles.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(CXX) $(CXXFLAGS)  $(INCLUDES) -c logger2.cpp -o logger2.o  \
+	-I$(TPF) \
+	-I$(TPF)/include \
+	-I$(TPF)/include/pdfium
+	$(AR) rcs libgeopdfreader.a *.o
+	cp libgeopdfreader.a device/arm64/libgeopdfreader.a
+
+clean:
+	rm -f *.o
+	rm -f *.a

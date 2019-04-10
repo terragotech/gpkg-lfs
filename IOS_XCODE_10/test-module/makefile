@@ -1,0 +1,2 @@
+tiftest: tiftest.cpp
+	clang++  -I/Users/admin/Desktop/GoodStart/gdallib2/gcore -I/Users/admin/Desktop/GoodStart/gdallib2/port -I/Users/admin/Desktop/GoodStart/gdallib2/ogr tiftest.cpp -o tiftest -L. -lproj -liconv -lgdal -stdlib=libc++
