@@ -1,0 +1,57 @@
+cpl_conv.o: cpl_conv.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_conv.cpp 
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_error.cpp 
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_string.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cplgetsymbol.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cplstringlist.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_strtod.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_path.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_csv.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_findfile.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_minixml.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_multiproc.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_list.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_getexecpath.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cplstring.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_win32.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsisimple.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsi_mem.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_unix_stdio_64.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_http.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_hash_set.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cplkeywordparser.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_recode.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_recode_iconv.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_recode_stub.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_quad_tree.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_atomic_ops.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_subfile.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_time.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_stdout.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_sparsefile.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_abstract_archive.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_tar.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_stdin.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_buffered_reader.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_base64.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_curl.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_curl_streaming.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_cache.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_xml_validate.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_spawn.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_google_oauth2.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_progress.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_virtualmem.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_worker_thread_pool.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_crypt.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_sha256.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_aws.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsi_error.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_vsil_gzip.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_minizip_ioapi.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_minizip_unzip.cpp
+	$(CXX) -DHAVE_LIBZ $(CXXFLAGS) -c cpl_minizip_zip.cpp
+	 
+clean:
+	rm -f *.o
