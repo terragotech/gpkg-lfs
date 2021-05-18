@@ -5,8 +5,8 @@ export TG=$2
 export BUILD_FOLDER='./jni'
 
 echo 'APP_ABI := '$2 > $BUILD_FOLDER/Application.mk
-echo 'APP_PLATFORM := android-21' >> $BUILD_FOLDER/Application.mk
-echo 'APP_STL := gnustl_static' >> $BUILD_FOLDER/Application.mk
+echo 'APP_PLATFORM := android-30' >> $BUILD_FOLDER/Application.mk
+echo 'APP_STL := c++_shared' >> $BUILD_FOLDER/Application.mk
 echo 'LOCAL_PATH := $(call my-dir)' > $BUILD_FOLDER/Android.mk
 echo 'include $(CLEAR_VARS)' >> $BUILD_FOLDER/Android.mk
 echo 'LOCAL_MODULE := gdal' >> $BUILD_FOLDER/Android.mk

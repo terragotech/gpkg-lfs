@@ -113,7 +113,7 @@ JNIEXPORT jlong JNICALL Java_com_terragoedge_geopdf_read_GeoPDFReader_destroyGeo
 	GeoPDFReader *pGeoPDFReader = reinterpret_cast<GeoPDFReader*>(ptr);
 	if(pGeoPDFReader != NULL)
 	{
-		delete pGeoPDFReader;
+		//delete pGeoPDFReader;
 	}
 	else
 	{

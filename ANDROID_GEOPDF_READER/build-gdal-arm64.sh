@@ -5,7 +5,7 @@ then
 	echo Param1 - Compiler location
 	echo Param2 - 3rdParty Folder
 else
-export LIBS="-lsupc++ -lstdc++"
+export LIBS="-lc++"
 export BUILD_PATH=$1
 export PATH=$PATH:$BUILD_PATH
 export TP_FOLDER=$2

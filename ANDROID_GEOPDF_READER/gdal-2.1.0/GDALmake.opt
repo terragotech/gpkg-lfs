@@ -1,12 +1,12 @@
 # -*- Makefile -*- for emacs.
-GDAL_ROOT	=	/home/ganesan/works/ANDROID_PDFIUM/gdal-2.1.0
+GDAL_ROOT	=	/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/gdal-2.1.0
 top_builddir	=	$(GDAL_ROOT)
 
 #
 # the library can be built by the native build or with the help of libtool
 #
 
-SHELL    =   /bin/bash
+SHELL    =   /bin/sh
 HAVE_LIBTOOL	=	yes
 LIBTOOL	=	$(SHELL) $(top_builddir)/libtool
 ifeq ($(HAVE_LIBTOOL),yes)
@@ -18,13 +18,13 @@ LIBTOOL_FINISH	=	$(LIBTOOL) --mode=finish --silent
 LIBTOOL_CLEAN	=	$(LIBTOOL) --mode=clean
 OBJ_EXT = lo
 else
-LIBTOOL_FINISH	=	/bin/true
+LIBTOOL_FINISH	=	/usr/bin/true
 OBJ_EXT = o
 endif
 
-CC	=	$(LIBTOOL_COMPILE_CC) i686-linux-android-gcc
-CXX	=	$(LIBTOOL_COMPILE_CXX) i686-linux-android-g++
-LD	=	$(LIBTOOL_LINK)	i686-linux-android-g++
+CC	=	$(LIBTOOL_COMPILE_CC) aarch64-linux-android-gcc
+CXX	=	$(LIBTOOL_COMPILE_CXX) aarch64-linux-android-g++
+LD	=	$(LIBTOOL_LINK)	aarch64-linux-android-g++
 RM	=	$(LIBTOOL_CLEAN) /bin/rm -f *.lo
 INSTALL = 	$(LIBTOOL_INSTALL) $(GDAL_ROOT)/install-sh -c
 INSTALL_LIB 	=	$(LIBTOOL_INSTALL) $(GDAL_ROOT)/install-sh -c
@@ -33,15 +33,15 @@ INSTALL_DIR	= 	$(GDAL_ROOT)/install-sh -d
 
 # SDE_LIB needs to be first because it embeds zlib.  We need to use its symbols instead of -lz's
 
-LIBS	=	$(SDE_LIB) -L/home/ganesan/works/ANDROID_PDFIUM/x86/lib -lproj -L/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install -L/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install/lib/pdfium -lpdfium -lfpdfdoc -lfpdfapi -lfpdftext -lformfiller -lpdfwindow -lfxedit -lfpdfdoc -lfxcodec -lfx_libopenjpeg -lfx_lcms2 -lfx_libjpeg -lfx_zlib -lfdrm -lfxge -lfreetype -lfx_agg -lfxcrt -lbigint -L/home/ganesan/works/ANDROID_PDFIUM/x86/lib -lsqlite3 -lz  -lm -ldl -lsupc++ -lstdc++ $(KAK_LIBS) $(DWG_LIBS) $(CURL_LIB) \
+LIBS	=	$(SDE_LIB) -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/lib -lproj -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install/lib/pdfium -lpdfium -lfpdfdoc -lfpdfapi -lfpdftext -lformfiller -lpdfwindow -lfxedit -lfpdfdoc -lfxcodec -lfx_libopenjpeg -lfx_lcms2 -lfx_libjpeg -lfx_zlib -lfdrm -lfxge -lfreetype -lfx_agg -lfxcrt -lbigint -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/lib -lsqlite3 -lz  -lm -ldl -lc++ $(KAK_LIBS) $(DWG_LIBS) $(CURL_LIB) \
 		$(MRSID_LIBS) $(MRSID_LIDAR_LIBS) $(ECW_LIBS) $(INGRES_LIB) \
 		$(PCIDSK_LIB) $(RASDAMAN_LIB) $(CHARLS_LIB) $(SOSI_LIB) \
 		$(OPENCL_LIB) $(JVM_LIB) $(LIBICONV) $(FGDB_LIB) $(LIBXML2_LIB) $(MONGODB_LIB)
 
 SSEFLAGS = 
-HAVE_SSE_AT_COMPILE_TIME = yes
-AVXFLAGS = -mavx
-HAVE_AVX_AT_COMPILE_TIME = yes
+HAVE_SSE_AT_COMPILE_TIME = 
+AVXFLAGS = 
+HAVE_AVX_AT_COMPILE_TIME = 
 
 PYTHON = 
 PY_HAVE_SETUPTOOLS=
@@ -69,17 +69,17 @@ INST_MAN	=	${prefix}/man
 INST_HTML	=	$(HOME)/www/gdal
 
 CPPFLAGS	=  -I$(GDAL_ROOT)/port  -DGDAL_COMPILATION
-CFLAGS		= -g -O2  -Wall -Wdeclaration-after-statement -Wextra -Winit-self -Wunused-parameter -Wmissing-prototypes -Wmissing-declarations -Wformat -Werror=format-security -Wno-format-nonliteral -Wlogical-op -Wshadow -Werror=vla -Wdeclaration-after-statement $(USER_DEFS)
-CXXFLAGS	= -std=c++0x -g -O2  -Wall -Wextra -Winit-self -Wunused-parameter -Wformat -Werror=format-security -Wno-format-nonliteral -Wlogical-op -Wshadow -Werror=vla -Wmissing-declarations -Wnon-virtual-dtor -Woverloaded-virtual -fno-operator-names $(USER_DEFS)
-CFLAGS_NOFTRAPV          = -g -O2  -Wall -Wdeclaration-after-statement -Wextra -Winit-self -Wunused-parameter -Wmissing-prototypes -Wmissing-declarations -Wformat -Werror=format-security -Wno-format-nonliteral -Wlogical-op -Wshadow -Werror=vla -Wdeclaration-after-statement $(USER_DEFS)
-CXXFLAGS_NOFTRAPV        = -g -O2  -Wall -Wextra -Winit-self -Wunused-parameter -Wformat -Werror=format-security -Wno-format-nonliteral -Wlogical-op -Wshadow -Werror=vla -Wmissing-declarations -Wnon-virtual-dtor -Woverloaded-virtual -fno-operator-names $(USER_DEFS)
-CFLAGS_NO_LTO_IF_AVX_NONDEFAULT             = -g -O2  -Wall -Wdeclaration-after-statement -Wextra -Winit-self -Wunused-parameter -Wmissing-prototypes -Wmissing-declarations -Wformat -Werror=format-security -Wno-format-nonliteral -Wlogical-op -Wshadow -Werror=vla -Wdeclaration-after-statement $(USER_DEFS)
-CXXFLAGS_NO_LTO_IF_AVX_NONDEFAULT           = -g -O2  -Wall -Wextra -Winit-self -Wunused-parameter -Wformat -Werror=format-security -Wno-format-nonliteral -Wlogical-op -Wshadow -Werror=vla -Wmissing-declarations -Wnon-virtual-dtor -Woverloaded-virtual -fno-operator-names $(USER_DEFS)
+CFLAGS		= -g -O2  -Wall -Wdeclaration-after-statement -Wextra -Winit-self -Wunused-parameter -Wmissing-prototypes -Wmissing-declarations -Wformat -Werror=format-security -Wno-format-nonliteral -Wshorten-64-to-32 -Wshadow -Werror=vla -Wdeclaration-after-statement -Wnull-dereference $(USER_DEFS)
+CXXFLAGS	= -std=c++0x -g -O2  -Wall -Wextra -Winit-self -Wunused-parameter -Wformat -Werror=format-security -Wno-format-nonliteral -Wshorten-64-to-32 -Wshadow -Werror=vla -Wnull-dereference -Wunused-private-field -Wmissing-prototypes -Wmissing-declarations -Wnon-virtual-dtor -Woverloaded-virtual -fno-operator-names $(USER_DEFS)
+CFLAGS_NOFTRAPV          = -g -O2  -Wall -Wdeclaration-after-statement -Wextra -Winit-self -Wunused-parameter -Wmissing-prototypes -Wmissing-declarations -Wformat -Werror=format-security -Wno-format-nonliteral -Wshorten-64-to-32 -Wshadow -Werror=vla -Wdeclaration-after-statement -Wnull-dereference $(USER_DEFS)
+CXXFLAGS_NOFTRAPV        = -g -O2  -Wall -Wextra -Winit-self -Wunused-parameter -Wformat -Werror=format-security -Wno-format-nonliteral -Wshorten-64-to-32 -Wshadow -Werror=vla -Wnull-dereference -Wunused-private-field -Wmissing-prototypes -Wmissing-declarations -Wnon-virtual-dtor -Woverloaded-virtual -fno-operator-names $(USER_DEFS)
+CFLAGS_NO_LTO_IF_AVX_NONDEFAULT             = -g -O2  -Wall -Wdeclaration-after-statement -Wextra -Winit-self -Wunused-parameter -Wmissing-prototypes -Wmissing-declarations -Wformat -Werror=format-security -Wno-format-nonliteral -Wshorten-64-to-32 -Wshadow -Werror=vla -Wdeclaration-after-statement -Wnull-dereference $(USER_DEFS)
+CXXFLAGS_NO_LTO_IF_AVX_NONDEFAULT           = -g -O2  -Wall -Wextra -Winit-self -Wunused-parameter -Wformat -Werror=format-security -Wno-format-nonliteral -Wshorten-64-to-32 -Wshadow -Werror=vla -Wnull-dereference -Wunused-private-field -Wmissing-prototypes -Wmissing-declarations -Wnon-virtual-dtor -Woverloaded-virtual -fno-operator-names $(USER_DEFS)
 
 NO_UNUSED_PARAMETER_FLAG = -Wno-unused-parameter
 NO_SIGN_COMPARE = -Wno-sign-compare
 NO_NON_VIRTUAL_DTOR_FLAG = -Wno-non-virtual-dtor
-NO_LOGICAL_OP_FLAG = -Wno-logical-op
+NO_LOGICAL_OP_FLAG = 
 
 # Also available -DAFL_FRIENDLY for strcmp(), etc.. variants that will
 # work better with American Fuzzy Lop branch examination logic
@@ -102,7 +102,7 @@ NO_LOGICAL_OP_FLAG = -Wno-logical-op
 LDFLAGS     = 
 # LDFLAGS += -fsanitize=address
 
-RANLIB		=	i686-linux-android-ranlib
+RANLIB		=	aarch64-linux-android-ranlib
 SO_EXT		=	
 LD_SHARED	=	
 EXE		=       
@@ -206,7 +206,7 @@ endif
 #
 # SQLite
 #
-SQLITE_INC = -I/home/ganesan/works/ANDROID_PDFIUM/x86/include
+SQLITE_INC = -I/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/include
 SQLITE_HAS_COLUMN_METADATA = no
 HAVE_SQLITE = yes
 HAVE_SPATIALITE = no
@@ -496,8 +496,8 @@ PODOFO_PLUGIN_LIB =
 #
 
 HAVE_PDFIUM = yes
-PDFIUM_INC = -I/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install -I/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install/include -I/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install/include/pdfium
-PDFIUM_PLUGIN_LIB = -L/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install -L/home/ganesan/works/ANDROID_PDFIUM/x86/pdfium/install/lib/pdfium -lpdfium -lfpdfdoc -lfpdfapi -lfpdftext -lformfiller -lpdfwindow -lfxedit -lfpdfdoc -lfxcodec -lfx_libopenjpeg -lfx_lcms2 -lfx_libjpeg -lfx_zlib -lfdrm -lfxge -lfreetype -lfx_agg -lfxcrt -lbigint
+PDFIUM_INC = -I/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install -I/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install/include -I/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install/include/pdfium
+PDFIUM_PLUGIN_LIB = -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/pdfium/install/lib/pdfium -lpdfium -lfpdfdoc -lfpdfapi -lfpdftext -lformfiller -lpdfwindow -lfxedit -lfpdfdoc -lfxcodec -lfx_libopenjpeg -lfx_lcms2 -lfx_libjpeg -lfx_zlib -lfdrm -lfxge -lfreetype -lfx_agg -lfxcrt -lbigint
 
 #
 # CharLs stuff
@@ -514,7 +514,7 @@ PROJ_STATIC	=	yes
 ifeq ($(PROJ_STATIC),yes)
 PROJ_FLAGS = -DPROJ_STATIC
 endif
-PROJ_INCLUDE	=	-I/home/ganesan/works/ANDROID_PDFIUM/x86/include
+PROJ_INCLUDE	=	-I/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/arm64-v8a/include
 
 PAM_SETTING     =       -DPAM_ENABLED
 

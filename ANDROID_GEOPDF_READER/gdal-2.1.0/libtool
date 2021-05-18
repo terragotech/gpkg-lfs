@@ -1,8 +1,8 @@
-#! /bin/bash
+#! /bin/sh
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status () 
-# Libtool was configured on host ganesan-VirtualBox:
+# Libtool was configured on host localhost.localdomain:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -62,17 +62,17 @@ build_old_libs=yes
 pic_mode=default
 
 # Whether or not to optimize for fast installation.
-fast_install=yes
+fast_install=needless
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/bash"
+SHELL="/bin/sh"
 
 # An echo program that protects backslashes.
 ECHO="printf %s\\n"
 
 # The host system.
-host_alias=i686-linux-android
-host=i686-pc-linux-android
+host_alias=aarch64-linux-android
+host=aarch64-unknown-linux-android
 host_os=linux-android
 
 # The build system.
@@ -81,22 +81,22 @@ build=x86_64-pc-linux-gnu
 build_os=linux-gnu
 
 # A sed program that does not truncate output.
-SED="/bin/sed"
+SED="/usr/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"
 
 # A grep program that handles long lines.
-GREP="/bin/grep"
+GREP="/usr/bin/grep"
 
 # An ERE matcher.
-EGREP="/bin/grep -E"
+EGREP="/usr/bin/grep -E"
 
 # A literal string matcher.
-FGREP="/bin/grep -F"
+FGREP="/usr/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/i686-linux-android-nm -B"
+NM="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/aarch64-linux-android-nm -B"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -141,7 +141,7 @@ want_nocaseglob="no"
 sharedlib_from_linklib_cmd="printf %s\\n"
 
 # The archiver.
-AR="i686-linux-android-ar"
+AR="aarch64-linux-android-ar"
 
 # Flags to create an archive.
 AR_FLAGS="cru"
@@ -150,10 +150,10 @@ AR_FLAGS="cru"
 archiver_list_spec="@"
 
 # A symbol stripping program.
-STRIP="i686-linux-android-strip"
+STRIP="aarch64-linux-android-strip"
 
 # Commands used to install an old-style archive.
-RANLIB="i686-linux-android-ranlib"
+RANLIB="aarch64-linux-android-ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$oldlib"
 old_postuninstall_cmds=""
 
@@ -161,7 +161,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="i686-linux-android-gcc"
+LTCC="aarch64-linux-android-gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -240,7 +240,7 @@ runpath_var=LD_RUN_PATH
 shlibpath_var=LD_LIBRARY_PATH
 
 # Is shlibpath searched before the hard-coded library search path?
-shlibpath_overrides_runpath=no
+shlibpath_overrides_runpath=yes
 
 # Format of library name prefix.
 libname_spec="lib\$name"
@@ -272,10 +272,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/lib/gcc/i686-linux-android/4.9.x /home/ganesan/works/ANDROID_PDFIUM/android-21-x86/lib/gcc /home/ganesan/works/ANDROID_PDFIUM/android-21-x86/i686-linux-android/lib /home/ganesan/works/ANDROID_PDFIUM/android-21-x86/sysroot/usr/lib "
+sys_lib_search_path_spec="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/lib64/clang/9.0.9 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/lib64/clang/9.0.9/lib/linux/aarch64 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/lib/gcc/aarch64-linux-android/4.9.x /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/aarch64-linux-android/lib64 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/sysroot/usr/lib/aarch64-linux-android/30 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/sysroot/usr/lib/aarch64-linux-android /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/aarch64-linux-android/lib /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/sysroot/usr/lib "
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/mesa-egl /usr/lib/x86_64-linux-gnu/mesa "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64//bind9-export/      /usr/lib64/iscsi "
 
 # Whether dlopen is supported.
 dlopen_support=unknown
@@ -287,12 +287,12 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="i686-linux-android-strip --strip-debug"
-striplib="i686-linux-android-strip --strip-unneeded"
+old_striplib="aarch64-linux-android-strip --strip-debug"
+striplib="aarch64-linux-android-strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/i686-linux-android/bin/ld"
+LD="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/aarch64-linux-android/bin/ld"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -302,13 +302,13 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$oldlib"
 
 # A language specific compiler.
-CC="i686-linux-android-gcc"
+CC="aarch64-linux-android-gcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
 
 # Compiler flag to turn off builtin functions.
-no_builtin_flag=" -fno-builtin"
+no_builtin_flag=" -fno-builtin -fno-rtti -fno-exceptions"
 
 # Additional compiler flags for building library objects.
 pic_flag=" -fPIC -DPIC"
@@ -10078,7 +10078,7 @@ build_old_libs=`case $build_libtool_libs in yes) echo no;; *) echo yes;; esac`
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
 # The linker used to build libraries.
-LD="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/i686-linux-android/bin/ld"
+LD="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/aarch64-linux-android/bin/ld"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -10088,7 +10088,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$oldlib"
 
 # A language specific compiler.
-CC="i686-linux-android-g++"
+CC="aarch64-linux-android-g++"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -10213,17 +10213,17 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../lib/gcc/i686-linux-android/4.9.x /home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../lib/gcc /home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib /home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../sysroot/usr/lib"
+compiler_lib_search_dirs="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/lib64/clang/9.0.9/lib/linux/aarch64 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../lib/gcc/aarch64-linux-android/4.9.x /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib/aarch64-linux-android/30 /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib/aarch64-linux-android /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib /home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib"
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
-predep_objects="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../sysroot/usr/lib/crtbegin_so.o"
-postdep_objects="/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../sysroot/usr/lib/crtend_so.o"
+predep_objects="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib/aarch64-linux-android/30/crtbegin_so.o"
+postdep_objects="/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib/aarch64-linux-android/30/crtend_so.o"
 predeps=""
-postdeps="-lstdc++ -lm -lgcc -lc -ldl -lgcc"
+postdeps="-lc++ -lm -lgcc -ldl -lc -lgcc -ldl"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../lib/gcc/i686-linux-android/4.9.x -L/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../lib/gcc -L/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../lib/gcc/i686-linux-android/4.9.x/../../../../i686-linux-android/lib -L/home/ganesan/works/ANDROID_PDFIUM/android-21-x86/bin/../sysroot/usr/lib"
+compiler_lib_search_path="-L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/lib64/clang/9.0.9/lib/linux/aarch64 -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../lib/gcc/aarch64-linux-android/4.9.x -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib/../lib64 -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib/aarch64-linux-android/30 -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib/aarch64-linux-android -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../lib/gcc/aarch64-linux-android/4.9.x/../../../../aarch64-linux-android/lib -L/home/android-build/gpkg-lfs/ANDROID_GEOPDF_READER/android-30-arm64/bin/../sysroot/usr/lib"
 
 # ### END LIBTOOL TAG CONFIG: CXX

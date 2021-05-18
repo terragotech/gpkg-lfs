@@ -7,7 +7,7 @@
 #ifndef CORE_INCLUDE_FXGE_FX_FREETYPE_H_
 #define CORE_INCLUDE_FXGE_FX_FREETYPE_H_
 
-#include <ft2build.h>
+#include "ft2build.h"
 #include <freetype.h>
 #include <ftglyph.h>
 #include <ftlcdfil.h>

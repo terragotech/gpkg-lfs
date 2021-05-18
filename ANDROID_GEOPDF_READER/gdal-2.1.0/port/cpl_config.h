@@ -11,10 +11,10 @@
 /* #undef HAVE_PTHREAD_MUTEX_ADAPTIVE_NP */
 
 /* Define to 1 if you have the `pthread_spinlock_t' type. */
-/* #undef HAVE_PTHREAD_SPINLOCK */
+#define HAVE_PTHREAD_SPINLOCK 1
 
 /* Define to 1 if you have the 5 args `mremap' function. */
-/* #undef HAVE_5ARGS_MREMAP */
+#define HAVE_5ARGS_MREMAP 1
 
 /* --prefix directory for GDAL install */
 #define GDAL_PREFIX "/usr/local"
@@ -57,7 +57,7 @@
 #define HAVE_GETCWD 1
 
 /* Define if you have the iconv() function and it works. */
-/* #undef HAVE_ICONV */
+#define HAVE_ICONV 1
 
 /* Define as 0 or 1 according to the floating point format supported by the
    machine */
@@ -145,7 +145,7 @@
 #define HAVE_READLINK 1
 
 /* Define to 1 if you have the `posix_spawnp' function. */
-/* #undef HAVE_POSIX_SPAWNP */
+#define HAVE_POSIX_SPAWNP 1
 
 /* Define to 1 if you have the `vfork' function. */
 #define HAVE_VFORK 1
@@ -160,13 +160,13 @@
 #define HAVE_LSTAT 1
 
 /* Set the native cpu bit order (FILLORDER_LSB2MSB or FILLORDER_MSB2LSB) */
-#define HOST_FILLORDER FILLORDER_LSB2MSB
+#define HOST_FILLORDER FILLORDER_MSB2LSB
 
 /* Define as const if the declaration of iconv() needs const. */
-/* #undef ICONV_CONST */
+#define ICONV_CONST 
 
 /* For .cpp files, define as const if the declaration of iconv() needs const. */
-/* #undef ICONV_CPP_CONST */
+#define ICONV_CPP_CONST 
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
@@ -182,10 +182,10 @@
 /* #undef SIZEOF_LONG */
 
 /* The size of `unsigned long', as computed by sizeof. */
-#define SIZEOF_UNSIGNED_LONG 4
+#define SIZEOF_UNSIGNED_LONG 8
 
 /* The size of `void*', as computed by sizeof. */
-#define SIZEOF_VOIDP 4
+#define SIZEOF_VOIDP 8
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
@@ -200,7 +200,7 @@
 #define HAVE_GCC_ATOMIC_BUILTINS 1
 
 /* Define to name of 64bit fopen function */
-#define VSI_FOPEN64 fopen
+#define VSI_FOPEN64 fopen64
 
 /* Define to name of 64bit ftruncate function */
 #define VSI_FTRUNCATE64 ftruncate64
