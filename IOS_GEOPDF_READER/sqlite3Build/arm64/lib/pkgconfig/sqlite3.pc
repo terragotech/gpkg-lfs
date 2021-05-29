@@ -1,6 +1,6 @@
 # Package Information for pkg-config
 
-prefix=/Users/venkata/whard22/sqlite3Build/arm64
+prefix=/Users/viswanathansubramanian/gpkg-lfs/IOS_GEOPDF_READER/sqlite3Build/arm64
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

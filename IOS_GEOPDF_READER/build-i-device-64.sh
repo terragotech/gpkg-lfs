@@ -42,7 +42,7 @@ export PREFIX_PROJ=$PWD/proj4
 export PREFIX_SQLITE=$PWD/sqlite3Build
 
 export build_gda="0"
-if [ $build_gda = "1" ]
+if [ $build_gda = "0" ]
 	then
 cd proj-4.8.0
 echo ////////////////////////////////////////////////////////////

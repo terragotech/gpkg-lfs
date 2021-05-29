@@ -386,7 +386,7 @@ void json_object_object_add(struct json_object* jso, const char *key,
 		lh_table_insert(jso->o.c_object, strdup(key), val);
 		return;
 	}
-	existing_value = (void *)existing_entry->v;
+	existing_value = (json_object *)existing_entry->v;
 	if (existing_value)
 		json_object_put(existing_value);
 	existing_entry->v = val;
@@ -474,7 +474,7 @@ static int json_object_int_to_json_string(struct json_object* jso,
 					  CPL_UNUSED int level,
 					  CPL_UNUSED int flags)
 {
-  return sprintbuf(pb, "%"PRId64, jso->o.c_int64);
+  return sprintbuf(pb, "%" PRId64, jso->o.c_int64);
 }
 
 struct json_object* json_object_new_int(int32_t i)

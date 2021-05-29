@@ -1,4 +1,4 @@
-prefix=/Users/venkata/whard22/proj4/arm64
+prefix=/Users/viswanathansubramanian/gpkg-lfs/IOS_GEOPDF_READER/proj4/arm64
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

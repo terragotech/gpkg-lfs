@@ -692,7 +692,10 @@ void OGRGeoJSONDataSource::AddLayer( OGRGeoJSONLayer* poLayer )
 /************************************************************************/
 /*                            FlushCache()                              */
 /************************************************************************/
-
+void OGRGeoJSONDataSource::FlushCache(){
+	//To fix link error
+}
+#if 0
 void OGRGeoJSONDataSource::FlushCache()
 {
     if( papoLayersWriter_ != NULL )
@@ -788,3 +791,4 @@ void OGRGeoJSONDataSource::FlushCache()
         }
     }
 }
+#endif

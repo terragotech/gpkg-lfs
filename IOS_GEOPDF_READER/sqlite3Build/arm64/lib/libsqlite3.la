@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/Users/venkata/whard22/sqlite3Build/arm64/lib'
+libdir='/Users/viswanathansubramanian/gpkg-lfs/IOS_GEOPDF_READER/sqlite3Build/arm64/lib'
