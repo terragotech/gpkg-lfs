@@ -42,6 +42,7 @@ class GeoPDFReader
 	char *ptrProgressID,
 	char *ptrtmpFolder,
 	char *ptrutid);
+	int checkOtherMercator(GDALDatasetH hSrcDS);
 	
 };
 #endif

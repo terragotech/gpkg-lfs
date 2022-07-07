@@ -77,10 +77,46 @@ char *GeoPDFReader::hasSubSets(char *pInputFile, int *result)
 	}
 	return pSelectedDataSet;
 }
+int GeoPDFReader::checkOtherMercator(GDALDatasetH hSrcDS)
+{
+	int result = 0;
+	int projectionResult = 0;
+	char* pszProjection = (char *) GDALGetProjectionRef( hSrcDS );
+	if(pszProjection != NULL)
+	{
+		if(strstr(pszProjection,"Mercator_1SP") != NULL)
+		{
+			projectionResult = 1;
+		}
+		else if(strstr(pszProjection,"Mercator_2SP") != NULL)
+		{
+			projectionResult = 2;
+		}
+	}
+	if(projectionResult > 0)
+	{
+		char *pszProj4 = NULL;
+		OGRSpatialReferenceH  hSRS1;
+		hSRS1 = OSRNewSpatialReference(NULL);
+		OSRImportFromWkt( hSRS1, &pszProjection );
+		OSRExportToProj4( hSRS1, &pszProj4 );
+		if((strcmp(pszProj4,"+proj=merc +lon_0=0 +k=0 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs ") == 0)
+				||	(strcmp(pszProj4,"+proj=merc +lon_0=0 +lat_ts=0 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs ") == 0))
+		{
+			result = 1;		
+		}
+		if(pszProj4 != NULL)
+		{
+			CPLFree( pszProj4 ); 	
+		}
+	}
+	return result;
+}
 int GeoPDFReader::generateMBTiles(char *ptrScratchFolder,char *ptrFileName,char *ptrMBTileName,char *ptrGdalPath,char *ptrProgressID,char *ptrTMP, char *ptrutid)
 {
 	int nResult = GEOPDF_READER_SUCCESS;
 	CPLSetConfigOption("GDAL_DATA",ptrGdalPath);
+	CPLSetConfigOption("GDAL_PDF_DPI","300");
 	//////////////////////////////////////////////////////////////////////////
 	int bReductionRequired = 1;
 	string inputRasterFile;
@@ -243,13 +279,14 @@ int GeoPDFReader::generateMBTiles(char *ptrScratchFolder,char *ptrFileName,char 
 			 nResult = GEOPDF_READER_RW_ERROR;
 		 }
 	 }
+	 int otherMercator = 0;
     if(bRastetrization == 1)
 	{
 		//////////////////////////////////////////////////////////////////////////
-		char **argv = (char **)malloc(sizeof(char *) * 8);
+		char **argv = (char **)malloc(sizeof(char *) * 10);
 		if(argv != NULL)
 		{
-			for(int i=0;i<8;i++) 
+			for(int i=0;i<10;i++) 
 			{
 				argv[i] = (char *) malloc(sizeof(char) * 1024);
 				if(argv[i] == NULL)
@@ -258,31 +295,80 @@ int GeoPDFReader::generateMBTiles(char *ptrScratchFolder,char *ptrFileName,char 
 					return nResult;
 				}
 			}
-			//Generate string to create a call to warp	
-			strcpy(argv[0],"gwarp");
-			strcpy(argv[1],"-of");
-			strcpy(argv[2],"GTiff");
-			strcpy(argv[3],"-t_srs");
-			strcpy(argv[4],"EPSG:3857");
-			if(bReductionRequired == 0)
+			//Check if other Mercator
+			if(ptrSubDS != NULL)
 			{
-				if(ptrSubDS != NULL) 
-				{
-					strcpy(argv[5],ptrSubDS);
-				}
-				else
-				{	
-					strcpy(argv[5],ptrFileName);
-				}
+				hDataset = GDALOpenEx( ptrSubDS, 
+					GDAL_OF_READONLY | GDAL_OF_RASTER | GDAL_OF_VERBOSE_ERROR, 
+					NULL,NULL,NULL );
+
 			}
 			else
 			{
-				strcpy(argv[5],inputRasterFile.c_str());
+				hDataset = GDALOpenEx( ptrFileName, 
+					GDAL_OF_READONLY | GDAL_OF_RASTER | GDAL_OF_VERBOSE_ERROR, 
+					NULL,NULL,NULL );
 			}
-		
-		
-			strcpy(argv[6],tifFile.c_str());
-			printf("tifFile file name: [%s]\n", tifFile.c_str());
+			
+			if(checkOtherMercator(hDataset) == 1){
+				geopdf_write_log((char*)logFile.c_str(),"INFO:Mercator_1SP or Mercator_2SP");
+				otherMercator = 1;
+				//Generate string to create a call to warp	
+				strcpy(argv[0],"gwarp");
+				strcpy(argv[1],"-of");
+				strcpy(argv[2],"GTiff");
+				strcpy(argv[3],"-s_srs");
+				strcpy(argv[4],"EPSG:3857");
+				strcpy(argv[5],"-t_srs");
+				strcpy(argv[6],"EPSG:3857");
+				if(bReductionRequired == 0)
+				{
+					if(ptrSubDS != NULL) 
+					{
+						strcpy(argv[7],ptrSubDS);
+					}
+					else
+					{	
+						strcpy(argv[7],ptrFileName);
+					}
+				}
+				else
+				{
+					strcpy(argv[7],inputRasterFile.c_str());
+				}
+			
+			
+				strcpy(argv[8],tifFile.c_str());
+			}
+			else
+			{
+				//Generate string to create a call to warp	
+				strcpy(argv[0],"gwarp");
+				strcpy(argv[1],"-of");
+				strcpy(argv[2],"GTiff");
+				strcpy(argv[3],"-t_srs");
+				strcpy(argv[4],"EPSG:3857");
+				if(bReductionRequired == 0)
+				{
+					if(ptrSubDS != NULL) 
+					{
+						strcpy(argv[5],ptrSubDS);
+					}
+					else
+					{	
+						strcpy(argv[5],ptrFileName);
+					}
+				}
+				else
+				{
+					strcpy(argv[5],inputRasterFile.c_str());
+				}
+			
+			
+				strcpy(argv[6],tifFile.c_str());
+				printf("tifFile file name: [%s]\n", tifFile.c_str());
+			}
+			GDALClose(hDataset);
 
 
 			//Remove the GeoTIFF file If already exists
@@ -298,7 +384,12 @@ int GeoPDFReader::generateMBTiles(char *ptrScratchFolder,char *ptrFileName,char 
 			geopdf_write_log((char*)logFile.c_str(),"INFO:Entering Warp module");
 	#if 1
 			/******** Converting GeoPDF to GeoTIFF ********/
-			wresult = geopdf_gwarp(7,argv);
+			if(otherMercator == 1){
+				wresult = geopdf_gwarp(9,argv);
+			}
+			else{
+				wresult = geopdf_gwarp(7,argv);
+			}
 			geopdf_create_status_file_progress((char*)progressFile.c_str(),0.60f);
 			if(wresult == 0)
 			{
@@ -349,7 +440,7 @@ int GeoPDFReader::generateMBTiles(char *ptrScratchFolder,char *ptrFileName,char 
 			}
 
 	#endif
-			for(int i=0;i<8;i++) {
+			for(int i=0;i<10;i++) {
 				if(argv[i] != NULL)
 				{
 					free(argv[i]);
